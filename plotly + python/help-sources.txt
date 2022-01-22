@@ -1,0 +1,2 @@
+https://plotly.com/python/line-and-scatter/
+https://plotly.com/python-api-reference/generated/plotly.express.scatter
