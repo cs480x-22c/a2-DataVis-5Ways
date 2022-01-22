@@ -140,3 +140,14 @@ While it takes time to find the correct documentation, these functions made the 
 
 ### Design Achievements
 - **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+
+My Notes
+matplotlib
+difficulty: easy
+used documentation
+had to increase opacity
+
+sources: 
+https://html-color-codes.info/colors-from-image/
+https://rgbacolorpicker.com/hex-to-rgba
+
