@@ -142,12 +142,24 @@ While it takes time to find the correct documentation, these functions made the 
 - **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
 
 My Notes
+
+TODO: play with colors
+
 matplotlib
+
 difficulty: easy
+
 used documentation
-had to increase opacity
+
+d3
+
+difficulty: a bit harder (axes were sad)
+
+used documentation, class example, https://www.tutorialspoint.com/d3js/d3js_axis_api.htm
 
 sources: 
+
 https://html-color-codes.info/colors-from-image/
+
 https://rgbacolorpicker.com/hex-to-rgba
 

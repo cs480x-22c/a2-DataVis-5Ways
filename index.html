@@ -1,0 +1,93 @@
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<body style="display: flex; justify-content: center; align-items: center; font-family: Arial;">
+    <svg width=500 height=500></svg>
+    <script>
+        d3.csv("cars-sample.csv")
+            .then(d => drawPlot(filterNA(d)));
+
+        let xScale = d3.scaleLinear()
+            .domain([1600, 5100])
+            .range([0, 400]);
+
+        let yScale = d3.scaleLinear()
+            .domain([46, 9])
+            .range([0, 400])
+
+        const filterNA = (d) => {
+            return d.filter(item => item.MPG != "NA");
+        }
+
+        const mapColor = (m) => {
+            if (m == "ford")
+                return "rgba(196, 196, 116, .75)";
+            else if (m == "toyota")
+                return "rgba(238, 164, 242, .75)";
+            else if (m == "bmw")
+                return "rgba(242, 171, 167, .75)";
+            else if (m == "honda")
+                return "rgba(125, 211, 175, .75)";
+            else if (m == "mercedes")
+                return "rgba(119, 203, 244, .75)";
+        }
+
+        const drawPlot = (d) => {
+            drawAxes();
+            drawBackground();
+            drawPoints(d);
+        };
+
+        const drawAxes = () => {
+            let xAxis = d3.axisBottom()
+                .scale(xScale)
+                .tickValues([2000, 3000, 4000, 5000]);
+            let yAxis = d3.axisLeft()
+                .scale(yScale)
+                .tickValues([10, 20 , 30, 40]);
+
+            d3.select("svg")
+                .append("g")
+                .attr("transform", "translate(50, 400)")
+                .call(xAxis);
+
+            d3.select("svg")
+                .append("g")
+                .attr("transform", "translate(50, 0)")
+                .call(yAxis);
+
+            d3.select("svg")
+                .append("text")
+                .attr("x", 0)
+                .attr("y", 200)
+                //.attr("transform", "rotate(-90)")
+                .text("MPG");
+
+            d3.select("svg")
+                .append("text")
+                .attr("x", 225)
+                .attr("y", 435)
+                .text("Weight");
+        };
+
+        const drawBackground = () => {
+            d3.select("svg")
+                .append("rect")
+                .attr("x", 50)
+                .attr("y", 0)
+                .attr("width", 400)
+                .attr("height", 400)
+                .attr("fill", "#ECECEC");
+        }
+
+        const drawPoints = (d) => {
+            d3.select("svg")
+                .selectAll("circle")
+                .data(d)
+                .enter().append("circle")
+                .attr("cx", d => 50 + xScale(d.Weight))
+                .attr("cy", d => yScale(d.MPG))
+                .attr("r", d => d.Weight / 500)
+                .attr("fill", d => mapColor(d.Manufacturer));
+        }
+
+    </script>
+</body>
