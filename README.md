@@ -157,6 +157,14 @@ difficulty: a bit harder (axes were sad)
 
 used documentation, class example, https://www.tutorialspoint.com/d3js/d3js_axis_api.htm
 
+ggplot
+
+difficult: super easy
+
+used documentation
+
+excel
+
 sources: 
 
 https://html-color-codes.info/colors-from-image/

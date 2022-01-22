@@ -2,7 +2,7 @@
 <body style="display: flex; justify-content: center; align-items: center; font-family: Arial;">
     <svg width=500 height=500></svg>
     <script>
-        d3.csv("cars-sample.csv")
+        d3.csv("../cars-sample.csv")
             .then(d => drawPlot(filterNA(d)));
 
         let xScale = d3.scaleLinear()
