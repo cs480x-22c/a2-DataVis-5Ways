@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/fedeit/a2-DataVis-5Ways/main/cars-sample.csv"
+  },
+  "width": 600,
+  "height": 600,
+  "mark": {"type": "circle", "opacity": 0.5},
+  "encoding": {
+    "color": {
+      "field": "Manufacturer",
+      "type": "ordinal",
+      "scale": {
+        "range": ["#f2acac", "#b5b64b", "#8ed4b6", "#8dcef0", "#e9acee"]
+      }
+    },
+    "size": {"field": "Weight", "type": "quantitative"},
+    "x": {
+      "field": "Weight",
+      "type": "quantitative",
+      "axis": {"tickMinStep": 1000},
+      "scale": {"domain": [1300, 5100]}
+    },
+    "y": {
+      "field": "MPG",
+      "type": "quantitative",
+      "axis": {"tickMinStep": 10},
+      "scale": {"domain": [8, 47]}
+    }
+  },
+  "config": {}
+}

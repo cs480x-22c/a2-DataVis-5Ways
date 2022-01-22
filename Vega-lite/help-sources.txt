@@ -1,0 +1,4 @@
+https://talk.observablehq.com/t/changing-colour-of-marks-based-on-data-values-vega-lite/3174
+https://vega.github.io/vega-lite/examples/point_2d.html
+https://vega.github.io/vega-lite/docs/size.html
+https://vega.github.io/vega-lite/docs/config.html#mark-config
