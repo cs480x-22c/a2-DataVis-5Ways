@@ -1,0 +1,47 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<body></body>
+
+<script type="module">
+    import * as Plot from "https://cdn.skypack.dev/@observablehq/plot@0.4";
+
+    function plotGraph(data){
+        console.log(data);
+    }
+
+    var d = d3.csv("cars-sample.csv").then(function(data){
+        console.log(data);
+        document.body.append(Plot.plot({
+        r:{
+            range: [.005,8]
+        },
+        x:{
+            domain:[1500, 5250],
+            ticks:4,
+            label:"WEIGHT",
+            
+        },
+        y:{
+            domain:[8,46],
+            ticks:4,
+            label:"MPG"
+        },
+        style:{
+            fontFamily: "Calibri",
+            fontSize:"8pt"
+            
+        },
+        color: {
+            type: "ordinal",
+            scheme: "Cool",
+        },
+        marks: [
+            
+            Plot.dot(data, {x: "Weight", y: "MPG", fill:"Manufacturer", r:"Weight", fillOpacity:.5, stroke:"Manufacturer", 
+            title: (d)=> "Manufacturer: "+ d.Manufacturer +"\n Car: " +d.Car +"\n Horsepower:"+ d.Horsepower })
+        ],
+        grid:true
+    }));
+    })
+    
+</script>
