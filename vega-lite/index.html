@@ -6,10 +6,10 @@
 <div id="vis">
     <script>
         let spec = {
-            width: 500,
-            height: 500,
+            width: 400,
+            height: 400,
             data: {url: "../cars-sample.csv"},
-            mark: "circle",
+            mark: {type: "circle", opacity: 0.5},
             encoding: {
                 x: {
                     field: "Weight", 
@@ -21,7 +21,10 @@
                     type: "quantitative",
                     scale: {domain: [9, 46]},
                     axis: {values: [10, 20, 30, 40]}},
-                color: {field: "Manufacturer", type: "nominal"},
+                color: {
+                    field: "Manufacturer", 
+                    type: "nominal",
+                    scale: {"domain": ["bmw", "ford", "mercedes", "honda", "toyota"], "range": ["#F08787", "#B4B44B", "#50C8F5", "#28D2AF", "#F064F0"]}},
                 size: {field: "Weight", type: "quantitative"}
             }
         };

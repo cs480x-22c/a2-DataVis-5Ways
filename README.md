@@ -149,7 +149,7 @@ matplotlib
 
 difficulty: easy
 
-used documentation
+used documentation, https://stackoverflow.com/questions/11423369/matplotlib-legend-circle-markers
 
 d3
 
@@ -174,4 +174,12 @@ https://nikkimarinsek.com/blog/how-to-format-different-conditions-in-excel
 https://support.microsoft.com/en-us/topic/change-the-scale-of-the-horizontal-category-axis-in-a-chart-637897f6-0d51-4ec5-bef9-25d2c83a8450
 
 general googling
+
+vega-lite
+
+difficulty: some
+
+used documentation
+
+hard to get set up
 
