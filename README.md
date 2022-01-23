@@ -165,9 +165,13 @@ used documentation
 
 excel
 
-sources: 
+difficulty: annoying
 
-https://html-color-codes.info/colors-from-image/
+cannot set tick marks
 
-https://rgbacolorpicker.com/hex-to-rgba
+https://nikkimarinsek.com/blog/how-to-format-different-conditions-in-excel
+
+https://support.microsoft.com/en-us/topic/change-the-scale-of-the-horizontal-category-axis-in-a-chart-637897f6-0d51-4ec5-bef9-25d2c83a8450
+
+general googling
 
