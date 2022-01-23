@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+
+<body style="display: flex; justify-content: center; align-items: center;">
+<div id="vis">
+    <script>
+        let spec = {
+            width: 500,
+            height: 500,
+            data: {url: "../cars-sample.csv"},
+            mark: "circle",
+            encoding: {
+                x: {
+                    field: "Weight", 
+                    type: "quantitative",
+                    scale: {domain: [1600, 5100]},
+                    axis: {values: [2000, 3000, 4000, 5000]}},
+                y: {
+                    field: "MPG", 
+                    type: "quantitative",
+                    scale: {domain: [9, 46]},
+                    axis: {values: [10, 20, 30, 40]}},
+                color: {field: "Manufacturer", type: "nominal"},
+                size: {field: "Weight", type: "quantitative"}
+            }
+        };
+        vegaEmbed("#vis", spec);
+    </script>
+</div>
+</body>
