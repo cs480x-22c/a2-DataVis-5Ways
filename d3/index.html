@@ -1,0 +1,96 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<body></body>
+
+<script>
+    var width = 600;
+    var height = 500;
+
+    var svg = d3.select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+    var data = d3.csv("cars-sample.csv").then(function(data){
+        var newData=[];
+        for(i=0; i<data.length; i++){
+            if(data[i].MPG != "NA"){
+                newData.push(data[i]);
+            }
+        }
+
+        var scaleX = d3.scaleLinear()
+        .domain([1500,5250])
+        .range([0,width-100]);
+
+        var x = d3.axisBottom()
+        .scale(scaleX);
+
+        var scaleY = d3.scaleLinear()
+        .domain([8,46])
+        .range([height-100, 40]);
+
+        var y = d3.axisLeft()
+        .scale(scaleY);
+
+        svg.append("text")
+        .attr("x", width/2.5)
+        .attr("y", height-50)
+        .text("Weight")
+        .style("font-family", "Calibri");
+
+        svg.append("text")
+        .attr("x", 3)
+        .attr("y", 40)
+        .text("MPG")
+        .style("font-family", "Calibri");
+
+        svg.append("g")
+        .attr("transform", "translate(40,"+(height-100)+")")
+        .call(x.ticks(4));
+
+        svg.append("g")
+        .attr("transform", "translate(40,0)")
+        .call(y.ticks(4));
+
+        var manufacturers = [];
+        for(i=0; i < newData.length; i++){
+            if(manufacturers.includes(newData[i].Manufacturer)==false){
+                console.log(newData[i].Manufacturer);
+                manufacturers.push(newData[i].Manufacturer);
+            }
+        }
+
+
+        var yellow = d3.schemeYlOrBr[9];
+        var colorScale = d3.scaleOrdinal()
+        .domain([manufacturers[0],manufacturers[1],manufacturers[2],manufacturers[3],manufacturers[4]])
+        .range(["#b0e0e6", "#ffb6c1", "#800080", "#ff00ff", "#6897bb"]);
+
+        var tooltip = d3.select("body")
+        .append("div")
+        .style("visibility", "hidden")
+
+
+        svg.append('g')
+        .selectAll("dot")
+        .data(newData)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d){return scaleX(d.Weight)+40;})
+        .attr("cy", function(d){return scaleY(d.MPG);})
+        .attr("r", function(d){return (d.Weight)*(.002)})
+        .style("opacity", .5)
+        .style("fill", function(d){return colorScale(d.Manufacturer)})
+        .on("mouseover", function(event, d){
+            var coordinates = d3.pointer(this);
+            tooltip.style("left", coordinates[0])
+            .style("top", coordinates[1])
+            .style("visibility", "visible")
+            .text("Manufacturer: "+d.Manufacturer+ "\n Car: "+ d.Car + "\n Horsepower: "+d.Horsepower);
+        });
+    })
+
+
+
+</script>
