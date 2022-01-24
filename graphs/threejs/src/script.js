@@ -174,7 +174,7 @@ const scene = new THREE.Scene()
 const fontLoader = new FontLoader()
 
 fontLoader.load(
-    './fonts/helvetiker_regular.typeface.json',
+    '/a2-DataVis-5Ways/graphs/threejs/dist/fonts/helvetiker_regular.typeface.json',
     (font) =>
     {
         const fastTextCreator = (text) =>
