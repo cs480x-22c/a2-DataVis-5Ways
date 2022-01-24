@@ -1,7 +1,14 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <body style="display: flex; justify-content: center; align-items: center; font-family: Arial;">
-    <svg width=500 height=500></svg>
+    <svg width=600 height=500></svg>
     <script>
+        let fordColor = "rgba(180, 180, 75, .5)";
+        let toyotaColor = "rgba(240, 100, 240, .5)";
+        let bmwColor = "rgba(240, 135, 135, .5)";
+        let hondaColor = "rgba(40, 210, 175, .5)";
+        let mercedesColor = "rgba(80, 200, 245, .5)";
+        let backgroundColor = "#ECECEC";
+
         d3.csv("cars-sample.csv")
             .then(d => drawPlot(filterNA(d)));
 
@@ -19,21 +26,22 @@
 
         const mapColor = (m) => {
             if (m == "ford")
-                return "rgba(180, 180, 75, .5)";
+                return fordColor;
             else if (m == "toyota")
-                return "rgba(240, 100, 240, .5)";
+                return toyotaColor;
             else if (m == "bmw")
-                return "rgba(240, 135, 135, .5)";
+                return bmwColor;
             else if (m == "honda")
-                return "rgba(40, 210, 175, .5)";
+                return hondaColor;
             else if (m == "mercedes")
-                return "rgba(80, 200, 245, .5)";
+                return mercedesColor;
         }
 
         const drawPlot = (d) => {
             drawAxes();
             drawBackground();
             drawPoints(d);
+            drawLegend();
         };
 
         const drawAxes = () => {
@@ -58,7 +66,7 @@
                 .append("text")
                 .attr("x", 0)
                 .attr("y", 200)
-                //.attr("transform", "rotate(-90)")
+                .attr("transform", "translate(-175, 210) rotate(-90)")
                 .text("MPG");
 
             d3.select("svg")
@@ -75,8 +83,25 @@
                 .attr("y", 0)
                 .attr("width", 400)
                 .attr("height", 400)
-                .attr("fill", "#ECECEC");
+                .attr("fill", backgroundColor);
+
+            //draw lines
+            drawBackgroundHelper(50, 65, 450, 65);
+            drawBackgroundHelper(50, 173, 450, 173);
+            drawBackgroundHelper(50, 281, 450, 281);
+            drawBackgroundHelper(50, 389, 450, 389);
+            drawBackgroundHelper(96, 0, 96, 400);
+            drawBackgroundHelper(210, 0, 210, 400);
+            drawBackgroundHelper(324, 0, 324, 400);
+            drawBackgroundHelper(438, 0, 438, 400);
         }
+
+        const drawBackgroundHelper = (x1, y1, x2, y2) => {
+            d3.select("svg")
+                .append("line")
+                .attr("x1", x1).attr("y1", y1).attr("x2", x2).attr("y2", y2)
+                .attr("stroke", "white").attr("stroke-width", 1);
+        };
 
         const drawPoints = (d) => {
             d3.select("svg")
@@ -88,6 +113,43 @@
                 .attr("r", d => d.Weight / 500)
                 .attr("fill", d => mapColor(d.Manufacturer));
         }
+
+        const drawLegend = () => {
+            d3.select("svg")
+                .append("text")
+                .attr("x", 475)
+                .attr("y", 150)
+                .text("Manufacturer");
+
+            drawLegendHelper(bmwColor, "bmw", 160);
+            drawLegendHelper(fordColor, "ford", 185);
+            drawLegendHelper(hondaColor, "honda", 210);
+            drawLegendHelper(mercedesColor, "mercedes", 235);
+            drawLegendHelper(toyotaColor, "toyota", 260 );
+        };
+
+        const drawLegendHelper = (color, manufacturer, height) => {
+            d3.select("svg")
+                .append("rect")
+                .attr("x", 475)
+                .attr("y", height)
+                .attr("height", 20)
+                .attr("width", 20)
+                .attr("fill", backgroundColor);
+
+            d3.select("svg")
+                .append("circle")
+                .attr("cx", 485)
+                .attr("cy", height + 10)
+                .attr("r", 4)
+                .attr("fill", color);
+
+            d3.select("svg")
+                .append("text")
+                .attr("x", 500)
+                .attr("y", height + 15)
+                .text(manufacturer);
+        };
 
     </script>
 </body>
