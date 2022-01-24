@@ -16,10 +16,9 @@ function Car(name, manufacturer, mpg, weight)
     this.weight = weight
 }
 
-let cars = []
+let carPoints = []
 
-
-const loadCarPoints = () =>
+const loadCarPoints = (cars) =>
 {
     cars.forEach(car => 
         {
@@ -33,11 +32,13 @@ const loadCarPoints = () =>
             sphere.position.y = getVerticleCord(car.mpg)
     
             //console.log("SPHERE AT: X:" + sphere.position.x + " Y:" + sphere.position.y + " Z:" + sphere.position.z)
+            carPoints.push(sphere)
             scene.add(sphere)
         })
     
 }
 
+// Loading car-sample.csv file
 const getCarData = async () =>
 {
     const response = await fetch('./cars-sample.csv')
@@ -45,8 +46,10 @@ const getCarData = async () =>
     return data
 }
 
+// Parsing car csv data to car object
 const parseCarData = async () =>
 {
+    const cars = []
     await getCarData().then(data => data.replaceAll("\"", "")
     .split("\n")
     .forEach(car =>
@@ -57,8 +60,7 @@ const parseCarData = async () =>
             cars.push(newCar)
 
     }))
-    loadCarPoints()
-
+    loadCarPoints(cars)
 }
 
 parseCarData()
@@ -172,7 +174,7 @@ const scene = new THREE.Scene()
 const fontLoader = new FontLoader()
 
 fontLoader.load(
-    '/fonts/helvetiker_regular.typeface.json',
+    './fonts/helvetiker_regular.typeface.json',
     (font) =>
     {
         const fastTextCreator = (text) =>
