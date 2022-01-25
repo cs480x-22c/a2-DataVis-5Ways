@@ -19,11 +19,16 @@ Lastly, I added in the plotly library in order to add tooltips when the mouse ho
 
 Overall, the graph was easy to create in R. Everything was very simple and R handles data sets very well. The only issue I came across was when implementing the tooltip.
 You can add text to the tooltip, but it automatically states what data is at that point already. To keep consistency with my other graphs, I decided to add horsepower and 
-the car name, and I accepted the fact that this tooltip would just have more information.
+the car name, and I accepted the fact that this tooltip would just have more information. I can see myself using R if I have a dataset and want a quick, simple graph.
 
-![ggplot2](img/)
+![ggplot2](img/RChart.png)
+![ggplot2 with tooltips](img/RChart2.png)
 
-# d3...
+# d3
+
+Source: I referenced https://www.d3-graph-gallery.com/graph/custom_theme.html to learn how to make a scatterplot using d3.
+
+d3 is a JavaScript library used for making custom data visualizations.
 
 (And so on...)
 
