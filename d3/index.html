@@ -64,7 +64,7 @@
 
         var yellow = d3.schemeYlOrBr[9];
         var colorScale = d3.scaleOrdinal()
-        .domain([manufacturers[0],manufacturers[1],manufacturers[2],manufacturers[3],manufacturers[4]])
+        .domain(manufacturers)
         .range(["#b0e0e6", "#ffb6c1", "#800080", "#ff00ff", "#6897bb"]);
 
         var tooltip = d3.select("body")
@@ -83,14 +83,10 @@
         .style("opacity", .5)
         .style("fill", function(d){return colorScale(d.Manufacturer)})
         .on("mouseover", function(event, d){
-            var coordinates = d3.pointer(this);
-            tooltip.style("left", coordinates[0])
-            .style("top", coordinates[1])
-            .style("visibility", "visible")
-            .text("Manufacturer: "+d.Manufacturer+ "\n Car: "+ d.Car + "\n Horsepower: "+d.Horsepower);
+            tooltip.style("visibility", "visible")
+            .text("Manufacturer: "+d.Manufacturer+ "\n Car: "+ d.Car + "\n Horsepower: "+d.Horsepower)
+            .style("font-family", "Calibri");
         });
     })
-
-
 
 </script>
