@@ -59,8 +59,19 @@ Since Flourish doesn't involve coding, I created the graph through uploading the
 
 Overall, I enjoyed using Flourish, and it made creating graphs easier than in excel in my opinion. The only actual issue I came across was that they didn't offer Calibri as a font because they only used Google fonts, so instead of using Calibri, I made the font something very close to it. I think that charting using programming offers more flexibility, but this is a great tool for someone without programming experience to use. I can see myself using this if I want to make a chart quickly.
 
-![Chart made using Flourish](img/FlourishChart.png)
-![Chart made using Flourish with tooltips](img/FlourishChart2.png)
+![Chart made using Flourish](img/CarsBubbleChart.png)
+![Chart made using Flourish with tooltips](img/CarsBubbleChart2.png)
+
+# Excel
+
+Excel is the classic spreadsheet tool that you can use analyze and visualize data.
+
+Since Excel isn't a programming language, I imported the data by opening up the csv file in Excel. In order to make the maufacturers color coded, I filtered the data by each manufacturer and added the data for each manufacturer as a series in the graph. I had to create another column for the bubble sizes in order to map bubble size to weight in Excel. To my knowledge, Excel doesn't have another way to do that more efficiently. I also ran into an issue with putting the tick marks exactly where I wanted them in Excel. It just doesn't let you choose where they go, so I still have four tick marks per axis, but the x-axis doesn't have them at the correct values. I also had issues with the tooltip in Excel. It has an automatic tooltip, but it doesn't let you add any other information to them.
+
+Overall, I would say that Excel makes it difficult to create a chart like this. I had to go through extra steps to meet the basic requirements, which made it harder than Flourish to complete. I've learned that Excel is very limited in its' capabilities. I would only use Excel graphing if I needed to make a simple graph.
+
+![Chart made using Observable Plot](img/ExcelChart.png)
+![Chart made using Observable Plot with tooltips](img/ExcelChart2.png)
 
 ## Technical Achievements
 - **Tooltips, mouseover event in d3**: I have tooltips that show up on all of the graphs I made so that if you hover your mouse over the bubble, text will appear that displays information about it. I was able to customize all of them except for the Excel tooltip, which already listed the (x,y) position of the bubble and the manufacturer. On all of the other graphs, I made sure to list at least the Car, the Manufacturer, and the Horsepower. The tooltip that took the most effort to implement was the tooltip in d3, which required me to use a mouseover event. However, with d3, you are able to control the tooltip more.
