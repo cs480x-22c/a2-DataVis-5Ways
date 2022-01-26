@@ -6,13 +6,16 @@
 ![caption](img/vis/matlab.png)
 
 # MatPlotLIB visualization
-[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/matplotlib.html)
+![caption](img/matlab.PNG)
+![caption](img/vis/matlab.png)
 
 # ggplot2 visualization
-[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/ggplot2.html)
+![caption](img/matlab.PNG)
+![caption](img/vis/matlab.png)
 
 # gnuplot visualization
-[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/gnuplot.html)
+![caption](img/gnuplot.PNG)
+![caption](img/vis/gnuplot.png)
 
 Readme Requirements
 ---
