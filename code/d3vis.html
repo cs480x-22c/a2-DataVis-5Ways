@@ -2,11 +2,6 @@
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v4.js"></script>
 <div id="my_dataviz"></div>
-<html>
-    <head>  
-        <a href="https://jacobadamsky.github.io/a2-DataVis-5Ways/index.html">Back to index.html</a>
-    </head>
-    <body>
 <script>
     var margin = { top: 20, right: 60, bottom: 60, left: 120 },
         width = 575 - margin.left - margin.right,
@@ -20,7 +15,7 @@
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
     
-    d3.csv("https://raw.githubusercontent.com/jacobadamsky/a2-DataVis-5Ways/main/cars-sample.csv", function (data) {
+    d3.csv("https://raw.githubusercontent.com/jacobadamsky/a2-DataVis-5Ways/main/code/cars-sample.csv", function (data) {
 
         // Add X axis and label
         var x = d3.scaleLinear()
@@ -88,5 +83,3 @@
             .text(function(d) { return d.MPG + "MPG,  " + d.Manufacturer + ", " + d.Weight + " (weight)" ; });
     })
 </script>
-    </body>
-</html>
