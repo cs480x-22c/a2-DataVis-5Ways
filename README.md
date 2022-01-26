@@ -2,8 +2,7 @@
 
 # Assignment 2 - Data Visualization, 5 Ways
 
-Using the dataset "cars-sample.csv", I created five visualization using various libraries and languages.  
-The goal was to use this chart as reference and recreate it using each tool.
+Using the dataset "cars-sample.csv", I created five visualization using various libraries and languages. I used R + ggplot2, Javascript + d3, Python + mathplotlib, Tableau, and Excel to complete this. The goal was to use this chart as reference and recreate it using each tool.
 
 ![ggplot2](img/ggplot2.png)
 
@@ -22,17 +21,6 @@ Other features are not required. This includes:
 - The legends.
 
 Note: For the missing MPG for the two Ford cars, I sub'd them with the MPG from the closest weight of that car type (Ford) this allowed me to complete the data set for visuals instead of a point that was not likely accurate (high weight and zero MPG, which is what is shown when you plot the missing data without changes)
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements.
-Be sure to note where these deviate.
-
-## Libraries, Tools, Languages Choosen
-
-- R + ggplot2
-  -Javascript + d3
-  -Python + mathplotlib
-  -Tableau
-  -Excel
 
 ## Tips
 
