@@ -1,5 +1,5 @@
-![caption](logos/d3logo.png)
-# d3js visualization 
+# d3js visualization
+[d3js HTML Visualization](/html/d3vis.html)
 
 
 
