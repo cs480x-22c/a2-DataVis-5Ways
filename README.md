@@ -1,5 +1,5 @@
 # d3js visualization
-[d3js HTML Visualization](/html/d3vis.html)
+[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/d3vis.html)
 
 
 
