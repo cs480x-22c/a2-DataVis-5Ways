@@ -1,13 +1,17 @@
 # d3js visualization
 [d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/d3vis.html)
 
+# MATLAB visualization
+[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/matlab.html)
 
+# MatPlotLIB visualization
+[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/matplotlib.html)
 
+# ggplot2 visualization
+[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/ggplot2.html)
 
-
-
-
-
+# gnuplot visualization
+[d3js HTML Visualization](https://jacobadamsky.github.io/a2-DataVis-5Ways/html/gnuplot.html)
 
 Readme Requirements
 ---
