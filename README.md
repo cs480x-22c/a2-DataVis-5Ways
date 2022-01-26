@@ -1,19 +1,19 @@
 # d3js visualization
 [link to d3vis.html page](https://jacobadamsky.github.io/a2-DataVis-5Ways/code/d3vis.html)
 <br>
-![caption](img/d3vis.PNG)
+![caption](img/d3vis.png)
 
 # MATLAB visualization
-![caption](img/matlab.PNG)
+![caption](img/matlab.png)
 
 # MatPlotLIB visualization
-![caption](img/matplotlib.PNG)
+![caption](img/matplotlib.png)
 
 # ggplot2 visualization
 ![caption](img/ggplot2.PNG)
 
 # gnuplot visualization
-![caption](img/gnuplot.PNG)
+![caption](img/gnuplot.png)
 
 Readme Requirements
 ---
