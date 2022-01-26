@@ -1,3 +1,14 @@
+![caption](logos/d3logo.png)
+# d3js visualization 
+
+
+
+
+
+
+
+
+
 Readme Requirements
 ---
 
