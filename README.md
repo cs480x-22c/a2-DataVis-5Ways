@@ -48,8 +48,19 @@ To create the graph using plot, I loaded in the data using the csv function. The
 
 Since this was the first graph I made for this assignment, it was kind of difficult because I didn't know how Plot formatted their attributes in the beginning and I haven't done much graphing through programming before. If I had to do it again, I think it would be much easier, having completed the other graphs. Other than having to get familiar with the library, the graph is easier to make than if you were using d3. I think that you can have a lot of flexibility with this library to do what you want, but I think d3 allows for more creativity. I can see myself using Plot if I want to make a decent custom plot but I don't have a lot of time.
 
-![Chart made using Observable Plot](img/plotChart.png)
-![Chart made using Observable Plot with tooltips](img/plotChart2.png)
+![Chart made using Observable Plot](img/PlotChart.png)
+![Chart made using Observable Plot with tooltips](img/PlotChart2.png)
+
+# Flourish
+
+Flourish is an online tool used for data visulaization and storytelling.
+
+Since Flourish doesn't involve coding, I created the graph through uploading the csv file and it was seamlessly put into a table for me. The app assigns variables to each column so it is easier to choose which ones you want to display. It is very user-friendly. The only things that irritated me about Flourish is that you have to click on all of the dropdowns in order to find what you want to change and they only had Google fonts. However, they do have an easy way to add tooltips to graphs, which I appreciated.
+
+Overall, I enjoyed using Flourish, and it made creating graphs easier than in excel in my opinion. The only actual issue I came across was that they didn't offer Calibri as a font because they only used Google fonts, so instead of using Calibri, I made the font something very close to it. I think that charting using programming offers more flexibility, but this is a great tool for someone without programming experience to use. I can see myself using this if I want to make a chart quickly.
+
+![Chart made using Flourish](img/FlourishChart.png)
+![Chart made using Flourish with tooltips](img/FlourishChart2.png)
 
 ## Technical Achievements
 - **Tooltips, mouseover event in d3**: I have tooltips that show up on all of the graphs I made so that if you hover your mouse over the bubble, text will appear that displays information about it. I was able to customize all of them except for the Excel tooltip, which already listed the (x,y) position of the bubble and the manufacturer. On all of the other graphs, I made sure to list at least the Car, the Manufacturer, and the Horsepower. The tooltip that took the most effort to implement was the tooltip in d3, which required me to use a mouseover event. However, with d3, you are able to control the tooltip more.
