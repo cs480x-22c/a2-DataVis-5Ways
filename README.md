@@ -21,6 +21,8 @@ Other features are not required. This includes:
 - The background grid.
 - The legends.
 
+Note: For the missing MPG for the two Ford cars, I sub'd them with the MPG from the closest weight of that car type (Ford) this allowed me to complete the data set for visuals instead of a point that was not likely accurate (high weight and zero MPG, which is what is shown when you plot the missing data without changes)
+
 Note that some software packages will make it **impossible** to perfectly preserve the above requirements.
 Be sure to note where these deviate.
 
@@ -61,9 +63,9 @@ Each visualization should include a screenshot. Put these in an `img` folder and
 
 # Excel
 
-Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
+![excelcars](img/excelcars.png)
 
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+This tool was something popular in workplaces but far from my favroite, Microsoft Excel. Importing the data is easy enough and autoloads CSV files correctly, however there are major drawbacks that make it not my favorite. Excel does not allow you to add white space before the start of the axis bounds, which made it impossible to have the x axis start at 2000 and the y-axis start at 10, since it cuts off the data. To avoid missing points, I set the axis bounds lower than the example, so the x-axis started at 1000 and the y-axis start at 0. Knowing how to use formulas in Excel is useful when working on larger data sets and manipluation of the CSV itself, but the system starts to lag when creating charts and graphs and slows down my system. If working with smaller sets, this is a fine tool, but for larger sets of data I would not use this again by choice.
 
 # Tableau
 
