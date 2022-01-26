@@ -36,7 +36,20 @@ through the scaleLinear function and added custom domains and ranges for the eac
 
 Overall, the graph was the most difficult to create in d3. You had to specify everything you wanted to do explicitly, which can be annoying, but I can also see how it gives you more control over the visualization. The tooltip was also more difficult to create in d3. I can see myself using d3 to creat visualizations when I want to create something that is more unique.
 
+![Chart made in d3](img/d3Chart.png)
+![Chart made in d3 with tooltips](img/d3Chart2.png)
 
+# d3 + Observable Plot
+
+d3 is a JavaScript library used for making custom data visualizations.
+Observable Plot is a JavaScript library built off of d3 that enables you to make charts in minutes.
+
+To create the graph using plot, I loaded in the data using the csv function. Then, I created the plot by appending Plot.plot() to the body tag. Than I put a range of values in the r attribute for the radius of the circles. Then, I added a domain, ticks, and label for the x and y attributes. I used the style attribute to change the font of the text and the color attribute to import a colorscheme and change the type to ordinal for the Manufacturer. Next, I used the Plot.dot() function to create the bubble chart and the title attribute to assign each bubble a tooltip.
+
+Since this was the first graph I made for this assignment, it was kind of difficult because I didn't know how Plot formatted their attributes in the beginning and I haven't done much graphing through programming before. If I had to do it again, I think it would be much easier, having completed the other graphs. Other than having to get familiar with the library, the graph is easier to make than if you were using d3. I think that you can have a lot of flexibility with this library to do what you want, but I think d3 allows for more creativity. I can see myself using Plot if I want to make a decent custom plot but I don't have a lot of time.
+
+![Chart made using Observable Plot](img/plotChart.png)
+![Chart made using Observable Plot with tooltips](img/plotChart2.png)
 
 ## Technical Achievements
 - **Tooltips, mouseover event in d3**: I have tooltips that show up on all of the graphs I made so that if you hover your mouse over the bubble, text will appear that displays information about it. I was able to customize all of them except for the Excel tooltip, which already listed the (x,y) position of the bubble and the manufacturer. On all of the other graphs, I made sure to list at least the Car, the Manufacturer, and the Horsepower. The tooltip that took the most effort to implement was the tooltip in d3, which required me to use a mouseover event. However, with d3, you are able to control the tooltip more.
