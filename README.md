@@ -12,6 +12,7 @@ though I did at first modify the CSV file before I got a better understanding of
 
 # MATLAB visualization
 ![caption](img/matlab.png)
+<br>
 Just like in d3, the syntax for plotting with MATLAB was very straight forward, only taking about 3 lines
 of code to just get a basic scatter plot set up. As for the color mapping, I'm sure I chose a very unsophisticated
 way of doing it, but I for-looped through the cells in the manufacturer column and added entries to a colormap which
@@ -24,6 +25,7 @@ think I would choose d3 over all of the other options.
 
 # MatPlotLIB visualization
 ![caption](img/matplotlib.png)
+<br>
 Using matplotlib in python wasn't as straight-forward for getting things to look how I wanted at first. A basic scatterplot
 with the data was fairly easy, but I was having trouble getting the conditional coloring and size to work. When I realized
 that I could plot individual points on the scatterplot, that made things a lot easier as I was able to access individual
@@ -35,6 +37,7 @@ methodology of d3 more.
 
 # ggplot2 visualization
 ![caption](img/ggplot2.PNG)
+<br>
 I forewent the data-piping method that was displayed in class, though ggplot2 was still very simple to use. What was nicest about
 color-mapping here was that you could just straight up input a string for a color and the language would do its own conversion to 
 an actual color value. Another nice aspect was that there are ifelse statements in R that let you have conditional results directly
@@ -45,6 +48,12 @@ of use and customizability.
 
 # gnuplot visualization
 ![caption](img/gnuplot.png)
+<br>
+I had no clue what language to pick for my last one, so I had a friend randomly pick one for me. At first, I thought gnuplot was going
+to be a hassle to set up, but it wasn't as bad as I expected. After understanding the syntax for column selection and getting a better
+understanding of ternary operators, plotting the data pretty much came down to 5 lines of code. No hacks to the CSV file were necessary
+to plot the data. I'd definitely say gnuplot could have a wide variety of applications, but I think a lot of the newer implementations
+of plotting overshadow it in terms of versatility.
 
 # Technical Achievements
 The only language I got mousing over to work in was d3 as the other languages were a lot less straight forward with their
