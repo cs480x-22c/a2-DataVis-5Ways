@@ -35,7 +35,13 @@ methodology of d3 more.
 
 # ggplot2 visualization
 ![caption](img/ggplot2.PNG)
-
+I forewent the data-piping method that was displayed in class, though ggplot2 was still very simple to use. What was nicest about
+color-mapping here was that you could just straight up input a string for a color and the language would do its own conversion to 
+an actual color value. Another nice aspect was that there are ifelse statements in R that let you have conditional results directly
+inside of the plotting, which wasn't possible (at least from what I found) in all the other languages. This was probably the easiest
+language to set up, but with that ease, you likely lose the ability to customize certain things. No hacks to the CSV file were necessary
+to plot the data. This language is a close second to d3 for me, so it definitely has a wide variety of applications based on its ease 
+of use and customizability.
 
 # gnuplot visualization
 ![caption](img/gnuplot.png)
@@ -45,7 +51,7 @@ The only language I got mousing over to work in was d3 as the other languages we
 syntax in terms of modifying interactions with the plot. Another technical achievement was with gnuplot which used a very
 interesting method for conditional plotting (lots of nested ternary operators and an interesting method for conditions).
 
-#Design Achievements
+# Design Achievements
 Color mapping was easier in some languages than in others, so I forewent consistency and  used different methods that I found
 to map the strings to colors (python was the easiest, gnuplot was the hardest). As for circle size, I had trouble finding how
 to do conditional variable results in certain languages, so I used basic a basic formula in some cases (floor(weight / 1000) * n),
