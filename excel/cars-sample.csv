@@ -1,8 +1,8 @@
 ,Car,Manufacturer,MPG,Weight,bmw,#f1aba6,ford,#c8c988,honda,#8dd7b7,mercedes,#8cd1f4,toyota,#eeb4f4
 5,torino,ford,17,3449,mpg,Weight,mpg,Weight,mpg,Weight,mpg,Weight,mpg,Weight
 6,galaxie 500,ford,15,4341,#N/A,#N/A,15,4341,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
-13,torino (sw),ford,NA,4034,#N/A,#N/A,14,4034,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
-18,mustang boss 302,ford,NA,3353,#N/A,#N/A,29.9,3353,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+13,torino (sw),ford,14,4034,#N/A,#N/A,14,4034,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
+18,mustang boss 302,ford,19,3353,#N/A,#N/A,29.9,3353,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
 21,corona mark ii,toyota,24,2372,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,24,2372
 24,maverick,ford,21,2587,#N/A,#N/A,21,2587,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
 30,2002,bmw,26,2234,26,2234,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A
