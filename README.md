@@ -1,5 +1,6 @@
 # d3js visualization
 [link to d3vis.html page](https://jacobadamsky.github.io/a2-DataVis-5Ways/code/d3vis.html)
+<br>
 ![caption](img/d3vis.PNG)
 
 # MATLAB visualization
