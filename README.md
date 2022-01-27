@@ -55,6 +55,17 @@ understanding of ternary operators, plotting the data pretty much came down to 5
 to plot the data. I'd definitely say gnuplot could have a wide variety of applications, but I think a lot of the newer implementations
 of plotting overshadow it in terms of versatility.
 
+# Java AWT visualization
+![caption](img/java-awt.png)
+<br>
+While I had much more experience wiht Java than any of the other environments, this one was definitely the hardest to set up. Instead of
+being a dedicated graphing library, Java AWT is more of a general visualization library used to generate graphics of various types. This
+made it much harder for me to get the proper dimensions for the graph, though it did give me the most control of how everything looked.
+Being able to customize individual elements such as the hatch marks on the axes was very helpful, but also complicated the process a lot.
+Again, no modifications to the CSV file as Java was able to read it directly into an array, skipping the first row of headers. Java AWT is
+up there in versatility, but I think the process of actually getting it set up to display things how I wanted made this less of a contender
+as a graphic visualizer for future use.
+
 # Technical Achievements
 The only language I got mousing over to work in was d3 as the other languages were a lot less straight forward with their
 syntax in terms of modifying interactions with the plot. Another technical achievement was with gnuplot which used a very
