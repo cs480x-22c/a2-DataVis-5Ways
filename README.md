@@ -67,7 +67,7 @@ up there in versatility, but I think the process of actually getting it set up t
 as a graphic visualizer for future use.
 
 # Flourish visualization
-![caption](img/flourish.png)
+![caption](img/flourish.PNG)
 <br>
 Flourish was probably the quickest to set up, only taking about 10 minutes to get done. After importing the data, you can select what columns
 correlate to specific attributes of the plot, such as size and color (color was able to take a string name like "ford" and give a consistent
