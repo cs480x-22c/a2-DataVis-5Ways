@@ -66,6 +66,18 @@ Again, no modifications to the CSV file as Java was able to read it directly int
 up there in versatility, but I think the process of actually getting it set up to display things how I wanted made this less of a contender
 as a graphic visualizer for future use.
 
+# Flourish visualization
+![caption](img/flourish.png)
+<br>
+Flourish was probably the quickest to set up, only taking about 10 minutes to get done. After importing the data, you can select what columns
+correlate to specific attributes of the plot, such as size and color (color was able to take a string name like "ford" and give a consistent
+color). I did have trouble getting the size difference between weight classes to be noticeable, but I'm not sure if this was a problem with my
+methodology or with the websites functionality. This was the only method that required me to modify the CSV file (made a function in Excel to 
+create a new column for size classes) as you couldnt modify the input data and there were no conditionals (at least not that I found). In terms
+of simplicity, this definitely is a great way to visualize data and I could see it being used for many applications (economics, sports statistics,
+etc), but it lacks the complexity that other methods have. For me, that means it's best suited for basic consumers and not data analysts or
+developers.
+
 # Technical Achievements
 The only language I got mousing over to work in was d3 as the other languages were a lot less straight forward with their
 syntax in terms of modifying interactions with the plot. Another technical achievement was with gnuplot which used a very
