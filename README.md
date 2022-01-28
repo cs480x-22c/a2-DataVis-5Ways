@@ -11,7 +11,7 @@ of control you have over the visualization is very helpful. No modification to t
 though I did at first modify the CSV file before I got a better understanding of the syntax.
 
 # MATLAB visualization
-![caption](img/matlab.png)
+![caption](img/matlab.PNG)
 <br>
 Just like in d3, the syntax for plotting with MATLAB was very straight forward, only taking about 3 lines
 of code to just get a basic scatter plot set up. As for the color mapping, I'm sure I chose a very unsophisticated
