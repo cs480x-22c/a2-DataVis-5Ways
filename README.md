@@ -1,142 +1,93 @@
-# 02-DataVis-5ways
+# d3js visualization
+[link to d3vis.html page](https://jacobadamsky.github.io/a2-DataVis-5Ways/code/d3vis.html)
+<br>
+![caption](img/d3vis.png)
+<br>
+The straight-forward syntax made d3 easy to implement, but it wasn't the most code-efficient option.
+Conditional plotting was a lot simpler here as well, but that may have just been me overcomplicating 
+it in other languages. As for uses of this tool, it has a vast number of applications. Almost any CSV
+file (or other file) can be easily plotted in d3 in a relatively short amount of time, and the amount
+of control you have over the visualization is very helpful. No modification to the CSV file was necessary,
+though I did at first modify the CSV file before I got a better understanding of the syntax.
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+# MATLAB visualization
+![caption](img/matlab.PNG)
+<br>
+Just like in d3, the syntax for plotting with MATLAB was very straight forward, only taking about 3 lines
+of code to just get a basic scatter plot set up. As for the color mapping, I'm sure I chose a very unsophisticated
+way of doing it, but I for-looped through the cells in the manufacturer column and added entries to a colormap which
+I then used in the scatter() function. Something like in d3 where I essentially made a dictionary would have been a
+much more efffective method of coloring the plot, but this was the first thing that came to mind without doing much
+research. I tried using the ternary operator inside of the for loop to simplify down some of the code, but wasn't able
+to get it working (something I definitely want to look at again). Just like d3, no hacks to the CSV file were necessary
+to plot the data. With more learning, I could see MATLAB being useful in a lot of the same scenarios as d3, though I 
+think I would choose d3 over all of the other options.
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+# MatPlotLIB visualization
+![caption](img/matplotlib.png)
+<br>
+Using matplotlib in python wasn't as straight-forward for getting things to look how I wanted at first. A basic scatterplot
+with the data was fairly easy, but I was having trouble getting the conditional coloring and size to work. When I realized
+that I could plot individual points on the scatterplot, that made things a lot easier as I was able to access individual
+data entries and modify them as needed. Color-mapping was a lot easier here compared to the other languages as numpy and
+Python have an effective way of mapping an array of strings to colors. While it was relatively easy to set up, I'm not a big
+fan of Python, so I don't think I'd see myself using this over any of the other options. No hacks to the CSV file were necessary
+to plot the data. As for use cases, I think that matplotlib (pyplot) is almost as versatile as d3, but I prefer the syntax and 
+methodology of d3 more.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+# ggplot2 visualization
+![caption](img/ggplot2.PNG)
+<br>
+I forewent the data-piping method that was displayed in class, though ggplot2 was still very simple to use. What was nicest about
+color-mapping here was that you could just straight up input a string for a color and the language would do its own conversion to 
+an actual color value. Another nice aspect was that there are ifelse statements in R that let you have conditional results directly
+inside of the plotting, which wasn't possible (at least from what I found) in all the other languages. This was probably the easiest
+language to set up, but with that ease, you likely lose the ability to customize certain things. No hacks to the CSV file were necessary
+to plot the data. This language is a close second to d3 for me, so it definitely has a wide variety of applications based on its ease 
+of use and customizability.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# gnuplot visualization
+![caption](img/gnuplot.png)
+<br>
+I had no clue what language to pick for my last one, so I had a friend randomly pick one for me. At first, I thought gnuplot was going
+to be a hassle to set up, but it wasn't as bad as I expected. After understanding the syntax for column selection and getting a better
+understanding of ternary operators, plotting the data pretty much came down to 5 lines of code. No hacks to the CSV file were necessary
+to plot the data. I'd definitely say gnuplot could have a wide variety of applications, but I think a lot of the newer implementations
+of plotting overshadow it in terms of versatility.
 
-Your goal is to use 5 different tools to make the following chart:
+# Java AWT visualization
+![caption](img/java-awt.png)
+<br>
+While I had much more experience wiht Java than any of the other environments, this one was definitely the hardest to set up. Instead of
+being a dedicated graphing library, Java AWT is more of a general visualization library used to generate graphics of various types. This
+made it much harder for me to get the proper dimensions for the graph, though it did give me the most control of how everything looked.
+Being able to customize individual elements such as the hatch marks on the axes was very helpful, but also complicated the process a lot.
+Again, no modifications to the CSV file as Java was able to read it directly into an array, skipping the first row of headers. Java AWT is
+up there in versatility, but I think the process of actually getting it set up to display things how I wanted made this less of a contender
+as a graphic visualizer for future use.
 
-![ggplot2](img/ggplot2.png)
+# Flourish visualization
+![caption](img/flourish.PNG)
+<br>
+![caption](img/flourish2.PNG)
+<br>
+Flourish was probably the quickest to set up, only taking about 10 minutes to get done. After importing the data, you can select what columns
+correlate to specific attributes of the plot, such as size and color (color was able to take a string name like "ford" and give a consistent
+color). I did have trouble getting the size difference between weight classes to be noticeable, but I'm not sure if this was a problem with my
+methodology or with the websites functionality. This was the only method that required me to modify the CSV file (made a function in Excel to 
+create a new column for size classes) as you couldnt modify the input data and there were no conditionals (at least not that I found). In terms
+of simplicity, this definitely is a great way to visualize data and I could see it being used for many applications (economics, sports statistics,
+etc), but it lacks the complexity that other methods have. For me, that means it's best suited for basic consumers and not data analysts or
+developers.
 
-These features should be preserved as much as possible in your replication:
+# Technical Achievements
+The only language I got mousing over to work in was d3 as the other languages were a lot less straight forward with their
+syntax in terms of modifying interactions with the plot (some methods had built-in mouseover). Another technical achievement was with gnuplot 
+which used a very interesting method for conditional plotting (lots of nested ternary operators and an interesting method for conditions). Lastly,
+I was able to get plotting done with seven different methods (only used 1 that didn't use any coding, Flourish).
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+# Design Achievements
+Color mapping was easier in some languages than in others, so I forewent consistency and  used different methods that I found
+to map the strings to colors (python was the easiest, gnuplot was the hardest). As for circle size, I had trouble finding how
+to do conditional variable results in certain languages, so I used basic a basic formula in some cases (floor(weight / 1000) * n),
+with n being some arbitrary number depending on how large the language plotted the data.
