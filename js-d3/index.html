@@ -5,11 +5,23 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
   </head>
   <body>
-    <div id="canvas">
-      <svg width="100" height="150" class="chart"></svg>
+    <div id="chart">
+      <svg width="100" height="150"></svg>
     </div>
     <script>
-      console.log(d3); // test if d3 is loaded
+      console.log(d3);
+
+      d3.csv("/cars-sample.csv", d3.autoType).then(function (data) {
+        d3.select("body")
+          .selectAll("div")
+          .data(data)
+          .enter()
+          .append("div")
+          .style("width", function (d) {
+            return d.amount * 40 + "px";
+          })
+          .style("height", "15px");
+      });
     </script>
   </body>
 </html>
