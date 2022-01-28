@@ -9,7 +9,7 @@ import * as d3 from 'D3'
 const margin = {
     top: 10,
     right: 30,
-    bottom: 30,
+    bottom: 60,
     left: 60
 }
 
@@ -58,6 +58,20 @@ d3.csv("./cars-sample.csv").then(data =>
     svg.append("g")
         .call(d3.axisLeft(y))
 
+    //Axis Labelss
+    svg.append('text')
+        .attr('text-anchor', 'middle')
+        .attr('x', sizes.width / 2 )
+        .attr('y', margin.top + sizes.height + 20)
+        .text("Weight")
+
+    svg.append('text')
+        .attr('text-anchor', 'middle')
+        .attr('transform', 'rotate(-90)')
+        .attr('y', -margin.left + 20)
+        .attr('x', -margin.top - sizes.height/2)
+        .text('MPG')
+    // Adding Data 
     const color = d3.scaleOrdinal()
         .domain(["bmw", "ford", "honda", "mercedes", "toyota"])
         .range(["#FA252580", "#939E0080", "#44E39380", "#29E7F580" , "#F73FFA80"])
