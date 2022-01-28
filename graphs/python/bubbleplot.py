@@ -1,4 +1,3 @@
-# STARTER: https://plotly.com/python/bubble-charts/
 import pandas as pd
 import plotly.express as px
 

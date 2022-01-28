@@ -1,7 +1,6 @@
 import "./style.css"
 import * as d3 from 'D3'
 
-// Starter Code https://www.d3-graph-gallery.com/graph/scatter_grouped.html
 /**
  * Graph Sizes
  */
