@@ -69,6 +69,8 @@ as a graphic visualizer for future use.
 # Flourish visualization
 ![caption](img/flourish.PNG)
 <br>
+![caption](img/flourish2.PNG)
+<br>
 Flourish was probably the quickest to set up, only taking about 10 minutes to get done. After importing the data, you can select what columns
 correlate to specific attributes of the plot, such as size and color (color was able to take a string name like "ford" and give a consistent
 color). I did have trouble getting the size difference between weight classes to be noticeable, but I'm not sure if this was a problem with my
