@@ -77,10 +77,32 @@ const scene = new THREE.Scene()
 /**
  * Sizes
  */
- const sizes = {
-    width: 800,
-    height: 600
+
+const margins = {
+    x: window.innerWidth * .2,
+    y: window.innerHeight * .2
 }
+
+ const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+
+window.addEventListener('resize', () => {
+    // Update sizes
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    margins.x = window.innerWidth * .2,
+    margins.y = window.innerHeight * .2
+
+    // Update Camera
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height)
+})
 
 /**
  * Axis Information
@@ -109,12 +131,12 @@ const scene = new THREE.Scene()
 
  const getHorizontalCord = (weight) => 
  {
-    return getCord(weight, horizontalAxis, sizes.width)
+    return getCord(weight, horizontalAxis, sizes.width - margins.x)
  }
 
  const getVerticleCord = (mpg) => 
  {
-    return getCord(mpg, verticleAxis, sizes.height)
+    return getCord(mpg, verticleAxis, sizes.height - margins.y)
 
  }
 
@@ -201,26 +223,26 @@ fontLoader.load(
             {
                 const text = fastTextCreator("|\n" + majorTick.toString())
                 text.position.x = getHorizontalCord(majorTick)
-                text.position.y = sizes.height / -2 - 50
+                text.position.y = sizes.height / -2 + margins.y / 2
                 scene.add(text)
             })
         
         verticleAxis.majorTicks.forEach(majorTick =>
             {
                 const text = fastTextCreator(majorTick.toString()+ "-")
-                text.position.x = sizes.width / -2 - 50
+                text.position.x = sizes.width / -2 + margins.x /3
                 text.position.y = getVerticleCord(majorTick)
                 scene.add(text)
             })
 
         const mpgLabel = fastTextCreator("M\nP\nG")
-        mpgLabel.position.x = sizes.width / -2 - 100
+        mpgLabel.position.x = sizes.width / -2 + margins.x / 4
         mpgLabel.position.y = 0
         scene.add(mpgLabel)
 
         const weightLabel = fastTextCreator("Weight")
         weightLabel.position.x = 0
-        weightLabel.position.y = sizes.height/-2 - 110
+        weightLabel.position.y = sizes.height/-2 + margins.y /5
         scene.add(weightLabel)
     }
 )

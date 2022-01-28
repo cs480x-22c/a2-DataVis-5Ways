@@ -12,3 +12,7 @@ Website: https://travisthomp.github.io/a2-DataVis-5Ways/graphs/d3/dist/index.htm
 # Google Sheets
 ![D3](images/googlesheets.PNG)
 
+# Flourish
+![Floruish](images/flourish.PNG)
+
+Code on flourish: https://public.flourish.studio/visualisation/8550400/
