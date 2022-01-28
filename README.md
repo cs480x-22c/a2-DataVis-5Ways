@@ -80,8 +80,9 @@ developers.
 
 # Technical Achievements
 The only language I got mousing over to work in was d3 as the other languages were a lot less straight forward with their
-syntax in terms of modifying interactions with the plot. Another technical achievement was with gnuplot which used a very
-interesting method for conditional plotting (lots of nested ternary operators and an interesting method for conditions).
+syntax in terms of modifying interactions with the plot (some methods had built-in mouseover). Another technical achievement was with gnuplot 
+which used a very interesting method for conditional plotting (lots of nested ternary operators and an interesting method for conditions). Lastly,
+I was able to get plotting done with seven different methods (only used 1 that didn't use any coding, Flourish).
 
 # Design Achievements
 Color mapping was easier in some languages than in others, so I forewent consistency and  used different methods that I found
