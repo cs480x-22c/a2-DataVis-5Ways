@@ -184,7 +184,7 @@ fontLoader.load(
                 {
                     font: font,
                     size: 20,
-                    height: 0.2,
+                    height: 2.5,
                     curveSegments: 10,
                     bevelEnabled: true,
                     bevelThickness: 0.03,
@@ -205,14 +205,23 @@ fontLoader.load(
                 scene.add(text)
             })
         
-            verticleAxis.majorTicks.forEach(majorTick =>
-                {
-                    const text = fastTextCreator(majorTick.toString()+ "-")
-                    text.position.x = sizes.width / -2 - 50
-                    text.position.y = getVerticleCord(majorTick)
-                    scene.add(text)
-                })
-        
+        verticleAxis.majorTicks.forEach(majorTick =>
+            {
+                const text = fastTextCreator(majorTick.toString()+ "-")
+                text.position.x = sizes.width / -2 - 50
+                text.position.y = getVerticleCord(majorTick)
+                scene.add(text)
+            })
+
+        const mpgLabel = fastTextCreator("M\nP\nG")
+        mpgLabel.position.x = sizes.width / -2 - 100
+        mpgLabel.position.y = 0
+        scene.add(mpgLabel)
+
+        const weightLabel = fastTextCreator("Weight")
+        weightLabel.position.x = 0
+        weightLabel.position.y = sizes.height/-2 - 110
+        scene.add(weightLabel)
     }
 )
 
@@ -223,7 +232,7 @@ fontLoader.load(
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 10000)
 
-camera.position.z = 500
+camera.position.z = 550
 camera.lookAt(new THREE.Vector3(0, 500, 500))
 
 
