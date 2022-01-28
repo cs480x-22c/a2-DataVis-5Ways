@@ -70,7 +70,7 @@ public class DrawGraph extends JPanel {
 		for (int j = 0; j < SIZE; j++) {
 			double x = ((reader.Weight.get(j) * 3 / 10) - 355) - BORDER_GAP;
 			double y = 730 - (reader.MPG.get(j) * 15);
-			Shape circle = new Ellipse2D.Double(x, y, reader.Size.get(j) / 10, reader.Size.get(j) / 10);
+			Shape circle = new Ellipse2D.Double(x, y, reader.Size.get(j) / 200, reader.Size.get(j) / 200);
 			g2.fill(circle);
 			g2.setColor((reader.Color.get(j) == "red") ? new Color(255, 0, 0, 122)
 					: (reader.Color.get(j) == "green") ? new Color(0, 255, 0, 122)
