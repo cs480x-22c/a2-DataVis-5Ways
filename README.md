@@ -57,7 +57,7 @@ This tool was something popular in workplaces but far from my favroite, Microsof
 
 # Tableau
 
-Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
+![tabCars](img/carsTableau.png)
 
 - Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
