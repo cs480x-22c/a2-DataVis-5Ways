@@ -26,7 +26,7 @@ ggplot2 is a charting library for the statistical langauge R. I used the geom_po
 
 ![ggplot](img/r-ggplot.PNG)
 
-# excel
+# Excel
 
 Excel was the only non language-based tool that I used. It was easy to create a basic scatterplot but difficult to add my own customizations beyond that. For example, to map color to manufacturer, I had to create pairs of dummy columns for each value of the manufacturer column, then go into the settings and specify which columns to plot against which. I was able to create a bubble chart instead of a standard scatterplot in order to get the size mappings. Using Excel I was not able to set the values of the tick marks. I found documentation on Microsoft's website on how to do this but when I followed the instructions the interval settings were missing from my version. Overall, I think that Excel is a good tool if you want to create some basic plots, but if you want to add more customization it may be better to use something more flexible.
 
