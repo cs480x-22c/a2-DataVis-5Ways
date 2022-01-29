@@ -117,6 +117,8 @@ Interestingly, according to the documentation, Vega-Lite uses d3 behind the scen
 
 When recreating the chart, I used custom colors to match the original, but there are a number of color presets that can be used.
 
+I was unable to match the circle size (mine are generally bigger), and Vega-Lite doesn't support having extra gridlines between axis labels.
+
 ## Technical Achievements
 - **Probably none**
 
