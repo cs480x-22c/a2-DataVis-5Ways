@@ -3,18 +3,7 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
 ![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
 
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
 - Scales: Note the scales do not start at 0.
@@ -98,26 +87,11 @@ Other Requirements
 - Description of the Design achievements you attempted with this visualization.
   - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
 
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
 **NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
 # R + ggplot2 + R Markdown
+
+<didn't change the sample text>
 
 R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.
@@ -133,10 +107,18 @@ While it takes time to find the correct documentation, these functions made the 
 
 (And so on...)
 
+# Vega-Lite
+
+"Vega-Lite is a high-level grammar of interactive graphics", according to Vega-Lite's website.
+
+It allows us to easily create charts in JSON. The object structure can match data structures to various properties of the markers, and legends and axes are automatically created for each mapping.
+
+Interestingly, according to the documentation, Vega-Lite uses d3 behind the scenes.
+
+When recreating the chart, I used custom colors to match the original, but there are a number of color presets that can be used.
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Probably none**
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Probably none**
