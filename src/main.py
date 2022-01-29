@@ -5,7 +5,7 @@ import seaborn as sns
 
 def main():
     plt.style.use('ggplot')
-    mtcars = pd.read_csv("cars-sample.csv")
+    mtcars = pd.read_csv("../cars-sample.csv")
     cmap = {"bmw": "#f3b7b4",
             "ford": "#cdce8e",
             "honda": "#95d9bb",
