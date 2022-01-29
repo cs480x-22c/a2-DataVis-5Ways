@@ -91,11 +91,10 @@ Other Requirements
 
 # R + ggplot2 + R Markdown
 
-<didn't change the sample text>
-
-R is a language primarily focused on statistical computing.
+According to the original README.md for this assignment:
+[R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.]
 
 To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
 
