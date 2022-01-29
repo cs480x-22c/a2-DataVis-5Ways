@@ -98,6 +98,12 @@ R Markdown is a document format that compiles to HTML or PDF and allows you to i
 
 I have found trying to figure out how to do stuff in R frustrating, but since the original chart was created in ggplot2, I was able to recreate it almost identically with minimal code.
 
+I borrowed code from the following sources:
+- This class: https://wpi0-my.sharepoint.com/personal/ltharrison_wpi_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fltharrison%5Fwpi%5Fedu%2FDocuments%2FSpring%202022%2Fcs480x%2D22c%2Fvid%2F2022%2D01%2D24%2013%2E03%2E11%20cs480x%2D22c%2Fggplot2demoinclass%2Ezip&parent=%2Fpersonal%2Fltharrison%5Fwpi%5Fedu%2FDocuments%2FSpring%202022%2Fcs480x%2D22c%2Fvid%2F2022%2D01%2D24%2013%2E03%2E11%20cs480x%2D22c
+- https://www.datanovia.com/en/blog/how-to-remove-legend-from-a-ggplot/
+- https://statisticsglobe.com/set-legend-alpha-of-ggplot2-plot-in-r
+- https://www.tutorialspoint.com/how-to-import-csv-file-data-from-github-in-r
+
 ![ggplot](ggplot/vis_ggplot2.png)
 
 # d3...
