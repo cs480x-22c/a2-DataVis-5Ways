@@ -21,14 +21,13 @@
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      d3.csv("cars-sample.csv", function (data) {
-        data = data.filter(function (d) {
-          if (isNaN(d.MPG)) {
-            return false;
+      var data = d3.csv("cars-sample.csv").then(function (data) {
+        var carsData = [];
+        for (i = 0; i < data.length; i++) {
+          if (data[i].MPG != "NA") {
+            carsData.push(data[i]);
           }
-          d.value = parseInt(d.MPG, 10);
-          return true;
-        });
+        }
 
         var x = d3.scaleLinear().domain([1000, 6000]).range([0, width]);
         svg
