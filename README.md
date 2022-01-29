@@ -3,7 +3,7 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-![ggplot2](img/ggplot2.png)
+![sampleggplot](img/ggplot2.png)
 
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
 - Scales: Note the scales do not start at 0.
@@ -101,7 +101,7 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
 
-![ggplot2](img/ggplot2.png)
+![sampleggplot](img/ggplot2.png)
 
 # d3...
 
@@ -118,6 +118,8 @@ Interestingly, according to the documentation, Vega-Lite uses d3 behind the scen
 When recreating the chart, I used custom colors to match the original, but there are a number of color presets that can be used.
 
 I was unable to match the circle size (mine are generally bigger), and Vega-Lite doesn't support having extra gridlines between axis labels.
+
+![vegalite](vega-lite/visualization.png)
 
 ## Technical Achievements
 - **Probably none**
