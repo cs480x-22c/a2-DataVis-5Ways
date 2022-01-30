@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Load color scale -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<svg width=700 height=600></svg>
+
+<script>
+
+    // was trying to get a background but it wouldn't appear
+    d3.select('svg')
+        .attr("y", 0)
+        .attr("width", 400)
+        .attr("height", 400)
+        .attr("fill", "grey");
+
+        // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 20, bottom: 30, left: 50},
+        width = 550 - margin.left - margin.right,
+        height = 475 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+    //Read the data
+    d3.csv("cars-sample.csv", function(data) {
+    
+      // Add X axis
+      var x = d3.scaleLinear()
+        .domain([1500, 5000])
+        .range([ 0, width ]);
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+      // X Axis Label
+      svg.append("text")      
+        .attr("x", 225 )
+        .attr("y",  465 )
+        .style("text-anchor", "middle")
+        .text("Weight");
+    
+      // Add Y axis
+      var y = d3.scaleLinear()
+        .domain([10, 45])
+        .range([ height, 0]);
+      svg.append("g")
+        .call(d3.axisLeft(y));
+
+      // Y Axis Label
+      svg.append('text')
+        .attr("x", 0)
+        .attr("y", 200)
+        .attr("transform", "translate(-200, 225) rotate(-90)")
+        .text("MPG");
+    
+      // Add a scale for bubble size
+      var z = d3.scaleLinear()
+        .domain([1000, 5000])
+        .range([ 4, 12]);
+    
+      // Add a scale for bubble color
+      var myColor = d3.scaleOrdinal()
+        .domain(["bmw", "ford", "honda", "mercedes", "toyota"])
+        .range(d3.schemeSet1);
+    
+      // Add dots
+      svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+          .attr("cx", function (d) { return x(d.Weight); } )
+          .attr("cy", function (d) { return y(d.MPG); } )
+          .attr("r", function (d) { return z(d.Weight); } )
+          .style("fill", function (d) { return myColor(d.Manufacturer); } )
+          .style("opacity", "0.5")
+          .attr("stroke", "black")
+          .style("stroke-width", "2px")
+    
+      })
+    </script>
