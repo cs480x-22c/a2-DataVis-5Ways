@@ -1,5 +1,3 @@
-# 02-DataVis-5ways
-
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
@@ -12,6 +10,20 @@ Beware that these functions are *asynchronous*, meaning it's possible to "build"
 
 - *For web languages like d3* Don't forget to run a local webserver when you're debugging.
 See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+
+# Vega-Lite
+
+"Vega-Lite is a high-level grammar of interactive graphics", according to Vega-Lite's website.
+
+It allows us to easily create charts in JSON. The object structure can match data structures to various properties of the markers, and legends and axes are automatically created for each mapping.
+
+Interestingly, according to the documentation, Vega-Lite uses d3 behind the scenes.
+
+When recreating the chart, I used custom colors to match the original, but there are a number of color presets that can be used.
+
+I was unable to match the circle size (mine are generally bigger), and Vega-Lite doesn't support having extra gridlines between axis labels.
+
+![vegalite](vega-lite/visualization.png)
 
 # R + ggplot2 + R Markdown
 
@@ -29,24 +41,6 @@ I borrowed code from the following sources:
 - https://www.tutorialspoint.com/how-to-import-csv-file-data-from-github-in-r
 
 ![ggplot](ggplot/vis_ggplot2.png)
-
-# d3...
-
-(And so on...)
-
-# Vega-Lite
-
-"Vega-Lite is a high-level grammar of interactive graphics", according to Vega-Lite's website.
-
-It allows us to easily create charts in JSON. The object structure can match data structures to various properties of the markers, and legends and axes are automatically created for each mapping.
-
-Interestingly, according to the documentation, Vega-Lite uses d3 behind the scenes.
-
-When recreating the chart, I used custom colors to match the original, but there are a number of color presets that can be used.
-
-I was unable to match the circle size (mine are generally bigger), and Vega-Lite doesn't support having extra gridlines between axis labels.
-
-![vegalite](vega-lite/visualization.png)
 
 # gnuplot
 
@@ -81,6 +75,10 @@ Other settings, like changing the background color and adding transparency, are 
 Like Vega-Lite and ggplot, Excel uses builtin color palletes, but I used a custom pallete to match the original graph.
 
 ![excel](excel/vis_excel.png)
+
+# d3
+
+/not done yet/
 
 ## Technical Achievements
 - **Probably none**
