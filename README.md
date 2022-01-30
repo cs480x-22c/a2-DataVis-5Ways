@@ -1,7 +1,10 @@
 # 02-DataVis-5ways
 ### Kaamil Lokhandwala
 
-I had fun learning in this project! Vega-lite, python, and google sheets are new for me!
+I had fun learning in this project! Vega-lite, python, and google sheets are new for me! 
+
+This is the original graph for reference.
+![ggplot2](img/ggplot2.png)
 
 # ThreeJS
 ![threejs](img/threejs.png)
