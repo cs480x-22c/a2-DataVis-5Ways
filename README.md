@@ -2,8 +2,6 @@
 
 Assignment 2 - Data Visualization, 5 Ways  
 Jacob Bissonette
-I just want to give a fair warning and apology, I'm still not 100% certain about how to properly use everything in github, so my markdowns etc. might be sloppy but I've been Googling as much as possible so let me know if there's ever anything I can fix.
-
 
 # Python & Matplotlib
 I've used Python in several courses and am using it right now for MQP as well. It is my favorite language to program in and I feel most comfortable with it. Matplotlib is a plottling library for Python, and I believe this is the first time I've truly used it, I can't recall using it in a prior class honestly. But, I know enough Python I wasn't too worried and it was a little tricky trying to figure out the legends and most of all the colors for the bubble chart. I used the Matplotlib API to better understand what data needed to be input, and used a kanoki article to put the colors into a dictionary with the manufacturers so they would plot correctly.
