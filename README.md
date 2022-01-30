@@ -36,6 +36,11 @@ References: https://www.datanovia.com/en/blog/how-to-remove-legend-from-a-ggplot
 
 
 # d3
+This class is the first time I've used d3. I think making the visualization on this was probably my least favorite, both because of experience and what it takes to make a solid bubble chart. I was struggling to make the legends and in the end left them omitted for this visualization because I couldn't find a proper way to do so. I was also unsure how to make the colors match as in the other plots. The background was another difficulty so I changed each circle to have a black outline. I found an article online to help make a bubble chart since I wouldn't really know where to begin from scratch and modified it from there so it made much more sense that way.
+
+References: https://www.d3-graph-gallery.com/graph/bubble_color.html
+
+![d3](img/d3-sample-cars.png)
 
 
 ## Technical Achievements
