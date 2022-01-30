@@ -13,13 +13,21 @@
       var vlSpec = {
         data: {url: "../cars-sample.csv"},
         mark: {type: "circle"},
+        width: 600,
+        height: 500,
         encoding: {
           x: {
             field: "Weight",
-            type: "quantitative"
+            type: "quantitative",
+            axis: {values: [2000, 3000, 4000, 5000]}
           },
           y: {
             field: "MPG",
+            type: "quantitative",
+            axis: {values: [10, 20, 30, 40]}
+          },
+          size: {
+            field: "Weight",
             type: "quantitative"
           }
         }
