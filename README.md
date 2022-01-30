@@ -3,7 +3,7 @@
 Assignment 2 - Data Visualization, 5 Ways  
 Jacob Bissonette
 
-# Python & Matplotlib
+# Python + Matplotlib
 I've used Python in several courses and am using it right now for MQP as well. It is my favorite language to program in and I feel most comfortable with it. Matplotlib is a plottling library for Python, and I believe this is the first time I've truly used it, I can't recall using it in a prior class honestly. But, I know enough Python I wasn't too worried and it was a little tricky trying to figure out the legends and most of all the colors for the bubble chart. I used the Matplotlib API to better understand what data needed to be input, and used a kanoki article to put the colors into a dictionary with the manufacturers so they would plot correctly.
 
 References: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/, https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
@@ -27,8 +27,8 @@ References: https://help.tableau.com/current/pro/desktop/en-us/formatting_editax
 ![tableau](img/tableau-sample-cars.png)
 
 
-# R & ggplot
-I used R in the stats classes and DS2010 but did not use ggplot. ggplot is a data vis package for R, and after using it, I feel like this one was the more feasible and neatly oriented data vis tool/library that I used. It used colors that don't clash too much, had a nice background to make it easier to read, and the legends were nead and easy to interpret. Along with that, the code is pretty simple. The one thing I did have to look up was how to remove a specific legend from the image, because the legend for the alpha value came up and that wasn't really an important aspect that needed a legend.
+# R + ggplot
+I used R in the stats classes and DS2010 but did not use ggplot. ggplot is a data vis package for R, and after using it, I feel like this one was the more feasible and neatly oriented data vis tool/library that I used. It used colors that don't clash too much, had a nice background to make it easier to read, and the legends were nead and easy to interpret. Along with that, the code is pretty simple. I also feel like the colors it chose would still be easy to distinguish from each other if the viewer was colorblind. My dad is very color blind, where any shade of red/green/pink/purple and the likes is different shades of grey, and it seems like R chose colors that aren't similar enough where that would be to big of an issue. The one thing I did have to look up was how to remove a specific legend from the image, because the legend for the alpha value came up and that wasn't really an important aspect that needed a legend.
 
 References: https://www.datanovia.com/en/blog/how-to-remove-legend-from-a-ggplot/
 
@@ -39,8 +39,7 @@ References: https://www.datanovia.com/en/blog/how-to-remove-legend-from-a-ggplot
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Matplotlib + Pandas**: I'm not sure if this would count per se, but I never really liked other methods of loading/reading csv's to python, so I created a python file within the folder with the csv and used pandas to read it. 
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Matplotlib Fun**: I know it probably wasn't the most feasible way, and definitely wouldn't be with more categories, but I felt that using a dictionary to associate manufactureres with a color for the plot was a neat way to handle it. Also, when determining size of the circles in matplotlib, I started with dividing the weights by 10 and then played around with it until I felt it was a reasonable visualization, so that is why the Weight category is divided by 20 for size.
