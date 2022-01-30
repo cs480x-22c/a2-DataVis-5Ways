@@ -40,7 +40,7 @@ This class is the first time I've used d3. I think making the visualization on t
 
 References: https://www.d3-graph-gallery.com/graph/bubble_color.html
 
-![d3](img/d3-sample-cars.png)
+![d3](img/d3-sample-cars.PNG)
 
 
 ## Technical Achievements
