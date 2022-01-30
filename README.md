@@ -123,7 +123,7 @@ Furthermore, it added about 400 FALSE/FALSE datapoints (which were artifacts of 
 
 Like Vega-Lite and ggplot, Excel uses builtin color palletes, but I used a custom pallete to match the original graph.
 
-excel(excel/vis_excel.png)
+![excel](excel/vis_excel.png)
 
 ## Technical Achievements
 - **Probably none**
