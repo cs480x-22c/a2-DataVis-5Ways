@@ -45,6 +45,7 @@ References: https://www.d3-graph-gallery.com/graph/bubble_color.html
 
 ## Technical Achievements
 - **Matplotlib + Pandas**: I'm not sure if this would count per se, but I never really liked other methods of loading/reading csv's to python, so I created a python file within the folder with the csv and used pandas to read it. 
+- **Tableau**: This probably wasn't the most difficult thing to do with tableau, but I've never used this before and thought this assignment gave me a great opportunity and reason to try it out, and was happy with the resulting graph.
 
 ### Design Achievements
 - **Matplotlib Fun**: I know it probably wasn't the most feasible way, and definitely wouldn't be with more categories, but I felt that using a dictionary to associate manufactureres with a color for the plot was a neat way to handle it. Also, when determining size of the circles in matplotlib, I started with dividing the weights by 10 and then played around with it until I felt it was a reasonable visualization, so that is why the Weight category is divided by 20 for size.
