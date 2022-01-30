@@ -22,38 +22,6 @@ Be sure to note where these deviate.
 
 Improvements are also welcome as part of Technical and Design achievements.
 
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
 Tips
 ---
 
@@ -136,7 +104,26 @@ In addition to the official documentation (http://gnuplot.info/docs_5.4/Gnuplot_
 - https://tipsfordev.com/in-gnuplot-how-can-i-plot-the-sum-of-two-columns-when-i-m-plotting-by-header-name
 - https://courses.physics.illinois.edu/phys466/sp2013/comp_info/gnuplot.html (for how to load scripts)
 
+There are ways to use gnuplot online; however, with the way I installed it, it doesn't support using online files. You will need to put gnuplot.script and cars-sample.csv in the same folder to get the code to run.
+
 ![gnuplot](gnuplot/vis_gnuplot.png)
+
+# Excel
+
+Excel is a part of Microsoft Office, and deals with spreadsheets.
+
+Among its features is the ability to create charts and graphs.
+
+I have already learned a large number of Excel's features due to having previously taken a course in Office, and so it didn't take that long to create the chart.
+
+Excel doesn't support mapping a data series to color; however, because the data series that was mapped to color was categorical, I was able to use it to filter the data into 5 groups, each of which I graphed using a different color.
+
+Excel also doesn't support mapping a data series to size, nor changing the spacing of axis ticks or gridlines.
+Furthermore, it added about 400 FALSE/FALSE datapoints (which were artifacts of my filtering method) to the graph at (0,0), forcing it to include the origin.
+
+Like Vega-Lite and ggplot, Excel uses builtin color palletes, but I used a custom pallete to match the original graph.
+
+![excel](excel/vis_excel.png)
 
 ## Technical Achievements
 - **Probably none**
