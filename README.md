@@ -124,6 +124,20 @@ I was unable to match the circle size (mine are generally bigger), and Vega-Lite
 
 ![vegalite](vega-lite/visualization.png)
 
+# gnuplot
+
+"Gnuplot is a portable command-line driven graphing utility for ... many ... platforms."
+ 
+Gnuplot is at least as beginner unfriendly as R, and Google was much less helpful for finding answers as it was for R. As a result, I gave up before attempting to add the grid or legends.
+
+In addition to the official documentation (http://gnuplot.info/docs_5.4/Gnuplot_5_4.pdf), I consulted these sources:
+- https://stackoverflow.com/questions/29071421/gnuplot-plotting-points-with-color-based-iris-data
+- https://stackoverflow.com/questions/14871272/plotting-using-a-csv-file
+- https://tipsfordev.com/in-gnuplot-how-can-i-plot-the-sum-of-two-columns-when-i-m-plotting-by-header-name
+- https://courses.physics.illinois.edu/phys466/sp2013/comp_info/gnuplot.html (for how to load scripts)
+
+![gnuplot](gnuplot/vis_gnuplot.png)
+
 ## Technical Achievements
 - **Probably none**
 
