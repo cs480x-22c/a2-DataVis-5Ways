@@ -118,8 +118,8 @@ I have already learned a large number of Excel's features due to having previous
 
 Excel doesn't support mapping a data series to color; however, because the data series that was mapped to color was categorical, I was able to use it to filter the data into 5 groups, each of which I graphed using a different color.
 
-Excel also doesn't support mapping a data series to size, nor changing the spacing of axis ticks or gridlines.
-Furthermore, it added about 400 FALSE/FALSE datapoints (which were artifacts of my filtering method) to the graph at (0,0), forcing it to include the origin.
+Excel also doesn't support mapping a data series to size, nor transparency, nor changing the spacing of axis ticks or gridlines.
+Furthermore, it added about 400 FALSE/FALSE datapoints (which were artifacts of my filtering method) to the graph at (0,0), forcing the graph to include the origin.
 
 Like Vega-Lite and ggplot, Excel uses builtin color palletes, but I used a custom pallete to match the original graph.
 
