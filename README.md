@@ -120,6 +120,7 @@ Excel doesn't support mapping a data series to color; however, because the data 
 
 Excel also doesn't support mapping a data series to size, nor changing the spacing of axis ticks or gridlines.
 Furthermore, it added about 400 FALSE/FALSE datapoints (which were artifacts of my filtering method) to the graph at (0,0), forcing the graph to include the origin.
+Other settings, like changing the background color and adding transparency, are rather hidden.
 
 Like Vega-Lite and ggplot, Excel uses builtin color palletes, but I used a custom pallete to match the original graph.
 
