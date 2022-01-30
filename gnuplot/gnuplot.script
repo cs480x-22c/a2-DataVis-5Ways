@@ -1,0 +1,16 @@
+Brands = "ford toyota bmw honda mercedes"
+index(s) = words(substr(Brands, 0, strstrt(Brands, s)-1)) + 1
+
+set style fill solid
+set linetype 1 lc rgb "#7fcccc66"
+set linetype 2 lc rgb "#7fe577ef"
+set linetype 3 lc rgb "#7ff28885"
+set linetype 4 lc rgb "#7f75d6aa"
+set linetype 5 lc rgb "#7f5ec0f2"
+
+set key autotitle columnhead
+set datafile separator ","
+
+plot 'cars-sample.csv' using "Weight":"MPG":((column("Weight"))/100):(index(strcol("Manufacturer"))) linecolor variable with circles
+
+pause -1 "Hit any key to continue"
