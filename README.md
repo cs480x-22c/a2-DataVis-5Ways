@@ -27,6 +27,14 @@ References: https://help.tableau.com/current/pro/desktop/en-us/formatting_editax
 ![tableau](img/tableau-sample-cars.png)
 
 
+# R & ggplot
+I used R in the stats classes and DS2010 but did not use ggplot. ggplot is a data vis package for R, and after using it, I feel like this one was the more feasible and neatly oriented data vis tool/library that I used. It used colors that don't clash too much, had a nice background to make it easier to read, and the legends were nead and easy to interpret. Along with that, the code is pretty simple. The one thing I did have to look up was how to remove a specific legend from the image, because the legend for the alpha value came up and that wasn't really an important aspect that needed a legend.
+
+References: https://www.datanovia.com/en/blog/how-to-remove-legend-from-a-ggplot/
+
+![r-ggplot](img/ggplot-sample-cars.png)
+
+
 # d3
 
 
