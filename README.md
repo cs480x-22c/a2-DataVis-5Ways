@@ -1,142 +1,87 @@
-# 02-DataVis-5ways
-
-Assignment 2 - Data Visualization, 5 Ways  
+Assignment 2 - Data Visualization, 5 Ways
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
+Summary
 ---
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+For Assignment 2 in CS480X I decided to go with the following three libraries and two graphing tools:
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+1. d3 HTML and Javascript
+2. Jupyter Notebook Python Plotly
+3. R + ggplot2
+4. Flourish
+5. Vega-Lite
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+-   **Miles Gregg**
 
-I have marked a few that are strongly suggested.
+    -   GitHub: https://github.com/MilesGregg
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
+Links
 ---
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+- GitHub Repository: https://github.com/MilesGregg/a2-DataVis-5Ways
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
+d3
 ---
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+d3 is getting easier to use, since I started out using d3 to make the graph because I thought it would be the most difficult to design and make the replicate. However it wasn't that bad to implement once I got the initial design of the axis and lines of the graphs done. d3 has so much more flexibility to making the graphs though compared to the other four tools I used for this assignment. In my previous assignment I already had a graph made which for this assignment I edited the graph a lot to plot the data from the csv and to draw the circles on the graph. d3 is very customizable to make the graphs look much better with more code you have. I can defenitly see myself using d3 in the future if I were to make a website with graphs.
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+![alt text](img/d3-Graph.png)
 
-Other Requirements
+Jupyter Notebook Python Plotly
 ---
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+Jupyter Notebook Python being one of the most used programming languages has some incredible easy graphing interfaces. I usually use matplotlib for graph but I figured that I needed to explore a different plotting tool for python which I later found plotly. Plotly is a very easy to use graphing interface which takes up only a couple lines of code to parse and display your intended graph. I used pandas to read the csv locally and then graphed with plotly which was super easy to do. Plotly outputs the data graph to local host browser which displays the graph and points. You can also hover of the points in plotly which will tell you move information about a specific point. I can defenitly see me using plotly in the future becuase it is super easy to use.
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+![alt text](img/Plotly-Graph.png)
 
-GitHub Details
+R + ggplot2
 ---
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+I used R once before when I took statistics which was useful when graphing the car data. I was able to graph the data correctly only with a few lines of code. Implementing the graph was really straight forward first R has a built in csv reader to read the data and parse it correctly. R is good as visual analysis for statistical computing. Then ggplot2 is a very popular library for making really nice looking graphs in R. I made use of the documentation: https://ggplot2.tidyverse.org/reference/, to successfully make a effective graph. Everything in R was really easy to use however I had some trouble at first importing the csv data into R studio. Other than that R is a very nice programming language to make visual charts and graphs. 
 
-Grading
+![alt text](img/R-Graph.png)
+
+Flourish
 ---
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
+Flourish was a very easy software to use which had a very nice user interface with tons of options when making my graph. This software was nice to use since there was no programming involved. The very nice part of Flourish was that you could change any part of the graph which was very nice when fine tunning the graph. However it did get confusing at times on which parts to change for a specific feature on the graph. Once I got use to all of the tools it was manageable to figure out all of the needed qualifications for the needed graph. You can also see the public link to the graph here: https://public.flourish.studio/visualisation/8558801/. Flourish is a very fancy tool that lets you graph any dataset with a few simple clicks which I can see myself using again in the future.
 
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+![alt text](img/Flourish-Graph.png)
 
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
+Vega-Lite
+---
 
-# R + ggplot2 + R Markdown
+Vega-Lite was a very simple and easy to use graphing tool that is open sourced also. It uses just a simple json file to read specific graphing paraparameters to read the data and output a very nice graph from that data. Vega-Lite doesn't have a nice GUI interface like Flourish does, but the json file is easy to use. The website auto updates when you type new information into the json file. I believe this is the future graphing tool because it is very easy to use. It also allows you to import your csv data input into Vega-Lite which. The documentation for Vega-Lite is very nice to use and there is a ton of examples that you can use to model your plot off of. Vega-Lite is a great program to model a CSV file with a simple json file. I really enjoyed using this program becuase of it's live updating of the graph when changing the json file. 
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+![alt text](img/Vega-Lite-Graph.png)
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+# Achievements Description
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+## **Technical Achievement Description**
 
-![ggplot2](img/ggplot2.png)
+For the techical achievement for this assignment I was 
 
-# d3...
+- I used Jupyter Notebook to make the plotly graph in becuase it was much faster at loading the http-server to Jupyter Notebook since it also uses the web browser. I was initially using just regular old python and it takes about 10 seconds to open the web port and to create the graph. 
 
-(And so on...)
+- For the d3 graph I added a tool tip for when the user hovers over a point on the graph it will display the manufactuer, weight, and MPG of the vechicle. This text is displayed underneath the graph so the uder can see the information easily. I put it under the graph becuase if I were to put it next to the mouse cursor it would difficult to see the text with the other data points around. 
 
+- This was my first time using a online graphing interface. The two that I used (Flourish and Vega-Lite) were very nice to use because all I had to do was import the data from my csv file and then just had to make the graphs. Both of the websites also had tons of documentation and online resources avaiable for the user. This made it very easy and fast to make nice looking graphs.
 
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- I filtered out all of the N/A values inside of the given dataset. This was done using a simple filtering system to get rid of the bad values in the CSV file. 
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+## **Design Achievement Description**
+
+For the design achievement I was able to make a accurate graph for all five different types of data visualization softwares I used. There were a few design achievements that I accomplished which I thought were important to have:
+
+- I was able to recreate all of the graphs from the original one given. Specifically I followed the pre-made picture as closely as possible to follow the design requriement. 
+
+- In all of my graphs I was able to replicate the colors that were given. I was able to do this with this tool I found online called image color picker which get the HEX and RGBA value at a specfic value in the image. I used a website called: https://imagecolorpicker.com/en to get the hex and rgb values of the sample cars graph that was given. This was able to get me the values for the colors which are:
+
+    1. Ford - HEX: #d0d08d, RGB: rgba(208,208,141,255)
+    2. Toyota - HEX: #ecadf7, RGB: rgba(236,173,247,255)
+    3. BMW - HEX: #f4ada7, RGB: rgba(244,173,167,255)
+    4. Honda - HEX: #8bd7b4, RGB: rgba(139,215,180,255)
+    5. Mercedes - HEX: #8fd3f8, RGB: rgba(143,211,248,255)
+
+![alt text](img/Color-Website.png)
