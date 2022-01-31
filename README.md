@@ -22,9 +22,8 @@ D3 was less than helpful when it came to creating gridlines, so I had to forgo a
 
 # Python + Matplotlib
 
-Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+![pycar](img/pythoncar.png)
+I whipped thru the python data vis since I've used it in previous courses to vis and compare data in math. data modeling before, so Matplotlib was nothing new for me. I used the method of creating colors via importing a hex array to the colors and put the grey background and white ticks, however I couldn't move my data to over the tick lines which was not my favorite, but this is one of the faster options for small data vis.
 
 # Excel
 
