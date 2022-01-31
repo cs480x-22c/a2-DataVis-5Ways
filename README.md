@@ -59,13 +59,20 @@ Ironically, this is the library that I'm most proud of my data hack in. I wrote 
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/f526a6776d62eed9121647011bcf9b805ce7dde4/img/java%20-%20javafx.PNG)
 
 **#Technical Achievements**
+- Tried to use more than five tools (RIP JavaFX :,( )
+- Got familiar with new tools (Flourish, ggplot2, SPSS, python/matplotlib/panda, and JavaFX are all pretty new to me. Flourish and SPSS were fairly easy to figure out, JavaFX required some digging on oracle, and python/matplotlib/panda required some sanity checks and coffee breaks. I'm technically also new to HTML/d3, though I new about the majority of what I used from the last assignment (except for mouseon/mouseoff), so it doesn't really count. I still have to figure out how to do animations in d3, though)
+- The d3 graph and the Flourish graph both have interactable datapoints. I'm especially proud of the d3 interactivity, since I made it all myself :)
+- Parsed my own data when scanning in the csv file for JavaFX (once again, RIP JavaFX :,( )
+- Not sure if it's really an achievement, but managed to avoid the bad data rows in all systems, either by coding an element to check for bad data (d3, python, java) or by removing the bad data (SPSS). Flourish and ggplot 2 dealt with this automatically.
 
 **#Design Achievements**
+- 
 
 *ADDITIONAL NOTES*
 
 **#tableau**
 Hot garbage. Absolute flaming trash. Please take this off of the a2 recommendations list in the readme.
+I don't even want to go into the MULTITUDE of reasons why I've come to hate this program. Just remove it, please.
 
 **#MicrosoftBI**
-Does not work with WPI emails, but requires microsoft customer email (cannot be personal email).
+Does not work with WPI emails, but requires microsoft customer email (cannot be personal email). Is there a registered account we can use this tool on through WPI, like the virtual desktop?
