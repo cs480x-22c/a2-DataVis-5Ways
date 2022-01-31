@@ -32,7 +32,7 @@
         
         var y = d3.scaleLinear()
           .domain([8, 48])
-          .range([height/4, 0])
+          .range([width/16 + height/4, width/16])
         svg.append("g")
           .call(d3.axisLeft(y));
         
@@ -52,7 +52,7 @@
             .attr("cx", function(point) { return x(point.Weight); })
             .attr("cy", function(point) { return y(point.MPG); })
             .attr("r", function(point) { return point.Weight/100; })
-            .attr("fill", function(point) { return colors(point.Manufacturer); })
+            .attr("fill", "blue")
       });
       
     </script>
