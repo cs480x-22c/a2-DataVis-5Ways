@@ -9,10 +9,34 @@
   </head>
   <body>
     
+    <div id="vis"></div>
     <script>
-      
       console.log(d3); // test if d3 is loaded
-
+      
+      var width = window.innerHeight;
+      var height = window.innerHeight;
+      
+      const svg = d3.select("#vis")
+        .append(svg)
+        .attr("width", width/4)
+        .attr("height", height/4);
+      
+      d3.csv("../cars-sample.csv", function(carData) {
+        
+        var x = d3.scaleLinear()
+          .domain([1400, 5200])
+        svg.append("g")
+          .attr("transform", "translate(0,50)")
+          .call(d3.axisBottom(x));
+        
+        var y = d3.scaleLinear()
+          .domain([8, 48])
+        svg.append("g")
+          .attr("transform", "translate(0,50)")
+          .call(d3.axisLeft(y));
+        
+      });
+      
     </script>
     
   </body>
