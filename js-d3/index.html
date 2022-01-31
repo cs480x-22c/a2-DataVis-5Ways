@@ -118,8 +118,8 @@
             d3.select("tooltip").transition().duration(100).style("opacity", 1);
             d3.select("tooltip")
               .html("Weight:" + d.weight + ", MPG:" + d.MPG)
-              .style("top", d3.mouse(this)[1] + "px")
-              .style("left", d3.mouse(this)[0] + "px");
+              .style("top", d3.pointer(this)[1] + "px")
+              .style("left", d3.pointer(this)[0] + "px");
           })
           .on("mouseout", function (d, i) {
             d3.select("tooltip")
