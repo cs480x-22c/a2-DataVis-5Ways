@@ -57,7 +57,18 @@ Cons:
 ![Plot reproduced in Vega-Lite](Vega-Lite/visualization.png)
 
 # d3.js
+d3.js allows to create complex data visualizations using JavaScript. d3.js reads the csv file using a function, maps the data to object fields, and allows to visualize it using SVG components. Compared to other solutions which plot the data directly, d3.js requires to create the parts of the plot one-by-one. For example, the axis have to be added and translated to a specific position, same as the labels, ticks, and numbers. Using d3.js certainly requires to read some documentation and sample code. However, I think d3.js was the most versatile data visualization framework. Compared to the other tools, the developer has full control of the graphical components of the plot. I think this is a great option to make complex visualizations, but if trying to make something simple, other solutions allow for great time-saving.
 
+Pros:
+- Powerful
+- Complete control over graphic components
+- Can manipulate the data before plotting it
+
+Cons:
+- Need to read the documentation and sample code
+- For simple plots it takes much longer than other data visualization platforms
+
+![Plot reproduced in Vega-Lite](d3/d3js.png)
 
 # Other
 ## Technical Achievements
