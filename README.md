@@ -1,7 +1,7 @@
 # 02-DataVis-5ways
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+- Ignore .ipynb_checkpoints folder
+
 # R + ggplot2 + R Markdown
 
 R is a language primarily focused on statistical computing. Ggplot2 is a popular library for charting in R. R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
@@ -22,11 +22,11 @@ Seaborn and matplotlib are very useful for creating many different types of grap
 
 ![seaborn_matplotlib](img/seaborn_graph.png)
 
-# Javascript + d3
+# JavaScript + d3
 
-I created the cars visualization by loading the data using `d3.csv()` and then I used various d3 elements to add the different elements of the chart, such as the axes, dots, etc. I manually added every element of the chart axis intervals to its labels. I also had to create an svg for the graph and set the size of it. I had to set the size of the margins for the location of the svg and graph. I also created a tooltip that gave the manufacturer, weight, and MPG of each dot.
+I created the cars visualization by loading the data using `d3.csv()` and then I used various d3 elements to add the different elements of the chart, such as the axes, dots, etc. I manually added every element of the chart axis intervals to its labels. I also had to create an svg for the graph and set the size of it. I had to set the size of the margins for the location of the svg and graph. I also created a tooltip that gave the car, manufacturer, weight, and MPG of each dot.
 
-D3 was somewhat easy to use once you find the correct documentation. Although it is not nearly as easy to use as seaborn and matplotlib. With d3, you have yo create elements a lot more manually versus just changing a parameter. For example, when I created the axis labels I had to position them on the screen in order for them to be in the middle of the axis and outside the graph. With other libraries, this was done automatically. The same difficulty goes for setting the dimensions and margins for the graph that is not needed in python. I had to set those manually by changing the pixel count where not needed for all of the other tools. Lastly, even with the tooltip I had to create the rectangle and position everything manually.
+D3 was somewhat easy to use once you find the correct documentation. Although it is not nearly as easy to use as seaborn and matplotlib. With d3, you have to create elements a lot more manually versus just changing a parameter. For example, when I created the axis labels I had to position them on the screen in order for them to be in the middle of the axis and outside the graph. With other libraries, this was done automatically. The same difficulty goes for setting the dimensions and margins for the graph that is not needed in python. I had to set those manually by changing the pixel count where that is not needed for all of the other tools. Lastly, even with the tooltip I had to create the rectangle and position everything manually.
 
 I think d3 is very useful in the future when you want to create very intricate charts. Once you are familiar with all the capabilities of it, you can create almost anything with it. You have to do a lot more things manually, but that allows so many more opportunities when creating a graph. It also does take much longer to create a graph because it does require a lot more code.
 
@@ -34,7 +34,7 @@ I think d3 is very useful in the future when you want to create very intricate c
 
 # Tableau
 
-I created the cars visualization in Tableau by connecting the dataset and dragging the Weight attribute to the columns and the MPG attribute to the rows. Tableau has a box labelled "Marks" where you can edit various elements on the graphs. From this I was able to color and size map, create legends, set the opacity. I was also able to add in to tooltip that gives the Manufacturer, Weight, and MPG when you hover over a dot. To set the color to Manufacturer and set the size to Weight I dragged the attributed to the Marks box and was able to edit from there. I was able to edit the axises by clicking on them.
+I created the cars visualization in Tableau by connecting the dataset and dragging the Weight attribute to the columns and the MPG attribute to the rows. Tableau has a box labelled "Marks" where you can edit various elements on the graphs. From this I was able to color and size map, create legends, set the opacity. I was also able to add in to tooltip that gives the Car, Manufacturer, Weight, and MPG when you hover over a dot. To set the color to Manufacturer and set the size to Weight I dragged the attributed to the Marks box and was able to edit from there. I was able to edit the axises by clicking on them.
 
 Tableau is very intuitive to use and it very useful for people who do not code. I found it very easy to use Tableau and it did a lot of things automatically. However, I did have to do some searching on how to create the graph at first because I have only used Tableau once before and I have never used it to create a graph.
 
@@ -50,7 +50,7 @@ Excel was by far the most difficult tool to use to make the graph. You had to ad
 
 Link for color mapping: https://stackoverflow.com/questions/17194105/how-can-i-color-dots-in-a-xy-scatterplot-according-to-column-value
 
-For the size mapping, I was trying to do something similar, but that wouldn't have worked. I ended up using a bubble chart and changing the sizes of the dots from there. I had to do a lot of search to learn how to make a bubble chart and map the sizes.
+For the size mapping, I was trying to do something similar, but that wouldn't have worked. I ended up using a bubble chart and changing the sizes of the dots from there. I had to do a lot of searching to learn how to make a bubble chart and map the sizes.
 
 I also had trouble setting the axis correctly. For example, the first interval for the x-axis is 2000, but the graph starts at around 1500. There is no way to set the min of the axis to 1500 without setting the first tick mark label to 1500. If I set the min to be 2000 then the graph would start at 2000 and some data would be cut off. Therefore, I have tick mark labels start at 7 for the y-axis and for the x-axis they start at 1500. I started the axises at these values because this is where they are started on the original graph, but the first labels for the x and y axises are at 1500 and 7, respectively. Also, with this none of the data would be cut off like if I started at 10 and 2000 and the axis still do not start at 0 which was a requirement. I searched for a very long time to try and find a solution to this, but there was nothing on setting the min of the graph and the first tick mark label to different values. There were only ways to set the min or the tick mark intervals together.
 
