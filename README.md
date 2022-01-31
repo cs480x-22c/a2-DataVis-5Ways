@@ -32,6 +32,11 @@ I could not get my JS envirnment to run my js2.js code, but it is set to produce
 
 source: https://jscharting.com/examples/chart-types/scatter-plot/classic/#
 
+# d3
+
+I could not get my JS envirnment to run my d3.js code, but it is set to produce a graph.
+
+source: https://www.educative.io/edpresso/how-to-create-a-scatter-plot-using-d3
 
 
 ## Technical Achievements
