@@ -13,6 +13,8 @@ Threejs was definitely the most difficult library to make a scattergraph with. A
 
 The workflow included spwaning 3D meshes for every object in the scene. Each mesh needs a material and geometry, so the code length built up fast. I noted that I had to multiply the weight by a very small number when sizing spheres.
 
+Here is the [live link](https://kslokhandwala2022.github.io/a2-DataVis-5Ways/threejs/) to see the animations.
+
 # D3
 ![d3](img/d3.PNG)
 
