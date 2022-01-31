@@ -14,11 +14,18 @@ NOTE: IMAGE IS MUCH EASIER TO SEE IF YOU CLICK ON IT. APOLOGIES FOR THE POOR SIZ
 
 **#r - ggplot2**
 
+R and ggplot2... where do I start. I hate R. I had a really bad experience with it in another class and I swore to myself I'd never use it again. HOWEVER, ggplot2 made this the easiest graph out of the 3 coding libraries I used. While I didn't feel that I had as much creative freedom as I did with d3, I was able to make the graph in 2 lines, in 5 minutes: load in the data from the csv, and make the chart. ggplot2 handles the rest.
+
+I would see this being useful in the future for simple of quick charts, but nothing more than that. I wasn't able to make the chart interactive after trying by installing a couple other libraries, and animations are out of the question. d3 just has it beat. That, and I didn't have to use any hacks or data maniipulation to get the right chart. It did it all for me with no effort required. Convenient, powerful, but takes the fun out of things, and very little flexability present.
+
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/2e64181fa7fc97fc10525b2345f26b49bca22e52/img/r%20-%20ggplot2.png)
+
+**#python - matplotlib & pandas**
+
 
 Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
-**#python - matplotlib & pandas**
+![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/cbce64722c411d923ba33aaad92b24fa9f30fa99/img/python%20-%20matplotlib%20&%20pandas.png)
 
 **Flourish**
 
