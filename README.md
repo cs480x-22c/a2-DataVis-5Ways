@@ -32,7 +32,7 @@ but I already titled the files with that and don't feel like going back thru and
 Oh well.
 This was pretty straightforward, and about as complex of a chart as you can physically make using Sheets.
 It wasn't that bad though, although Excel is in fact significantly better.
-![excel (google sheets)][img/excelplot.png]
+![excel][img/excelplot.png]
 
 # Flourish
 
