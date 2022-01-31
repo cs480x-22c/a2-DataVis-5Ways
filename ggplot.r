@@ -1,16 +1,4 @@
-#install.packages("ggplot2", repos = "http://cran.us.r-project.org")
-#install.packages("ggrepel", repos = "http://cran.us.r-project.org")
+install.packages("ggplot2")carData <- read.csv(file = "cars-sample.csv")
 
-library(ggplot2)
-library(ggrepel)
-
-pdf(NULL)
-
-data <- read.csv('./cars-sample.csv')
-# referenced this website's code http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
-ggplot(data, aes(x=Weight, y=MPG, label=Car)), size=2, label.size=NA, fill=NA, alpha=0.5, min.segment.length=0, force=5, max.overlaps=Inf)
-
-
-
-
+ggplot(data=carData, aes(Weight, MPG, color=Manufacturer, size=Weight, alpha=5/10)) + geom_jitter()
 ggsave('ggplot.png')
