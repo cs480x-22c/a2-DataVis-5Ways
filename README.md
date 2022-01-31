@@ -7,7 +7,7 @@ d3 is the javascript data vis library we're currently using in this class, so it
 
 I could see d3 being useful in the future for pretty much any vis I want to make. It feels powerful, and I know that animations are a very real possibility, even though I haven't figured them out yet. Also, it's convenient that you can just make a vis and then embed it in a website, since everything is done in js/html.
 
-For hacks and manipulations, I was easily able to highlight/unhighlight datapoints on mouseon/mouseoff, but I had a harder time getting text I displayed about the data point to disappear, so I just appended a white rect over the text on mouseoff and called it a day... haha. Also, the legend text took some trial and error, but I eventually got the spacing right. If only I knew d3 a bit better, it could have been much more elegant.
+For hacks and manipulations, I was easily able to highlight/unhighlight datapoints on mouseon/mouseoff, but I had a harder time getting text I displayed about the data point to disappear, so I just appended a white rect over the text on mouseoff and called it a day... haha. Also, the legend text took some trial and error, but I eventually got the spacing right. If only I knew d3 a bit better, it could have been much more elegant. (Almost forgot, I had to navigate around the 2 N/A MPG data rows. I hate those rows.)
 
 **NOTE: IMAGE IS MUCH EASIER TO SEE IF YOU CLICK ON IT. APOLOGIES FOR THE POOR SIZING IN THE EMBED**
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/bdbc60b7dc78303589b323bd8bb2d8a3d341fc8b/img/javascript%20-%20d3.png)
@@ -30,15 +30,19 @@ I can't see this tool being very useful in the future unless you have a python s
 
 **Flourish**
 
+Ah, Flourish... before I found this on the list, I thought I had to hard code all 5 graphs, so you could say that Flourish saved me from losing my mind. Flourish was easy - like, even easier than ggplot2; I gave it the data, it spat out a chart, but at the same time I had so many more customizability options than I did with ggplot2. I could make an interactive chart, give the chart animations. It didn't really feel like a one-and-done deal like ggplot2 did. I still think that d3 takes the edge on flexibility, since the ability to hard code what you want in will always provide more options than a pre-coded site will, but Flourish is really goddam convenient and easy to use.
 
-
-Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+As far as future use goes, I could see myself using this alongside d3 if I'm ever stripped for time or want to make and embed a really simple chart. I also think it'd be extremely useful for people who are less tech-savvy and don't know how to code. Just like with ggplot2, though, the tool did pretty much everything for me, so no hacks were required. But, unlike ggplot2, it didn't feel as cheap or easy because of the level of customization available to the user. If I chose any 2 tools to learn more about going forward, they'd be d3 in first place and Flourish in a close second.
 
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/b7d74334aaaefc01d8ddd9cd1c99fa707f986a67/img/Flourish%20-%201.png)
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/b7d74334aaaefc01d8ddd9cd1c99fa707f986a67/img/Flourish%20-%202.png)
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/b7d74334aaaefc01d8ddd9cd1c99fa707f986a67/img/Flourish%20-%203.png)
 
 **#SPSS**
+
+Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+
+![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/e64a53e07bf8c5c29b881ad53bd236a74e404509/img/SPSS.PNG)
 
 **#java - javafx**
 I came VERY close to making JavaFX work, but the libraries do not allow you to color individual points/series... shame
