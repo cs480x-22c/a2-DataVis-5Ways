@@ -1,0 +1,29 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<body></body>
+<script>
+  //left margin = 54, graph width = 452, right margin = 110
+  //var top margin = 10, graph height = 390, bottom margin = 40
+  var width = 616;
+  var height = 440;
+  var svg = d3.select("body").append("svg").attr("width",width).attr("height",height);
+  d3.csv("https://raw.githubusercontent.com/hyoder/a2-DataVis-5Ways/main/cars-sample.csv").then(function(data){
+      var x = d3.scaleLinear().domain([1500,5250]).range([54,506]);
+	    svg.append("g").attr("transform", "translate(0,400)").call(d3.axisBottom(x));
+	    var y = d3.scaleLinear().domain([47,8]).range([10,400]);
+	    svg.append("g").attr("transform","translate(54,0)").call(d3.axisLeft(y));
+	    svg.append("text").attr("transform","translate(280,435)").style("text-anchor","middle").text("Weight");
+	    svg.append("text").attr("transform","translate(25,203)rotate(270)").style("text-anchor","middle").text("MPG");
+      var size = d3.scaleLinear().domain([1000,5000]).range([4,12]);
+      var color = d3.scaleOrdinal().domain(["bmw","ford","honda","mercedes","toyota"]).range(["#f2b1ae","#c8c980","#88d7b4","#78cbf5","#eea9f2"]);
+      svg.append('g')
+	      .selectAll("dot")
+	      .data(data)
+	      .enter()
+	    .append("circle")
+    	  .attr("cx", function(d){ return x(d.Weight); })
+    	  .attr("cy", function(d){ return y(d.MPG); })
+    	  .attr("r", function(d){ return size(d.Weight); })
+    	  .style("fill", function(d){ return color(d.Manufacturer); })
+	      .style("opacity",0.5);
+  });
+</script>
