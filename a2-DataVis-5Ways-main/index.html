@@ -1,0 +1,71 @@
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<div id="graph"></div>
+
+<script>
+
+    var margin = { top: 10, right: 20, bottom: 30, left: 50 },
+        width = 800 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    var svg = d3.select("#graph")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv("cars-sample.csv", function (data) {
+
+        var x = d3.scaleLinear()
+            .domain([1500, 5250])
+            .range([0, width]);
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        svg.append("text")
+            .attr("x", 400)
+            .attr("y", 485)
+            .text("Weight");
+
+        var y = d3.scaleLinear()
+            .domain([10, 50])
+            .range([height, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        svg.append('text')
+            .attr("x", 0)
+            .attr("y", 200)
+            .attr("transform", "translate(-200, 220) rotate(-90)")
+            .text("MPG");
+
+        svg.append('text')
+            .attr("x", 220)
+            .attr("y", 10)
+            .text("Weight vs MPG");
+
+        var bubble_size = d3.scaleLinear()
+            .domain([100, 2000])
+            .range([4, 12]);
+
+        var bubble_color = d3.scaleOrdinal()
+            .domain(["bmw", "ford", "honda", "mercedes", "toyota"])
+            .range(d3.schemeSet2);
+
+        svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return x(d.Weight); })
+            .attr("cy", function (d) { return y(d.MPG); })
+            .attr("r", function (d) { return bubble_size(d.Weight); })
+            .style("fill", function (d) { return bubble_color(d.Manufacturer); })
+            .style("opacity", "0.5")
+
+    })
+</script>
