@@ -11,11 +11,13 @@ def main():
             "honda": "#95d9bb",
             "mercedes": "#93d3f4",
             "toyota": "#eeb2f2"}
-    plt.scatter(mtcars.Weight, mtcars.MPG, s=mtcars.Weight/200, c=mtcars.Manufacturer.map(cmap))
+    _, ax = plt.subplots()
+    for key, group in mtcars.groupby("Manufacturer"):
+        group.plot.scatter(ax=ax, x="Weight", y="MPG", label=key, color=cmap[key], alpha=0.5)
     plt.xlabel("Weight")
+    plt.xticks(range(1000, 5000, 1000))
     plt.ylabel("MPG")
     plt.yticks(range(10, 50, 10))
-    plt.legend()
     plt.show()
 
 
