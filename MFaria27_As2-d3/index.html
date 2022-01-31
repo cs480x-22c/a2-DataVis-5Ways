@@ -21,11 +21,11 @@
         .attr("width", width/2)
         .attr("height", height/2);
       
-      d3.csv("cars-sample.csv", function(carData) {
+      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(carData) {
         
         var x = d3.scaleLinear()
           .domain([1400, 5200])
-          .range([0, width/4])
+          .range([width/16, (width/4) + (width/16)])
         svg.append("g")
           .attr("transform", "translate(0, " + (height/4) + ")")
           .call(d3.axisBottom(x));
