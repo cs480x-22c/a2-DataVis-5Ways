@@ -22,7 +22,7 @@ I would see this being useful in the future for simple of quick charts, but noth
 
 **#python - matplotlib & pandas**
 
-Python and matplotlib/pandas was easily the hardest of the 3 libraries I succeeded in making charts in. What took forever was the color-mapping. Python's color mapping is fuuuuuunky. After a few hours of trying, it still didn't come out 100% correct, and I had to give up on adding a legend, but I'm still proud of the result... kind of. d3 was more flexibile, more powerful, and more convenient.
+Python and matplotlib/pandas was easily the hardest of the 3 libraries I succeeded in making charts in. What took forever was the color-mapping. Python's color mapping is fuuuuuunky. After a few hours of trying, it still didn't come out 100% correct, and I had to give up on adding a legend, but I'm still proud of the result... kind of. Also, the weight mapping worked, but I feel like it's not as pronounced as the rest of the products on this list. Overall, d3 was more flexibile, more powerful, and more convenient.
 
 I can't see this tool being very useful in the future unless you have a python specific program that requires a simple vis and you don't know how to link languages or cross-embed elements - a very niche situation. Also, I guess you could consider the panda library my hack for this one, since I had to use it to read in the csv in a more conveniently-usable format than I could with matplotlib in order to color-map at all. 
 
@@ -49,9 +49,12 @@ I could see this being useful in the future... kind of. It's a pay-to-use progra
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/e64a53e07bf8c5c29b881ad53bd236a74e404509/img/SPSS.PNG)
 
 **#java - javafx**
-I came VERY close to making JavaFX work, but the libraries do not allow you to color individual points/series... shame
 
-Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+JavaFX is the sixth tool on this list, and the fourth library. That's because I didn't manage to get it to work :,( Java, as my first programming language, is somewhat dear to my heart, so I really wanted to make this work, but it just didn't... shame.
+
+The difficulty I ran into was with - drumroll please -  color mapping! And also size mapping, but I didn't give it much thought past not being able to color map. As it turns out, JavaFX is not a great visualization tool! It has no built in support for mapping size, color, or other attributes to inidividual data points or entire data series. Because of this, I don't think this tool can be useful in the future, unfortunately. The libraries would need some serious updating and reworking to change my mind (or maybe I'm just completely missing options I didn't know existed. Oracle doesn't seem to think so, and neither does stack overvlow).
+
+Ironically, this is the library that I'm most proud of my data hack in. I wrote an effective - although somewhat clunky - algorithm to parse through the file data with a scanner and pull out what I needed, since I couldn't find a way to make the libraries do it for me. It's too bad I couldn't get the mapping working in the end. Oh, well. Also, I should note that I wanted to try out Java 2D, but I had a lot of trouble finding anything about it or where/how I can access the libraries, which is why I went with JavaFX, instead. I'll probably reach out at some point looking for info on this library.
 
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/f526a6776d62eed9121647011bcf9b805ce7dde4/img/java%20-%20javafx.PNG)
 
