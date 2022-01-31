@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<svg width="500" height="400" id="dot"></svg>
+
+<script>
+  // set the dimensions and margins of the graph
+  var svg = d3.select("svg"),
+    margin = 200,
+    width = svg.attr("width") - margin,
+    height = svg.attr("height") - margin;
+    
+
+  //Read the data
+d3.csv("https://raw.githubusercontent.com/lilygarfinkel/a2-DataVis-5Ways/main/cars-sample.csv", conversor, function(data)
+  {   
+  console.log(data);
+  //x
+    var xScale = d3.scaleLinear()
+        .domain([1500, 5000])
+        .range([0, width]);
+     svg
+      .append("g")
+      .attr("transform", "translate(100," + (height + 100) + ")")
+      .call(d3.axisBottom(xScale).ticks(4));
+      //y
+    var yScale = d3.scaleLinear()
+        .domain([5, 45])
+        .range([height, 0]);   
+    svg
+      .append("g")
+      .attr("transform", "translate(100," + (height - 100) + ")")
+      .call(d3.axisLeft(yScale).ticks(5));
+     
+       //color
+  var colorScale = d3.scaleQuantize()
+    .domain([3,8])
+    .range(["#a6e22e","#f92672","#66d9ef", "#fd971f","#ae81ff"]);
+
+      // Add dots
+      svg
+      .append("g")
+      .selectAll("dot")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("cx", function (d) { return xScale(d.Weight);})
+      .attr("cy", function (d) { return yScale(d.MPG);})
+      .attr("r", function(d){ 
+        var num =Math.floor(d.Weight / 1000);
+        if (num <2){
+          num =2;
+        }
+        return num;} )
+      .attr("transform", "translate(100, 100)")
+      .style("fill", function(d){ return colorScale(d.Manufacturer);})
+      .style("opacity", 0.5);
+
+  
+  // X label
+    svg
+      .append("text")
+      .attr("x", width / 2 + 100)
+      .attr("y", height - 15 + 150)
+      .attr("text-anchor", "middle")
+      .style("font-family", "Helvetica")
+      .style("font-size", 12)
+      .text("Weight");
+
+    // Y label
+    svg
+      .append("text")
+      .attr("text-anchor", "middle")
+      .attr("transform", "translate(50," + height + ")rotate(-90)")
+      .style("font-family", "Helvetica")
+      .style("font-size", 12)
+      .text("MPG");
+
+    //Weight Legend
+    svg.append("text").attr("x", 390).attr("y", 35).text("Weight").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("circle").attr("cx",400).attr("cy",50).attr("r", 2)
+    svg.append("circle").attr("cx",400).attr("cy",70).attr("r", 3)
+    svg.append("circle").attr("cx",400).attr("cy",90).attr("r", 4)
+    svg.append("text").attr("x", 410).attr("y", 52).text("2000").style("font-size", "10px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 410).attr("y", 72).text("3000").style("font-size", "10px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 410).attr("y", 92).text("4000").style("font-size", "10px").attr("alignment-baseline","middle");
+
+    //Color Legend
+    svg.append("text").attr("x", 390).attr("y", 135).text("Manufacturer").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("circle").attr("cx",400).attr("cy",150).attr("r", 2).style("fill", "#a6e22e")
+    svg.append("circle").attr("cx",400).attr("cy",170).attr("r", 2).style("fill", "#f92672")
+    svg.append("circle").attr("cx",400).attr("cy",190).attr("r", 2).style("fill", "#66d9ef")
+    svg.append("circle").attr("cx",400).attr("cy",210).attr("r", 2).style("fill", "#fd971f")
+    svg.append("circle").attr("cx",400).attr("cy",230).attr("r", 2).style("fill", "#ae81ff")
+    svg.append("text").attr("x", 410).attr("y", 152).text("bmw").style("font-size", "10px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 410).attr("y", 172).text("ford").style("font-size", "10px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 410).attr("y", 192).text("honda").style("font-size", "10px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 410).attr("y", 212).text("toyota").style("font-size", "10px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 410).attr("y", 232).text("mercedes").style("font-size", "10px").attr("alignment-baseline","middle");
+  })
+    //change from string to number for graphing    
+function conversor(d){
+  d.Weight= +d.Weight;
+  d.MPG= +d.MPG; 
+  d.Manufacturer = d.Manufacturer.length;
+return d;
+}
+
+ </script>

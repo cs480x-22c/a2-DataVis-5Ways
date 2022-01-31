@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/lilygarfinkel/a2-DataVis-5Ways/main/cars-sample.csv",
+    "transform": [
+      {
+        "type": "filter",
+        "expr": "datum['Weight'] != null && datum['MPG'] != null && datum['Manufacturer'] != null"
+      }
+    ]
+  },
+  "mark": {"type": "point", "filled": true},
+  "encoding": {
+    "x": {"field": "Weight", "type": "quantitative"},
+    "y": {"field": "MPG", "type": "quantitative"},
+    "size": {"field": "Weight", "type": "quantitative"},
+    "shape": {"value": "circle"},
+    "strokeWidth": {"value": 1},
+    "opacity": {"value": 0.5},
+    "color": {"field": "Manufacturer"}
+  },
+  "config": {}
+}
