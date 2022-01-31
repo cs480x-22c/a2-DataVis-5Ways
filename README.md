@@ -66,6 +66,7 @@ Ironically, this is the library that I'm most proud of my data hack in. I wrote 
 - Not sure if it's really an achievement, but managed to avoid the bad data rows in all systems, either by coding an element to check for bad data (d3, python, java) or by removing the bad data (SPSS and technically Excel, though that graph isn't in here because it failed miserably). Flourish and ggplot 2 dealt with this automatically.
 - Figured out how to embed images in README.md files on github.
 - Learning about not one, but multiple libraries in python and R in an attempt to improve the graphs.
+- Learned how to read .csv data into d3, ggplot2, python, and java (already knew how to do most of it in java)
 
 **#Design Achievements**
 - impelemted simple highlighting/unhighlighting and information display/undisplay in d3. I personally think the highlighting looks pretty clean, as well. Prior to doing this, I did not know about d3's mouseover/mouseoff tools.
