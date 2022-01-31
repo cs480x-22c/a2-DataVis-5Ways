@@ -117,6 +117,11 @@ We will choose some at random to run and test.
 
 **NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
+# Excel
+
+Paragraph
+![Excel Graph](img/excelGraph)
+
 # R + ggplot2 + R Markdown
 
 R is a language primarily focused on statistical computing.
