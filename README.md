@@ -19,8 +19,7 @@ For Assignment 2 in CS480X I decided to go with the following three libraries an
 Links
 ---
 
-- GitHub Pages: https://milesgregg.github.io/a1-ghd3/
-- GitHub Repository: https://github.com/MilesGregg/a1-ghd3
+- GitHub Repository: https://github.com/MilesGregg/a2-DataVis-5Ways
 
 d3
 ---
