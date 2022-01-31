@@ -73,7 +73,7 @@ For the techical achievement for this assignment I was
 
 For the design achievement I was able to make a accurate graph for all five different types of data visualization softwares I used. There were a few design achievements that I accomplished which I thought were important to have:
 
-- I was able to recreate all of the graphs from the original one given. Specifically 
+- I was able to recreate all of the graphs from the original one given. Specifically I followed the pre-made picture as closely as possible to follow the design requriement. 
 
 - In all of my graphs I was able to replicate the colors that were given. I was able to do this with this tool I found online called image color picker which get the HEX and RGBA value at a specfic value in the image. I used a website called: https://imagecolorpicker.com/en to get the hex and rgb values of the sample cars graph that was given. This was able to get me the values for the colors which are:
 
