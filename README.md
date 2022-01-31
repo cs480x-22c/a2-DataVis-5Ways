@@ -120,7 +120,7 @@ We will choose some at random to run and test.
 # Excel
 
 Paragraph
-![Excel Graph](img/excelGraph)
+![ExcelGraph](img/excelGraph)
 
 # R + ggplot2 + R Markdown
 
