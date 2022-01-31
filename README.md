@@ -71,9 +71,17 @@ Cons:
 ![Plot reproduced in Vega-Lite](d3/d3js.png)
 
 # Other
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+All design and technical achievements were completed on Python or JavaScript because they are the most versatile.
+### Technical Achievements
+- Managed NA values in the dataset
+     - The dataset contained some missing (NA) values. I could either filter them out, or make an interpolation to estimate the missing values. I imported the [Simple Statistics](https://simplestatistics.org) library to compute a linear regression on data points, and then used the model to predict the MPG values for the missing data.
+- Lighthouse tests:
+    - I tested the website using the Google Lighthouse tests and scored 100 on Performance, Accessibility, and Best Practices. I did this to check that I am following best practices, that the site is accessible (tests include background/foreground color contrast check), and that the dataset it read, interpolated, and processed quickly enough (performance metric).
+![Lighthouse test](readme-img/d3js-lighthouse.png)
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- Accessible color palette (screenshot below):
+    - I created a custom color palette of five colors using [https://colors.adobe.com](https://colors.adobe.com). I also validated the palette for accessibility using [https://colors.adobe.com/create/color-accessibility](https://colors.adobe.com/create/color-accessibility) to make sure it works for people with color blind or accessibility issues.
+![Accessible color palette](readme-img/color-palette.png)
+- Visualize NA values in the dataset
+    - To identify the points with a MPG value predicted by the linear regression model, I changed the stroke of those circles to make them darker. This allows to keep the same color palette and make the manufacturer easily recognizable, while warning the viewer that the point is predicted and not actual.
