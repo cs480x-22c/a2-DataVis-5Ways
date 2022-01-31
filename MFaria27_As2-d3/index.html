@@ -20,7 +20,7 @@
         .append("svg")
         .attr("width", width/2)
         .attr("height", height/2)
-        .attr("transform", "translate(" + (width/16) + ", 0)");
+        .attr("transform", "translate(" + (width/16) + ", " + (height/16) + ")");
         
       d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(data) {
         console.log(data)
@@ -35,6 +35,7 @@
           .domain([8, 48])
           .range([height/4, 0])
         svg.append("g")
+          .attr("transform", "translate(" + (width/16) + ", " + (height/16) + ")")
           .call(d3.axisLeft(y));
         
         var manuscol = d3.scaleOrdinal()
