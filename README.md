@@ -69,4 +69,4 @@ The only thing I was unable to do in Sisense compared to Tableau is add the weig
 In d3, I was able to implement a function that would allow to the user to interact with the graph. If the usre hovered over a point, say a red one, all the other red points on the graph would stay highlights and the other non red points would go gray. This allows the user to isolare the data based on manufacturer. 
 
 ### Design Achievements
--I experimented with Python's cmaps! I tried a few different paletts but the Spring one gave me the most joy. Almost groundhog day :) 
+-I experimented with Python's cmaps! I tried a few different palettes but the Spring one gave me the most joy. Almost groundhog day :) 
