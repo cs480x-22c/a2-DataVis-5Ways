@@ -17,6 +17,18 @@
       font-family: "Raleway";
       font-size: 22px;
     }
+
+    div.tooltip {
+      position: absolute;
+      text-align: center;
+      padding: 0.2rem;
+      background: #ececec;
+      color: #ffffff;
+      border: 0px;
+      border-radius: 8px;
+      pointer-events: none;
+      font-size: 0.7rem;
+    }
   </style>
   <body>
     <h1>Car's Weight Vs MPG</h1>
@@ -34,8 +46,7 @@
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-        .style("background", "#ececec");
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
       var data = d3.csv("cars-sample.csv").then(function (data) {
         var carsData = [];
@@ -89,20 +100,28 @@
             return d.Weight / 350;
           })
           .style("opacity", 0.5)
-          .style("fill", function (d) {
-            switch (d.Manufacturer) {
-              case "bmw":
-                return "rgb(241, 171, 166)";
-              case "ford":
-                return "rgb(200, 201, 136)";
-              case "honda":
-                return "rgb(141, 215, 183)";
-              case "mercedes":
-                return "rgb(140, 209, 244)";
-              case "toyota":
-                return "rgb(238, 180, 244)";
-            }
-          });
+          .on("mouseover", function (d, i) {
+            div.transition().duration(100).style("opacity", 1);
+          })
+          .on(
+            "mouseout",
+            function (d, i) {
+              div.transition().duration("200").style("opacity", 0);
+            }.style("fill", function (d) {
+              switch (d.Manufacturer) {
+                case "bmw":
+                  return "rgb(241, 171, 166)";
+                case "ford":
+                  return "rgb(200, 201, 136)";
+                case "honda":
+                  return "rgb(141, 215, 183)";
+                case "mercedes":
+                  return "rgb(140, 209, 244)";
+                case "toyota":
+                  return "rgb(238, 180, 244)";
+              }
+            })
+          );
       });
     </script>
   </body>
