@@ -55,12 +55,12 @@
             .attr("transform", "translate(" + (width/16) + ", 0)");
         
         svg.append("text")
-          .attr("transform", "translate(" + (width/4) + ", " + ((height/4) + (height/16)) + ")")
+          .attr("transform", "translate(" + (width/8) + ", " + ((height/4) + (height/32)) + ")")
           .text("Weight");
         
         svg.append("text")
-          .attr("transform", "translate(" + (width/8) + ", " + (height/4) + ")")
-          .attr("transform", "rotate(-90)")
+          .attr("transform", "translate(" + (width/4) + ", " + (height/4) + ")")
+          //.attr("transform", "rotate(-90)")
           .text("MPG");
       });
       //function(point) { return point.Weight/100;
