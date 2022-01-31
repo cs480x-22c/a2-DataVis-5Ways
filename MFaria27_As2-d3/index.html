@@ -25,9 +25,9 @@
         
         var x = d3.scaleLinear()
           .domain([1400, 5200])
-          .range([height/4, width/4])
+          .range([0, width/4])
         svg.append("g")
-          .attr("transform", "translate(0,50)")
+          .attr("transform", "translate(0, " + (height/4) + ")")
           .call(d3.axisBottom(x));
         
         var y = d3.scaleLinear()
