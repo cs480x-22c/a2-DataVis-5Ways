@@ -92,6 +92,12 @@ https://www.d3-graph-gallery.com/graph/scatter_basic.html
 ## Technical Achievements
 <ul>
   <li>Other than Excel, all of the visualization methods were things I was learning from with little to no previous experience, so having some of the basics of all of these languages/graph creation methods under my belt is very nice.</li>
-  <li>In Excel, separating all the necessary data into columns by manufacturer, MPG, and weight was a solution that </li>
+  <li>In Excel, separating all the necessary data into columns by manufacturer, MPG, and weight was a pretty technical/brute force solution to my troubles setting up a graph in excel.</li>
+  <li>Creating two legends using matplotlib by creating a second artist and adding it to the graph before the first one to make it so that the second legend didn't overwrite the first was a difficult solution to adding multiple legends.</li>
 </ul>
+
 ## Design Achievements
+<ul>
+  <li>Excel and D3 javascript did not have direct mapping on weight to size, so I had to manually map values in order to get an accurate size by weight.</li>
+  <li>Working with hex colors to get visibile colors that stayed accurate to the original graph that we had to create.</li>
+</ul>
