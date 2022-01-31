@@ -28,13 +28,14 @@
           .domain([1400, 5200])
           .range([0, (width/4)])
         svg.append("g")
-          .attr("transform", "translate(0, " + (height/4) + ")")
+          .attr("transform", "translate(" + (width/16) + ", " + (height/4) + ")")
           .call(d3.axisBottom(x));
         
         var y = d3.scaleLinear()
           .domain([8, 48])
           .range([height/4, 0])
         svg.append("g")
+          .attr("transform", "translate(" + (width/16) + ", 0)");
           .call(d3.axisLeft(y));
         
         var manuscol = d3.scaleOrdinal()
@@ -51,6 +52,7 @@
             .attr("r", function (d) { return d.Weight / 600 })
             .style("fill", function (d) { return manuscol(d.Manufacturer) })
             .style("opacity", 0.5)
+            .attr("transform", "translate(" + (width/16) + ", 0)");
       });
       //function(point) { return point.Weight/100;
     </script>
