@@ -19,7 +19,9 @@
       var svg = d3.select("#vis")
         .append("svg")
         .attr("width", width/2)
-        .attr("height", height/2);
+        .attr("height", height/2)
+        .append("g")
+        .attr("transform", "translate(" + (width/16) + ", " + (height/4) + ")");
         
       
       d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(data) {
