@@ -1,0 +1,14 @@
+{
+  "name": "@trashrat3000/a2-d3",
+  "main": "c3b73fce9e016a6e@210.js",
+  "version": "210.0.0",
+  "homepage": "https://observablehq.com/@trashrat3000/a2-d3",
+  "author": {
+    "name": "sham",
+    "url": "https://observablehq.com/@trashrat3000"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
