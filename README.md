@@ -1,142 +1,81 @@
-# 02-DataVis-5ways
-
-Assignment 2 - Data Visualization, 5 Ways  
+Assignment 1 - Hello World: GitHub and d3  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
+Summary
 ---
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+For Assignment 2 in CS480X 
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+-   **Miles Gregg**
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+    -   GitHub: https://github.com/MilesGregg
 
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
+Links
 ---
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+- GitHub Pages: https://milesgregg.github.io/a1-ghd3/
+- GitHub Repository: https://github.com/MilesGregg/a1-ghd3
+- https://public.flourish.studio/visualisation/8558801/
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
+d3
 ---
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+d3 is getting easier to use . I started out using d3 to make the graph becuase I tought it would be the most difficult to design and make the replicate. However it wasn't that bad to implement once I got the initial desin of the axis and lines of the graphs done. d3 has so much more flexiablity to making the graphs though compared to the other four tools I used for this assignment. 
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
+Python Plotly
 ---
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+Python being one of the most used programming languages has some incredable easy graphing interfaces. I usually use matplotlib for graph but I figured that I needed to explore a different plotting tool for python which I later found plotly. Plotly is a very easy to use graphing interface which takes up only a couple lines of code to parse and display your intended graph. I used pandas to read the csv locally and then graphed with plotly which was super easy to do. Plotly ouputs the data graph to local host browser which displays the graph and points. You can also hover of the points in plotly which will tell you move information about a specific point. 
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+![alt text](https://github.com/MilesGregg/a2-DataVis-5Ways/blob/master/main.png?raw=true)
 
-GitHub Details
+R + ggplot2
 ---
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+I used R once before when I took statictics which was useful when graphing the car data. I was able to graph the data correctly only with a few lines of code. Implementing the graph was really straight forward first R has a built in csv reader to read the data and parse it correctly. 
 
-Grading
+Using only 
+
+Vega-Lite
 ---
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
+Vega-Lite was a very simple and easy to use grpahing tool that is open sourced also. It uses just a simple json file to read specific graphing paramaters to read the data and output a very nice graph from that data. Vega-Lite doesn't have a nice GUI interface like Flourish does but using the json file is easy to use. The website auto updates when you type new information into the json file. I believe this is the future graphing tool because it is very easy to use. It also allows you to import your csv data imput into Vega-Lite which. The documention for Vega-Lite is very nice to use and there is a ton of examples that you can use to model your plot off of.
 
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+Technical Achievement Description
+---
 
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
+For the techical achievement for this assignment I was successfully able to get data from the California Covid-19 Hospital Data Website: https://data.chhs.ca.gov/dataset/covid-19-hospital-data. This allowed me to get certain data from different months to plot using d3. I plotted Covid-19 data in the state of California for  the months of March and December of 2021. Using Node.js http-server I was able to reload the webpage on port: http://127.0.0.1:8080/ whenever the HTML code would change. 
 
-# R + ggplot2 + R Markdown
+![alt text](https://github.com/MilesGregg/a1-ghd3/blob/master/main.png?raw=true)
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+Design Achievement Description
+---
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+For the design achievement I was able to make a accurate graph that represents very important data for people to see. I wanted to see the Covid Hospitalizations for the two completely different months of 2021. Designing the graph I made four different shapes for each statisic I am trying to show. The four statistics I'm trying to show are Vax and Unvax Hospitlizations in March 2021 and Vax and Unvax Hospitlizations in December 2021. For the different colors in my graph I was able to use Google Color Picker to choose different colors for different shpaes and lines. 
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+![alt text](https://github.com/MilesGregg/a1-ghd3/blob/master/color_picker.png?raw=true)
 
-![ggplot2](img/ggplot2.png)
+The polygon shapes were very difficult to do since I had to make points around the current point on the graph. I did this with the following code below. Basically it has 5-3 different points around the current point we are trying to plot. The 5-3 varies based of the shape I am trying to plot. It will then draw the polyPoints variable on the svg using the polygon feature in d3js. The only diffence between the triangle and pendagon code is that the array is different on the second line of code. The pendagon is a size of 5 and triangle is a size of 3.
 
-# d3...
+```js
+var polyPoints = []
+var pendagonSide = [[-10, -10], [10, -10], [15, 5], [0, 20], [-15, 5]]
+for (var i = 0; i < vax_hos_march.length; i++) {
+    var outputString = "";
+    for (var j = 0; j < pendegonSide.length; j++) {
+        var x = vax_hos_march[i][0] + (pendegonSide[j][0]*0.025);
+        var y = vax_hos_march[i][1] + (pendegonSide[j][1]*0.15);
+        outputString += xScaleGraph1(x.toString()) + "," + yScaleGraph1(y.toString()) + " "
+    }
+    polyPoints.push(outputString);
+}
 
-(And so on...)
-
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+svg.append('g')
+    .selectAll("polygon")
+    .data(polyPoints)
+    .enter()
+    .append("polygon")
+    .attr("points", function(d) { return d })
+    .attr("transform", "translate(100, 100)")
+    .style("fill", "#1900ff");
+```
