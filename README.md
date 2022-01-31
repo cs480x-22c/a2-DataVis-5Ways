@@ -69,11 +69,11 @@ Ironically, this is the library that I'm most proud of my data hack in. I wrote 
 - Learned how to read .csv data into d3, ggplot2, python, and java (already knew how to do most of it in java)
 
 **#Design Achievements**
-- impelemted simple highlighting/unhighlighting and information display/undisplay in d3. I personally think the highlighting looks pretty clean, as well. Prior to doing this, I did not know about d3's mouseover/mouseoff tools.
-- managed to succesfully color map and size map in d3 and python (kinda) using my own systems (i.e. without looking at someone else's code). I figured it out for myself, which I'm somewhat proud of.
+- Impelemted simple highlighting/unhighlighting and information display/undisplay in d3. I personally think the highlighting looks pretty clean, as well. Prior to doing this, I did not know about d3's mouseover/mouseoff tools.
+- Managed to succesfully color map and size map in d3 and python (kinda) using my own systems (i.e. without looking at someone else's code). I figured it out for myself, which I'm somewhat proud of.
 - I know it's listed above, but graph interactability in d3 and Flourish.
 - Successfully changing the alpha factor to correct for opacity in all tools/languages (except SPSS and, of course, JavaFX)
-- Achieved the basic graph structure (axes, labels, data ticks and beginning points for axes, opacity, size mapping, color mapping) for all tools (for the most part)
+- Achieved the basic graph structure (axes, labels, data ticks and beginning points for axes, opacity, size mapping, color mapping, legend) for all tools (for the most part)
 - 
 
 *ADDITIONAL NOTES*
