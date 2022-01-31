@@ -20,9 +20,9 @@
     <script>
       console.log(d3);
 
-      var margin = { top: 10, right: 30, bottom: 40, left: 60 },
-        width = 460 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+      var margin = { top: 10, right: 30, bottom: 40, left: 60 };
+      var width = 460 - margin.left - margin.right;
+      var height = 400 - margin.top - margin.bottom;
 
       var svg = d3
         .select("#chart")
@@ -30,7 +30,8 @@
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        .attr("background", "#ececec");
 
       var data = d3.csv("cars-sample.csv").then(function (data) {
         var carsData = [];
