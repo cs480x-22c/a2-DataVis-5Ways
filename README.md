@@ -1,142 +1,103 @@
-# 02-DataVis-5ways
-
-Assignment 2 - Data Visualization, 5 Ways  
+# Assignment 2 - Data Visualization: 5 Ways
+### Mattheus Faria 
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+# R + ggplot2 Visualization
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+![alt text](https://github.com/MFaria27/a2-DataVis-5Ways/blob/main/img/MFaria_As2-R_Plot.PNG?raw=true)
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+ggplot2 is a visualization package used in R programming that is mostly used for statistical visualizations.
 
-Your goal is to use 5 different tools to make the following chart:
+The ggplot function automatically maps colors to a specific label using its 'aes' variable in a single line without any extra work  (I.E. color=Mannufacturer) which was easily the shortest amount of code needed to map color to manufacturer, and geom_point let me map point size to car weight in a single line.
 
-![ggplot2](img/ggplot2.png)
+Recreating the scatter plot with ggplot2 was actually the quickest and easiest implementation out of the five methods used. I was able to create the visualization in just 5 lines of R, which is significantly small for creating such a nice looking graph. R and the ggplot2 library have to be the best coding tools for creating quick graphs, but I haven't used the tool enough to know its capabilities with a larger, more detailed graph.
 
-These features should be preserved as much as possible in your replication:
+Sources:
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
 
-Other features are not required. This includes:
+===
 
-- The background grid.
-- The legends.
+# Matplotlib / Python
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+![alt text](https://github.com/MFaria27/a2-DataVis-5Ways/blob/main/img/MFaria_As2-matplotlib.PNG?raw=true)
 
-Improvements are also welcome as part of Technical and Design achievements.
+Python is one of the best programming languages for data science today, with Matplotlib being a very useful visualization library.
 
-Libraries, Tools, Languages
----
+Creating the graph was fairly simple, as the bulk of the graph was created using the scatter() function. Inside this function, you can set the size of each point based on a value, but one issue presented is that it automatically raises the number input by an exponent of 2. This made making the varying sizes of each point a little harder to see, but with a closer look at the graph, it works fine. Mapping color was also fairly simple, as the map() function allows mapping color as long as I provided a dictionary.
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+Matplotlib took me a fair amount of time to get used to before I got a proper visualization down. Most of my problems came from finding how to create multiple legends, but after looking at documnetation, it was fairly simple to get down. Compared to the javascript and R methods of visual creation, I'd definitely say this one is a bit weaker in terms of creating a simple graph easily. From the documentation I read, it seems like it can be used for a lot more, but the same could be done without much hassle using javascript.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+Sources:
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
+https://matplotlib.org/stable/gallery/text_labels_and_annotations/custom_legends.html
 
-I have marked a few that are strongly suggested.
+===
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
+# Microsoft Excel
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+![alt text](https://github.com/MFaria27/a2-DataVis-5Ways/blob/main/img/MFaria_As2-excel.PNG?raw=true)
 
-Tips
----
+Microsoft Excel is a spreadsheet software that can open most lists of data and create visualizations using that loaded data. 
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+After loading in the csv of car data, I created new columns that each had a specific car's MPG and weight, with each column being a different manufacturer. This was the easiest way to separate the data so that it could be colored by manufacturer when formatting the graph. To map car weight to point size, I made more columns with each car's weight divided by 1000 to get a "size" value. This would be needed when setting up a bubble scatter plot, which takes x, y, and size values for each point. After loading all the data into the graph, it was fairly simple to give each point a color and opacity.
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+Despite being the tool I had the most experience with, recreating the graph in excel was by far the most frustrating out of the five methods. The process of seperating each manufacturer by MPG and weight to get a single graph of all of the data was very difficult to get to, as it was the most straight-forward, yet time-consuming, method I used. Before getting to that, I would go through many different methods of visual creation through excel, all of which would be missing one or two required traits, and I would eventually scrap them for the next. Excel is good when working with data, but creating visuals is a clunky experience which is better suited for the other methods.
 
+Sources:
 
-Readme Requirements
----
+https://peltiertech.com/multiple-series-in-one-excel-chart/#:~:text=Report%20Ad-,Select%20Series%20Data%3A%20Right%20click%20the%20chart%20and%20choose%20Select,the%20chart%20shows%20two%20series
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+===
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+# Vega-Lite
 
-Other Requirements
----
+![alt text](https://github.com/MFaria27/a2-DataVis-5Ways/blob/main/img/MFaria_As2-Vegalite.PNG?raw=true)
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+Vega-Lite is a new, high-level visualization tool that uses JSON syntax to create and format graphs. The creators of Vega-Lite provide a browser IDE to try it out, but it can also be imported to a javascript/html file to be used as a webpage.
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+Setting up Vega-Lite in a webpage was suprisingly very easy, as the github page/website of vega provided a simple guide for the whole process. Once the frame of the webpage was set up, all I had to do was create/format the chart inside of a single variable. Using JSON syntax, creating the graph was very simple, as encoding x, y, color, and point size was as easy as pointing to the variable they would be based on and mapping it.
 
-GitHub Details
----
+The only difficulty I had when creating the visual was loading the csv into the index file outside of directly making it through github (Attempted using sublime, not recommended). Once I managed to properly load the data, making the visual was a breeze. With a little bit of studying documentation, Vega-Lite easily became a simple, easy-to-use visualization tool. I don't think it can go into the fine details such as d3, but for a quick to set up graph, it is pretty good.
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+Sources:
 
-Grading
----
+Website Index : https://mfaria27.github.io/a2-DataVis-5Ways/MFaria27_As2-Vega/index.html
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
+https://vega.github.io/vega-lite/examples/circle_natural_disasters.html
 
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+===
 
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
+# D3 / Javascript
 
-# R + ggplot2 + R Markdown
+![alt text](https://github.com/MFaria27/a2-DataVis-5Ways/blob/main/img/MFaria_As2-d3.PNG?raw=true)
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+Sources:
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+D3 is a javascript library that can be used to make various visualizations on a webpage, including normal, interactable shapes and charts.
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+Loading the data into the webpage was relatively easy, as d3.csv() loaded the data into a function that could be created to add everything needed from the dataset into the visualization. Creating the axises was pretty strange, as I had to define the length and position of each axis individually in the svg. Adding axis titles was very annoying, as I needed the percise location of the text in order to line it up properly. Making points using the data was a little bit tricky to understand, but after looking at some examples, it was fairly easy to implement.
 
-![ggplot2](img/ggplot2.png)
+D3 was the method of visualization that took me the longest to complete. While d3 can be used to create pretty much anything in terms of visualization, it is the method that requires the most finite details out of all of them. Every single aspect/trait in the visualization had to be defined someway. While it was difficult to create, d3 is definitely the best visualization tool for creating anything, as there are too many ways to make visuals.
 
-# d3...
+Website Index : https://mfaria27.github.io/a2-DataVis-5Ways/MFaria27_As2-d3/index.html
 
-(And so on...)
+https://www.tutorialspoint.com/d3js/d3js_axis_api.htm
 
+https://www.d3-graph-gallery.com/graph/scatter_basic.html
+
+===
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+<ul>
+  <li>Other than Excel, all of the visualization methods were things I was learning from with little to no previous experience, so having some of the basics of all of these languages/graph creation methods under my belt is very nice.</li>
+  <li>In Excel, separating all the necessary data into columns by manufacturer, MPG, and weight was a pretty technical/brute force solution to my troubles setting up a graph in excel.</li>
+  <li>Creating two legends using matplotlib by creating a second artist and adding it to the graph before the first one to make it so that the second legend didn't overwrite the first was a difficult solution to adding multiple legends.</li>
+</ul>
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+## Design Achievements
+<ul>
+  <li>Excel and D3 javascript did not have direct mapping on weight to size, so I had to manually map values in order to get an accurate size by weight.</li>
+  <li>Working with hex colors to get visibile colors that stayed accurate to the original graph that we had to create.</li>
+</ul>

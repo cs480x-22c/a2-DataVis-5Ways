@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MFaria27_As2-d3</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    
+    <div id="vis"></div>
+    <script>
+      console.log(d3); // test if d3 is loaded
+      
+      var width = 1400;
+      var height = 1200;
+      
+      var svg = d3.select("#vis")
+        .append("svg")
+        .attr("width", width/2)
+        .attr("height", height/2)
+        .attr("transform", "translate(" + (width/16) + ", " + (height/16) + ")");
+        
+      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(data) {
+        console.log(data)
+        var x = d3.scaleLinear()
+          .domain([1400, 5200])
+          .range([0, (width/4)])
+        svg.append("g")
+          .attr("transform", "translate(" + (width/16) + ", " + (height/4) + ")")
+          .call(d3.axisBottom(x));
+        
+        var y = d3.scaleLinear()
+          .domain([8, 48])
+          .range([height/4, 0])
+        svg.append("g")
+          .attr("transform", "translate(" + (width/16) + ", 0)")
+          .call(d3.axisLeft(y));
+        
+        var manuscol = d3.scaleOrdinal()
+            .domain(["bmw", "ford", "honda", "mercedes", "toyota"])
+            .range(["#FF0000", "#B6B74A", "#92D050", "#00B0F0", "#DF82E6"])
+        
+        svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return x(d.Weight); })
+            .attr("cy", function (d) { return y(d.MPG); })
+            .attr("r", function (d) { return d.Weight / 600 })
+            .style("fill", function (d) { return manuscol(d.Manufacturer) })
+            .style("opacity", 0.5)
+            .attr("transform", "translate(" + (width/16) + ", 0)");
+        
+        svg.append("text")
+          .attr("transform", "translate(" + (width/6) + ", " + ((height/4) + (height/32)) + ")")
+          .text("Weight");
+        
+        svg.append("text")
+          .attr("transform", "translate(" + (width/24) + ", " + (height/8) + ") rotate(270)")
+          //.attr("transform", "rotate(-90)")
+          .text("MPG");
+      });
+      //function(point) { return point.Weight/100;
+    </script>
+    
+  </body>
+</html>

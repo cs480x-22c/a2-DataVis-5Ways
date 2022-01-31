@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>MFaria27_As2-Vega</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+  </head>
+  <body>
+    
+    <div id="vis"></div>
+    <script>
+      
+      var vlSpec = {
+        data: {url: "../cars-sample.csv"},
+        mark: {type: "circle"},
+        width: 500,
+        height: 400,
+        encoding: {
+          x: {
+            field: "Weight",
+            type: "quantitative",
+            axis: {values: [2000, 3000, 4000, 5000]},
+            scale: {domain: [1400, 5200]}
+          },
+          y: {
+            field: "MPG",
+            type: "quantitative",
+            axis: {values: [10, 20, 30, 40]},
+            scale: {domain: [8, 48]}
+          },
+          size: {
+            field: "Weight",
+            type: "quantitative"
+          },
+          color: {
+            field: "Manufacturer",
+            type: "nominal",
+            scale: {
+              domain: ["bmw", "ford", "honda", "mercedes", "toyota"],
+              range: ["#FF0000", "#B6B74A", "#92D050", "#00B0F0", "#DF82E6"]
+            }
+          }
+        }
+      };
+      
+      vegaEmbed('#vis', vlSpec);
+    </script>
+  </body>
+</html>
