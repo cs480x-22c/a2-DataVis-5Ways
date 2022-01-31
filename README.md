@@ -12,7 +12,7 @@ For hacks and manipulations, I was easily able to highlight/unhighlight datapoin
 **NOTE: IMAGE IS MUCH EASIER TO SEE IF YOU CLICK ON IT. APOLOGIES FOR THE POOR SIZING IN THE EMBED**
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/bdbc60b7dc78303589b323bd8bb2d8a3d341fc8b/img/javascript%20-%20d3.png)
 
-**#r - ggplot2**
+**#R - ggplot2**
 
 R and ggplot2... where do I start. I hate R. I had a really bad experience with it in another class and I swore to myself I'd never use it again. HOWEVER, ggplot2 made this the easiest graph out of the 3 coding libraries I used. While I didn't feel that I had as much creative freedom as I did with d3, I was able to make the graph in 2 lines, in 5 minutes: load in the data from the csv, and make the chart. ggplot2 handles the rest.
 
@@ -28,7 +28,7 @@ I can't see this tool being very useful in the future unless you have a python s
 
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/cbce64722c411d923ba33aaad92b24fa9f30fa99/img/python%20-%20matplotlib%20&%20pandas.png)
 
-**Flourish**
+**#Flourish**
 
 Ah, Flourish... before I found this on the list, I thought I had to hard code all 5 graphs, so you could say that Flourish saved me from losing my mind. Flourish was easy - like, even easier than ggplot2; I gave it the data, it spat out a chart, but at the same time I had so many more customizability options than I did with ggplot2. I could make an interactive chart, give the chart animations. It didn't really feel like a one-and-done deal like ggplot2 did. I still think that d3 takes the edge on flexibility, since the ability to hard code what you want in will always provide more options than a pre-coded site will, but Flourish is really goddam convenient and easy to use.
 
