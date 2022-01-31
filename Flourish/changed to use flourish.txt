@@ -1,0 +1,2 @@
+chaged plan to use flourish not GNUplot
+https://public.flourish.studio/visualisation/8573088/
