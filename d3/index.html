@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src='https://unpkg.com/simple-statistics@7.7.2/dist/simple-statistics.min.js'></script>
+        <div id='plot-div'></div>
+    </head>
+
+    <body>
+        <script>
+            const simplestats = window.ss
+            const width = 500
+            const height = 400
+
+            let margin = {
+                top: 20,
+                left: 20,
+                right: 20,
+                bottom: 20
+            }
+
+            let render = (data) => {
+                let xScale = d3.scaleLinear()
+                .domain([1500, 5100])
+                .range([margin.left, width - margin.right])
+                
+                let yScale = d3.scaleLinear()
+                .domain(d3.extent(data, p => p['MPG']))
+                .range([height - margin.bottom, margin.top])
+                
+                let colorScale = d3.scaleOrdinal(
+                    data.map(d => d['Manufacturer']),
+                    ['#8E51FA', '#5AD1DB', '#FAB101', '#DC4A48', '#24F09B']
+                )
+
+                let sizeScale = d3.scaleLinear()
+                .domain(d3.extent(data, p => p['Weight']))
+                .range([1, 20])
+
+                var svg = d3.select("#plot-div")
+                .append("svg")
+                .attr("viewBox", [0, 0, width, height + 30])
+                
+                // Add gray background
+                svg.append("rect")
+                .attr("width", width)
+                .attr("height", height + 20)
+                .attr("fill", "#EBEBEB")
+                
+                // Add circles for data
+                svg.append("g")
+                .selectAll("circle")
+                .data(data)
+                .join("circle")
+                .attr("transform", (d) => `translate(${xScale(d['Weight'])},${yScale(d['MPG'])})`)
+                .attr("r", (d) => sizeScale(d['Weight']))
+                .attr("fill", (d) => colorScale(d['Manufacturer']))
+                .attr("opacity", 0.5)
+                .attr("stroke", d => d.Predicted ? "black" : "")
+
+                svg.append("g")
+                .attr("transform", `translate(0,${height - margin.bottom})`)
+                .call(d3.axisBottom(xScale).ticks(5))
+                .call((g) => g.select(".domain").remove())
+                .call((g) =>
+                    g.append("text")
+                    .attr("x", width / 2)
+                    .attr("y", 30)
+                    .attr("fill", "#000")
+                    .attr("font-weight", "bold")
+                    .attr("text-anchor", "end")
+                    .text("Weight")
+                )
+                svg.append("g")
+                .attr("transform", `translate(${margin.left},0)`)
+                .call(d3.axisLeft(yScale).ticks(4))
+                .call((g) => g.select(".domain").remove())
+                .call((g) =>
+                    g.select(".tick:last-of-type text")
+                    .clone()
+                    .attr("y", -20)
+                    .attr("x", -20)
+                    .attr("text-anchor", "start")
+                    .attr("font-weight", "bold")
+                    .text("MPG")
+                )
+            }
+
+            d3.csv('./cars-sample.csv', p => {
+                return {
+                    MPG: (p.MPG === "NA") ? -1 : +p.MPG,
+                    Weight: +p.Weight,
+                    Manufacturer: p.Manufacturer
+                }
+            })
+            .then(dataRaw => {
+                let data = dataRaw.filter( p => p.MPG >= 0)
+                let points = []
+                data.forEach(p => points.push([p.Weight, p.MPG]))
+                var predict = ss.linearRegressionLine(ss.linearRegression(points))
+                let computed = dataRaw.map( p => {
+                    return {
+                        MPG: (p.MPG === -1) ? predict(p.Weight) : +p.MPG,
+                        Weight: p.Weight,
+                        Manufacturer: p.Manufacturer,
+                        Predicted: (p.MPG === -1)
+                    }
+                })
+                render(computed)
+            })
+        </script>
+    </body>
+</html>
