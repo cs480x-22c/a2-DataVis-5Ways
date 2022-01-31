@@ -25,7 +25,7 @@
         
         var x = d3.scaleLinear()
           .domain([1400, 5200])
-          .range([0, width/4])
+          .range([height/4, width/4])
         svg.append("g")
           .attr("transform", "translate(0,50)")
           .call(d3.axisBottom(x));
@@ -37,6 +37,23 @@
           .attr("transform", "translate(0,50)")
           .call(d3.axisLeft(y));
         
+        var colors = {
+          "bmw" : "#FF0000",
+          "ford" : "#B6B74A",
+          "honda" : "#92D050",
+          "mercedes" : "#00B0F0",
+          "toyota" : "#DF82E6"
+        };
+        
+        svg.append('g')
+          .selectAll("dot")
+          .data(carData)
+          .enter()
+          .append("circle")
+            .attr("cx", function(point) { return x(point.Weight); })
+            .attr("cy", function(point) { return y(point.MPG); })
+            .attr("r", function(point) { return point.Weight/100; })
+            .attr("fill", function(point) { return colors(point.Manufacturer); })
       });
       
     </script>
