@@ -22,12 +22,21 @@ I would see this being useful in the future for simple of quick charts, but noth
 
 **#python - matplotlib & pandas**
 
+Python and matplotlib/pandas was easily the hardest of the 3 libraries I succeeded in making charts in. What took forever was the color-mapping. Python's color mapping is fuuuuuunky. After a few hours of trying, it still didn't come out 100% correct, and I had to give up on adding a legend, but I'm still proud of the result... kind of. d3 was more flexibile, more powerful, and more convenient.
 
-Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+I can't see this tool being very useful in the future unless you have a python specific program that requires a simple vis and you don't know how to link languages or cross-embed elements - a very niche situation. Also, I guess you could consider the panda library my hack for this one, since I had to use it to read in the csv in a more conveniently-usable format than I could with matplotlib in order to color-map at all. 
 
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/cbce64722c411d923ba33aaad92b24fa9f30fa99/img/python%20-%20matplotlib%20&%20pandas.png)
 
 **Flourish**
+
+
+
+Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+
+![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/b7d74334aaaefc01d8ddd9cd1c99fa707f986a67/img/Flourish%20-%201.png)
+![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/b7d74334aaaefc01d8ddd9cd1c99fa707f986a67/img/Flourish%20-%202.png)
+![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/b7d74334aaaefc01d8ddd9cd1c99fa707f986a67/img/Flourish%20-%203.png)
 
 **#SPSS**
 
