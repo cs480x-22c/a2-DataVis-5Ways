@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    line{
+        stroke: white;
+    }
+    
+</style>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<div class="header">Select data point to see car name</div>
+
+<div id="my_dataviz"></div>
+
+<script>
+//started code obtained at:
+    //https://www.d3-graph-gallery.com/graph/scatter_basic.html
+    //https://observablehq.com/d/4f28a37068afd93a#x
+    
+    // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 30, bottom: 30, left: 60},
+        width = 460 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right +100)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+        `translate(${margin.left}, ${margin.top})`);
+    
+    var mydata;
+    const cval = ['#F7776E', '#A3A601', '#03BD7C', '#00B0FC', '#E86BF3']
+    
+    //Read the data
+    d3.csv("cars-sample.csv").then( function(data) {
+        //console.log(data)
+        
+      // Add X axis
+    const x = d3.scaleLinear()
+        .domain([1500, 5000])
+        .range([0, width])
+
+    var x_axis = d3.axisBottom(x).scale(x).ticks(4);
+    
+    svg.append("g")
+        .attr("transform", 'translate(0, 360)')
+        .call(x_axis);
+    
+      // Add Y axis
+    const y = d3.scaleLinear()
+        .domain([8, 47])
+        .range([ height, 0])
+        
+    var y_axis = d3.axisLeft(y).scale(y).ticks(4);
+        svg.append("g")
+        .call(y_axis);
+
+    const c = function(d){
+        if(d.MPG == 'NA'){
+            return "#EBEBEB"
+        }
+        else if(d.Manufacturer=="bmw"){
+            return cval[0]
+        } else if(d.Manufacturer =="ford"){
+            return cval[1]
+        }else if(d.Manufacturer =="honda"){
+            return cval[2]
+        }else if(d.Manufacturer =="mercedes"){
+            return cval[3]
+        }else if(d.Manufacturer =="toyota"){
+            return cval[4]
+        }
+    }
+        
+    //grid starter code from:
+        //https://www.essycode.com/posts/adding-gridlines-chart-d3/
+    const xAxisGrid = d3.axisBottom(x).tickSize(-height).tickFormat('').ticks(10);
+    const yAxisGrid = d3.axisLeft(y).tickSize(-width).tickFormat('').ticks(10);
+
+    svg.append('g')
+        .attr('class', 'x axis-grid')
+        .attr("stroke", "#222")
+        .style("fill", '#EBEBEB')
+        .attr('transform', 'translate(0,' + height + ')')
+        .call(xAxisGrid);
+    
+    svg.append('g')
+        .attr('class', 'y axis-grid')
+        .call(g => g.select(".tick").remove())
+        .call(yAxisGrid);
+
+
+      // Add dots
+    svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .join("circle")
+        .attr("cy", function (d) { return y(d.MPG); } )
+        .attr("cx", function (d) { return x(d.Weight); } )
+        .attr("r", function (d) { return d.Weight/500; } )
+        .style("opacity", 0.5)
+        .style("fill", function (d) { return c(d); } )
+        .on('click', function(evt, d) {
+            d3.select(this)
+                .transition()
+                .duration(100)
+                .ease(d3.easeLinear)
+                .attr('stroke', 'black')
+                .attr('stroke-width', 2)
+                .attr('r', d.Weight/500)
+                console.log(evt.clientX)
+                svg.append("text").attr("x", evt.clientX-60 ).attr("y", evt.clientY-30).text(d.Car).style("font-size", "20px").attr("alignment-baseline","middle")
+                console.log(d.Car)
+        })
+    
+    })
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+60).attr("r", 6).style("fill", cval[0])
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+80).attr("r", 6).style("fill", cval[1])
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+100).attr("r", 6).style("fill", cval[2])
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+120).attr("r", 6).style("fill", cval[3])
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+140).attr("r", 6).style("fill", cval[4])
+
+    svg.append("text").attr("x", width+10).attr("y", margin.top+40).text("Manufacturer").style("font-size", "20px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+60).text("BMW").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+80).text("Ford").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+100).text("Honda").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+120).text("Mercedes").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+140).text("Toyota").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+220).attr("r", 4).style("fill", 'black')
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+240).attr("r", 6).style("fill", 'black')
+    svg.append("circle").attr("cx",width+20).attr("cy",margin.top+260).attr("r", 8).style("fill", 'black')
+
+    svg.append("text").attr("x", width+10).attr("y", margin.top+200).text("Size").style("font-size", "20px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+220).text("2000").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+240).text("3000").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", width+30).attr("y", margin.top+260).text("4000").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    svg.append("text").attr("x", width/2).attr("y", height+20).text("Weight").style("font-size", "15px").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", -40).attr("y", height/2).text("MPG").style("font-size", "15px").attr("alignment-","middle")
+
+    
+</script>

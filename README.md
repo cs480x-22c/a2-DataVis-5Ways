@@ -3,140 +3,48 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+**Maria del Carmen Sacristan Benjet**
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# R + ggplot2 
+![R visualization](img/Rplot-MCSB.png)
 
-Your goal is to use 5 different tools to make the following chart:
+Despite the fact I started without any previous knowledge of R or ggplot, it ended up being the easiest way to create the visualization. The hardest part was figuring out how to read the data from the csv file. After that it took me only one line to get my visualization. R was good at showing what I needed through simple commands. I also suspect that the image prompt of the visualization that we were provided with was made in R, which is why R with only a few personalizations defaulted to the exact graph I needed. I now know that Ris a very useful and easy to use tool to plot conventional graphs.
 
-![ggplot2](img/ggplot2.png)
+# Python + matplotlib.pyplot
 
-These features should be preserved as much as possible in your replication:
+![Python visualization](img/PyPlot-MCSB.png)
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+Using python with the matplotlib library was significantly challenging. Getting the general concept of the table was easy, however I struggled to force it to do the details. Making the legend was a nightmare, because the color map would only take in a color or number, thus losing the manufacturer label. I also had to plot the visualization as subplots so that it would allow the legend to have more than one value in it. In the end the legend for the manufacturer's color code was unsatisfactory. It really made me appreciate the auto created legend in R.
 
 
-Readme Requirements
----
+# d3
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+![d3 visualization](img/d3MCSB1.JPG)
+![d3 visualization after interaction](img/d3MCSB2.JPG)
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+My d3 visualization can be found here: https://marsacben.github.io/index.html
 
-Other Requirements
----
+D3 allowed for the most freedom to personalize the visualization as I wanted. The drawback is that I had to spend a lot of time building a lot of the basic elements that were generated for me in R and Python. For example, making the grid and axis for the d3 visualization proved the hardest part of the project. Plotting the data, the easiest, and I had the liberty to do it exactly how I wanted with no constraints. I was able to add interaction to the data points, and map to exactly the color and size I wanted. For the legend I was able to avoid the fiasco of Python since I could just type in manually the texts and reference shapes. D3 is a great language to make personalized or interactive visualizations too complicated for other languages like R or Python.
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+# Google sheets
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+![Google Sheets visualization](img/GoogleSheets-MCSB.JPG)
+My google sheets visualization can be found here: https://docs.google.com/spreadsheets/d/1nxTvyUmIwYO66rqbnx0XzS1Fqsu3WiErogr3PZ7X22I/edit?usp=sharing
 
-GitHub Details
----
+I love using google sheets because it is very easy to create. The big drawback is that it is very limited. Google sheets only allow you to make simple graphs. As you can see in my visualization, I was not able to capture the color nor size mapping of the original visualization.
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+# Datawrapper
 
-Grading
----
+![Datawrapper visualization](img/dataWrapper-MCSB.JPG)
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+I found Datawrapper after searching for free online data visualization GUI tools. This tool is very easy to use, and provides a surprising amount of personalization or its simplicity. Here all I was not able to do was add a legend to the size map. I would have also liked to be able to make the size differences larger so they would be more noticeable. Nonetheless, I was happy it gave me the ability to size maps. I liked the ease, the amount of options and the fact that it doesn't force you to create an account to create visualization. Bellow are screenshots documenting my process making this visualization:
+![Datawrapper upload csv file](img/DWuploaddata.JPG)
+![Datawrapper selecting data](img/DWcheckdata.JPG)
+![Datawrapper edit data](img/DWedit.JPG)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Built interactive visualization**: I made my d3 visualization interactive. Clicking on any data point will display the name of that car as well as adding a thick black boarder line to the circle. 
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Used a color matching tool to fing the exact colors used in the picture of the reference visualization**: For my d3 visualization I used this a tool to get the exact color from an image so that I could replicate my d3 visualization in the exact same color. The color matching tool I used was: https://html-color-codes.info/colors-from-image/#. I lso spent a lot of time figuring out how to make the grid line color white to match the original visualization. This was very hard as it would not allow the changing of the line clolour throught .attr() not .style() and I had to ad css to do it.
