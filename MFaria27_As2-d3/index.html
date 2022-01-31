@@ -21,7 +21,7 @@
         .attr("width", width/2)
         .attr("height", height/2);
       
-      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(carData) {
+      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(data) {
         
         var x = d3.scaleLinear()
           .domain([1400, 5200])
@@ -47,7 +47,7 @@
         
         svg.append("g")
           .selectAll("dot")
-          .data(carData)
+          .data(data)
           .enter()
           .append("circle")
             .attr("cx", function(point) { return x(point.Weight); })
