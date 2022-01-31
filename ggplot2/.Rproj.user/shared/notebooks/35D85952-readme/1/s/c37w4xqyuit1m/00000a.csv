@@ -1,0 +1,6 @@
+"0","df_cars %>% ggplot() + 
+  geom_point( aes(x=Weight, y=MPG, color=Manufacturer, size=Weight, alpha=0.5) )
+"
+"2","Warning:"
+"2"," Removed 2 rows containing missing values (geom_point).
+"
