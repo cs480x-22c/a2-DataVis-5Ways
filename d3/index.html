@@ -26,14 +26,6 @@
         svg.append("g").attr("transform", "translate(0, 450)").call(d3.axisBottom(xScaleGraph).tickValues(xTickValues).tickFormat(d3.format("d")));
         svg.append("g").call(d3.axisLeft(yScaleGraph).tickValues(yTickValues));
 
-        svg.append("text").attr("x", 250).attr("y", 483).text("Weight")
-        svg.append("text")
-            .attr("x", -250)
-            .attr("y", -55)
-            .attr("dy", "1em")
-            .attr("transform", "rotate(-90)")
-            .text("MPG");
-
         svg.append("g")
             .attr("class", "heavyGrid")
             .attr("transform", "translate(0, 450)")
@@ -42,6 +34,14 @@
         svg.append("g")
             .attr("class", "heavyGrid")
             .call(d3.axisLeft(yScaleGraph).ticks(5).tickSize(-500).tickFormat(""));
+
+        svg.append("text").attr("x", 250).attr("y", 483).text("Weight")
+        svg.append("text")
+            .attr("x", -250)
+            .attr("y", -55)
+            .attr("dy", "1em")
+            .attr("transform", "rotate(-90)")
+            .text("MPG");
 
         var fixedData = [];
         for (var i = 0; i < data.length; i++){
