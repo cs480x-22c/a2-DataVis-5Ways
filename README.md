@@ -9,7 +9,7 @@ I could see d3 being useful in the future for pretty much any vis I want to make
 
 For hacks and manipulations, I was easily able to highlight/unhighlight datapoints on mouseon/mouseoff, but I had a harder time getting text I displayed about the data point to disappear, so I just appended a white rect over the text on mouseoff and called it a day... haha. Also, the legend text took some trial and error, but I eventually got the spacing right. If only I knew d3 a bit better, it could have been much more elegant.
 
-NOTE: IMAGE IS MUCH EASIER TO SEE IF YOU CLICK ON IT. APOLOGIES FOR THE POOR SIZING IN THE EMBED
+**NOTE: IMAGE IS MUCH EASIER TO SEE IF YOU CLICK ON IT. APOLOGIES FOR THE POOR SIZING IN THE EMBED**
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/bdbc60b7dc78303589b323bd8bb2d8a3d341fc8b/img/javascript%20-%20d3.png)
 
 **#r - ggplot2**
