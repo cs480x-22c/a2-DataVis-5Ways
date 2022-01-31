@@ -1,0 +1,185 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<div id="car_viz"></div>
+
+<script>
+  console.log(d3); // test if d3 is loaded
+
+//sets graph margains, used starter code for guidance
+const margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 750 - margin.left - margin.right,
+    height = 750 - margin.top - margin.bottom;
+
+const svg = d3.select("#car_viz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right + 500)
+    .attr("height", height + margin.top + margin.bottom + 500)
+  .append("g")
+    .attr("transform", 
+          `translate(${margin.left}, ${margin.top})`);
+
+//set up graph axes, used starter code for guidance (not including text)
+d3.csv("cars-sample.csv")
+const x = d3.scaleLinear()
+    .domain([1500, 5000])
+    .range([ 0, width ]);
+  svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x));
+  svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width/2 + margin.left)
+    .attr("y", height + margin.bottom + margin.top)
+    .text("Weight");
+
+const y = d3.scaleLinear()
+    .domain([5, 50])
+    .range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+  svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("x", -height/2+margin.top+margin.bottom)
+    .attr("y", -40)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("MPG");
+
+//color mapping function for car type
+function myFunction(inp) {
+	if(inp === "bmw")
+		return "red"
+	if(inp === "ford")
+		return "green"
+	if(inp === "honda")
+		return "blue"
+	if(inp === "mercedes")
+		return "purple"
+	if(inp === "toyota")
+		return "orange"
+};
+
+//read in data, I did all of this by myself
+d3.csv("cars-sample.csv", function(data) {
+	console.log(data);
+	if(data.Weight != "NA" && data.MPG != "NA") {
+  svg.append("circle")
+   	.attr("cx", x(data.Weight))
+   	.attr("cy", y(data.MPG))
+   	.attr("r", data.Weight/500)
+   	.style("opacity", 0.50)
+   	.style("fill", d3.color(myFunction(data.Manufacturer)))
+   	.on("mouseover", function(d) {
+ 			d3.select(this)
+ 				.transition()
+ 				.delay(0)
+ 				.duration(500)
+ 				.style("stroke", "black")
+ 				.style("stroke-width", 10);
+ 			svg.append("text")
+    		.attr("class", "x label")
+    		.attr("text-anchor", "end")
+    		.attr("x", width-margin.left)
+    		.attr("y", height + margin.bottom + margin.top + 50)
+    		.style('fill', d3.color(myFunction(data.Manufacturer)))
+    		.text("Car: " + data.Car + ", Manufacturer: " + data.Manufacturer + ", MPG: " + data.MPG + ", Weight: " + data.Weight + ", Origin: " + data.Origin);
+		})
+   	.on("mouseout", function(d) {
+ 			d3.select(this)
+ 				.transition()
+ 				.delay(0)
+ 				.duration(500)
+ 				.style("stroke", d3.color(myFunction(data.Manufacturer)))
+ 				.style("stroke-width", 0);
+ 			svg.append("rect")
+ 				.attr("x", 0)
+ 				.attr("y", height + margin.bottom + margin.top + 10)
+ 				.attr("width", width+margin.left+margin.right)
+ 				.attr("height", "100")
+ 				.attr("stroke", "white")
+ 				.style("fill", "white");
+		})
+   }
+});
+
+	svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2-125)
+    .text("Manufacturer");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2-100)
+    .style("fill", "red")
+    .text("bmw");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2-75)
+    .style("fill", "green")
+    .text("ford");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2-50)
+    .style("fill", "blue")
+    .text("honda");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2-25)
+    .style("fill", "purple")
+    .text("mercedes");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2)
+    .style("fill", "orange")
+    .text("toyota");
+
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2+50)
+    .text("Weight");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2+75)
+    .text("2000");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2+100)
+    .text("3000");
+  svg.append("text")
+		.attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width+margin.left+75)
+    .attr("y", height/2+125)
+    .text("4000");
+  svg.append("circle")
+  	.attr("cx", width+margin.left+30)
+   	.attr("cy", height/2+70)
+   	.attr("r", 2000/500)
+	svg.append("circle")
+  	.attr("cx", width+margin.left+30)
+   	.attr("cy", height/2+95)
+   	.attr("r", 3000/500)
+  svg.append("circle")
+  	.attr("cx", width+margin.left+30)
+   	.attr("cy", height/2+120)
+   	.attr("r", 4000/500)
+
+</script>
