@@ -18,19 +18,21 @@
       
       const svg = d3.select("#vis")
         .append(svg)
-        .attr("width", width/4)
-        .attr("height", height/4);
+        .attr("width", width/2)
+        .attr("height", height/2);
       
       d3.csv("../cars-sample.csv", function(carData) {
         
         var x = d3.scaleLinear()
           .domain([1400, 5200])
+          .range([0, width/4])
         svg.append("g")
           .attr("transform", "translate(0,50)")
           .call(d3.axisBottom(x));
         
         var y = d3.scaleLinear()
           .domain([8, 48])
+          .range([height/4, 0])
         svg.append("g")
           .attr("transform", "translate(0,50)")
           .call(d3.axisLeft(y));
