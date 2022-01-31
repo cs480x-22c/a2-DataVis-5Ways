@@ -74,7 +74,8 @@ Ironically, this is the library that I'm most proud of my data hack in. I wrote 
 - I know it's listed above, but graph interactability in d3 and Flourish.
 - Successfully changing the alpha factor to correct for opacity in all tools/languages (except SPSS and, of course, JavaFX)
 - Achieved the basic graph structure (axes, labels, data ticks and beginning points for axes, opacity, size mapping, color mapping, legend) for all tools (for the most part)
-- 
+- Added a grid to all of the graphs where I was able to figure it out. The only one I didn't was d3, because I hadn't thought of adding a grid and am only now realizing I never got back to it. For vis's I would normally avoid grids, but since vis is pure informative data, I think a grid works better in keeping what you're seeing straight.
+- Not really an achievement, but I kept a light colored background for the vis', since I felt it was easiest to a) view a grid on b) see transparent data on and c) didn't retract from the appeal of these particular graphs.
 
 *ADDITIONAL NOTES*
 
