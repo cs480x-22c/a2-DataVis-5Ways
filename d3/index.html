@@ -26,15 +26,6 @@
         svg.append("g").attr("transform", "translate(0, 450)").call(d3.axisBottom(xScaleGraph).tickValues(xTickValues).tickFormat(d3.format("d")));
         svg.append("g").call(d3.axisLeft(yScaleGraph).tickValues(yTickValues));
 
-        svg.append("g")
-            .attr("class", "heavyGrid")
-            .attr("transform", "translate(0, 450)")
-            .call(d3.axisBottom(xScaleGraph).ticks(5).tickSize(-450).tickFormat(""));
-
-        svg.append("g")
-            .attr("class", "heavyGrid")
-            .call(d3.axisLeft(yScaleGraph).ticks(5).tickSize(-500).tickFormat(""));
-
         svg.append("text").attr("x", 250).attr("y", 483).text("Weight")
         svg.append("text")
             .attr("x", -250)
