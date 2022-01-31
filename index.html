@@ -1,0 +1,97 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<style>
+	body {
+	  font-family: 'Times New Roman';
+	}
+	img {
+		display: inline-block;
+		max-width: 100%;
+		height: auto;
+	}
+</style>
+
+<b>R + ggplot:</b><br>
+<img class="center-fit" src="img/ggplot.png"><br>
+
+<b>Excel:</b><br>
+<img class="center-fit" src="img/excel.png"><br>
+
+<b>Javascript + D3:</b><br>
+
+<!-- Load in the d3 library -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<div id="my_dataviz"></div>
+<script>
+    var margin = { top: 20, right: 60, bottom: 60, left: 120 },
+        width = 575 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    var svg = d3.select("#my_dataviz")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+    
+    d3.csv("https://raw.githubusercontent.com/jacobadamsky/a2-DataVis-5Ways/main/code/cars-sample.csv", function (data) {
+
+        // Add X axis and label
+        var x = d3.scaleLinear()
+            .domain([1500, 5200])
+            .range([0, width]);
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        svg.append("text")
+            .attr("transform",
+                "translate(" + (width / 2) + " ," +
+                (height + margin.top + 20) + ")")
+            .style("text-anchor", "middle")
+            .text("Weight");
+
+        // Add Y axis and label
+        var y = d3.scaleLinear()
+            .domain([9, 46])
+            .range([height, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margin.left)
+            .attr("x", 0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("MPG");
+
+        // Conditional coloring based on manufacturer
+        var color = d3.scaleOrdinal()
+            .domain(["ford", "honda", "toyota", "mercedes", "bmw"])
+            .range(["red", "orange", "green", "blue", "purple"])
+        
+        // Add dots using color variable
+        svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return x(d.Weight); })
+            .attr("cy", function (d) { return y(d.MPG); })
+            .attr("r", function (d) { return d.Weight / 600 })
+            .style("fill", function (d) { return color(d.Manufacturer) })
+            .style("opacity", 0.5)
+            .append("svg:title")
+            .text(function(d) { return d.MPG + "MPG,  " + d.Manufacturer + ", " + d.Weight + " (weight)" ; });
+    })
+</script>
+
+<b>Python + Matplotlib:</b><br>
+<img class="center-fit" src="img/matplotlib.png"><br>
+
+<b>Flourish:</b>
+<div class="flourish-embed flourish-scatter" data-src="visualisation/8567614" data-width="60%"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
