@@ -48,8 +48,8 @@ I can see why Flourish has been used more and more in recent years, it's lovely 
 You can find the interactive version here: https://public.flourish.studio/visualisation/8559488/
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Ex-pert**: I feel I was able to nail the chart in Excel, and while that means I just spent a lot of time clicking around, it made me feel more competent about the software than I have in the past.
+- **Snake Charmer**: With bare minimum coding experience and not a lot provided to me, I feel like I was able to intuitively read into what I needed to do when creating the graph for Python using Matplotlib. It seems trivial but a week or two ago I would have been stumped a lot more frequently, I feel.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Understanding Color and Sizes Roles in Graphs**: I feel like as I went foreward with creating for this project, I understood a little bit more about what I wanted to see in a graph, and it didn't quite have as much to do with replicating the original as it did creating something analyzeable and readable for all, something you could quickly look at and obtain the information that you need from the visual aid.
