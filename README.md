@@ -1,142 +1,38 @@
-# 02-DataVis-5ways
+**Assignment 2 - Data Visualization, 5 Ways  
+**
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+For this assignment, I created the graph in 4 coding languages and in one other program (excel). The four coding languages I used were R (ggplot2), matlab, python (matplotlib, pandas, & numpy), and d3. I was not able to successfully accomplish everything for all 5 charts but most were similar if not achieving some parts of the extra additions of grid lines or the legend. 
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+#1: R - ggplot2 
+R is a programming language often used for statistical programming and graphics. It has ggplot2, which helps break up graphs and have better and easily made graphics. The way to start making this graph was demonstrated in class and I utilized the code from class, adding to this class code to add the additional missing pieces, like the color and opacity working properly. This chart was able to replicate what was exemplified, as it is made from the same language as the original photo. I was able to successfully able to format those few additions. 
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+<img width="532" alt="image" src="https://user-images.githubusercontent.com/70589029/151754158-3ab2f7e2-6d93-4897-b51c-f2079075c1ea.png">
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+#2: Excel 
+Excel is a spreadsheet created by Microsoft tht is able to take data and create charts. In this, I used a scatterplot to create the chart, using the data we had and creating additional extra rows to ensure the Manufacturer color was being calculated correctly. This graph was created and I tried my best to keep the colors similar to the original ones for the different manufacturers. I also had the gridlines and the legend for the manufacturers on this graph. The main issue I had with this one was that I struggled to change the size based on the data and ended up having to manually change them to accurately reflect the differences in weight. There was also a limitation were I could not change where the axis started without messing up the ticks and went as close as possible to the original (10 to 50 on the y axis and 1000 to 5000 on the x axis). 
 
-Your goal is to use 5 different tools to make the following chart:
+<img width="210" alt="image" src="https://user-images.githubusercontent.com/70589029/151754718-1f69830a-3585-465e-8a33-5aa589a7eedc.png">
 
-![ggplot2](img/ggplot2.png)
+#3: Matlab
+Matlab is a matrix based coding languages that is able to accurately make graphs. I used this because I have used matlab before and wanted to have some practice. I had not made a bubblechart in matlab before though and had to do some research. However, I was able to successfully make the chart. It is lacking a legend but the colors were attempted to be similar and for the bubble sizes to be of a similar size. The biggest issue I had with Matlab was actually opening the csv file I had attempted to. I had to change how I had planned to approach it and while changing it could not get the cell array to be altered to be colors instead of the manufacturer. Because it was so problematic, I ended up manually inputting the colors in their own array that would be used to determine te color. 
 
-These features should be preserved as much as possible in your replication:
+<img width="392" alt="image" src="https://user-images.githubusercontent.com/70589029/151757939-ad618a5a-aed0-4d36-a7d1-9bcff7d797dd.png">
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+#4: Python - matplotlib
+Python matplotlib is used to create visualizations in python. Matplotlib was used here to create the bubblechart and did not have many issues. The axises do start at the right locations, but there are too many ticks on the lines. The bubbles are all done properly and the colors were attempted to be similar to d3. A series of if statements had to be used to create a list of the proper colors because it would not directly turn the manufacturer to a specific color. This was in general one of the easier ones for me to accomplish because I have used python more recently that most of the other coding languages I used. To figure out how to make a bubblechart I referenced: https://datavizpyr.com/make-bubble-plot-in-python-with-matplotlib/ and to use a csv for data in a graph I referenced: https://matplotlib.org/stable/tutorials/introductory/pyplot.html
 
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+<img width="455" alt="image" src="https://user-images.githubusercontent.com/70589029/151757139-552e229d-b4e4-4712-aafe-8dd7cdcb7ce2.png">
 
 
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
+#5: d3 
+d3 is the main open source we have been using for this class. d3 is still very confusing to me and while I am trying to learn, it definitely is a bit of a learning curve and confusing to wrap my head around it. For the d3 code, I found a more advanced coding option and typed up the parts that I needed to create the graph successfully. There is a legend for the manufacturers. I had trouble with the colors and keeping them more similar because they were randomized and when I moved the manufacturer names around they became different colors but not consistently the color I was looking for. The code was majorly based off of: https://www.d3-graph-gallery.com/graph/bubble_template.html
+<img width="380" alt="image" src="https://user-images.githubusercontent.com/70589029/151759230-c278269f-7b55-4386-9ca4-2210597fc839.png">
 
 
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+Technical Achievements
+- I was able to learn more about graphing in multiple languages that I did not know already. I have minimal experience in coding graphs in any languages, so I think this was very valuable to learn more. 
+- While I did not include them in my d3 work, I was able to see different interactions that could be by referencing the code I found for d3. I did not use them but they were interesting to interact with. One feature, highlight, would just hide the graph data if the mouse was drawn over the legend, which was odd. 
+- I also was able to add the grid to a couple of the graphs to practice another attribute addition. 
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+Design Achievements
+- I was able to create similar bubble sizes and colors for all of the charts (although not exactly the same). The similar colors and sizes allow for easier comparison between the different graphs that have been conducted. 
