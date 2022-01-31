@@ -3,8 +3,19 @@
     <title>CS480 A2 D3 Example</title>
     <meta charset="utf-8" />
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
   </head>
+  <style>
+    body {
+      font-family: "Raleway";
+      font-size: 22px;
+    }
+  </style>
   <body>
+    <h1>D3-JS Demo</h1>
     <div id="chart"></div>
     <script>
       console.log(d3);
@@ -12,6 +23,9 @@
       var margin = { top: 10, right: 30, bottom: 40, left: 60 },
         width = 460 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
+
+      const insideWidth = width - marin.left - margin.right;
+      const insideHeight = height - margin.top - margin.bottom;
 
       var svg = d3
         .select("#chart")
@@ -29,13 +43,13 @@
           }
         }
 
-        var x = d3.scaleLinear().domain([1000, 6000]).range([0, width]);
+        var x = d3.scaleLinear().domain([1000, 5000]).range([0, width]);
         svg
           .append("g")
           .attr("transform", "translate(0," + height + ")")
           .call(d3.axisBottom(x));
 
-        var y = d3.scaleLinear().domain([8, 47]).range([height, 0]);
+        var y = d3.scaleLinear().domain([8, 40]).range([height, 0]);
         svg.append("g").call(d3.axisLeft(y));
 
         svg
@@ -43,6 +57,7 @@
           .attr("y", height + margin.bottom / 1.2)
           .attr("x", width / 2)
           .style("text-anchor", "middle")
+          .style("font-family", "Raleway")
           .text("Weight");
 
         svg
@@ -51,6 +66,7 @@
           .attr("y", 0 - margin.left / 2)
           .attr("x", 0 - height / 2)
           .style("text-anchor", "middle")
+          .style("font-family", "Raleway")
           .text("MPG");
 
         svg
