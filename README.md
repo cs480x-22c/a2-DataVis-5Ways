@@ -121,9 +121,22 @@ We will choose some at random to run and test.
 
 Paragraph
 
-![ExcelGraph](img/excelGraph)
+![ExcelGraph](img/excelGraph.png)
 
-# R + ggplot2 + R Markdown
+# Google Sheets
+
+Paragraph
+
+![GoogleSheets](img/excelGraph.png)
+
+https://docs.google.com/spreadsheets/d/1OoX1dXFnqCfLGN9FQdK7usQsVxRJzVmlC8v40wHmJX8/edit#gid=0
+
+
+# R + ggplot2 
+
+Paragraph
+
+![ggplot2](img/Rplot02.png)
 
 R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.
