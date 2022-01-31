@@ -9,4 +9,18 @@ fig = px.scatter(df, x='Weight', y='MPG', size='Weight', color='Manufacturer', o
                     'honda': '#8ed4b6',
                     'mercedes': '#8dcef0'
                 })
+
+fig.update_layout(
+    xaxis = dict(
+        tickmode = 'linear',
+        tick0 = 2000,
+        dtick = 1000
+    ),
+    yaxis = dict(
+        tickmode = 'linear',
+        tick0 = 10,
+        dtick = 10
+    )
+)
+
 fig.show()
