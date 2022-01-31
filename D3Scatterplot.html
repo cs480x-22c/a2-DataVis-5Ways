@@ -1,0 +1,112 @@
+<!-- 
+    - Marie Tessier
+    - CS480X: Data Visualization
+    - HW1  
+-->
+
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+
+<body></body>
+<script>
+
+    // set the dimensions and margins of the graph
+    var margin = { top: 5, right: 30, bottom: 45, left: 40 },
+        width = 900 - margin.left - margin.right,
+        height = 700 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    //data
+    d3.csv("cars-sample.csv").then(function (data) {
+
+        //colors
+        var man = d3.group(data, d => d.Manufacturer)
+        const color = d3.scaleOrdinal()
+            .domain([man[0], man[1], man[2], man[3], man[4]])
+            .range(d3.schemeCategory10);
+
+        //x-axis
+        const x = d3.scaleLinear()
+            .domain([2000, 5000])
+            .range([0, width]);
+
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        svg.append("text")
+            .attr("transform",
+                "translate(" + (width / 2) + " ," +
+                (height + margin.top + 20) + ")")
+            .style("text-anchor", "middle")
+            .text("Weight");
+
+        //y-axis
+        const y = d3.scaleLinear()
+            .domain([10, 40])
+            .range([height, 0]);
+
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margin.left)
+            .attr("x", 0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("MPG");
+
+        //add data
+        //console.log(data.Weight);
+
+        svg.append("g")
+            .selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) {
+                if (d.Weight <= 5000 && d.Weight >= 2000) {
+                    return x(d.Weight);
+                }
+            })
+            .attr("cy", function (d) {
+                if (d.MPG <= 40 && d.MPG >= 10) {
+                    return y(d.MPG);
+                }
+            })
+            .attr("r", function (d) {
+                if (d.Weight <= 5000 && d.Weight >= 2000) {
+                    return d.Weight * (0.0015);
+                }
+            })
+            .style("opacity", 0.6)
+            .style("fill", function (d) {
+                return color(d.Manufacturer);
+            })
+            .on("mouseover", function (d) {
+               d3.select(this).attr("r", 15
+               );
+            })
+            .on("mouseout", function (d) {
+                d3.select(this).attr("r", function(d){
+                    if (d.Weight <= 5000 && d.Weight >= 2000) {
+                        return d.Weight * (0.0015);
+                    };
+                });
+            });
+    });           
+</script>
+
+</html>
