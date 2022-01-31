@@ -15,7 +15,7 @@
     }
   </style>
   <body>
-    <h1>D3-JS Demo</h1>
+    <h1>Car's Weight Vs MPG</h1>
     <div id="chart"></div>
     <script>
       console.log(d3);
@@ -55,6 +55,7 @@
           .attr("x", width / 2)
           .style("text-anchor", "middle")
           .style("font-family", "Raleway")
+          .style("padding", 10)
           .text("Weight");
 
         svg
@@ -64,6 +65,7 @@
           .attr("x", 0 - height / 2)
           .style("text-anchor", "middle")
           .style("font-family", "Raleway")
+          .style("padding", 10)
           .text("MPG");
 
         svg
