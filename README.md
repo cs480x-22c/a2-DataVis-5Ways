@@ -27,7 +27,7 @@ Python Plotly
 
 Python being one of the most used programming languages has some incredable easy graphing interfaces. I usually use matplotlib for graph but I figured that I needed to explore a different plotting tool for python which I later found plotly. Plotly is a very easy to use graphing interface which takes up only a couple lines of code to parse and display your intended graph. I used pandas to read the csv locally and then graphed with plotly which was super easy to do. Plotly ouputs the data graph to local host browser which displays the graph and points. You can also hover of the points in plotly which will tell you move information about a specific point. 
 
-![alt text](https://github.com/MilesGregg/a2-DataVis-5Ways/blob/master/img/Plotly-Graph.png?raw=true)
+![alt text](https://github.com/MilesGregg/a2-DataVis-5Ways/blob/master/img/d3-Graph.png?raw=true)
 
 R + ggplot2
 ---
