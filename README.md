@@ -2,78 +2,37 @@
 
 Assignment 2 - Data Visualization, 5 Ways  
 ===
+# R + ggplot2 + R Markdown
+I used ggplot2 to create this scatter plot. This was not too difficult but I did have some trouble properly importing the cars-sample.csv file into R. 
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+Libraries:
+- ggplot2
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+![Screenshot (55)](https://user-images.githubusercontent.com/48228807/151817989-af94b289-eed9-494a-9e8e-ee6609f07232.png)
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# Python 
+The first plot I made with Python was with Pandas and Matplotlib. This was easier than using d3 but was difficult to learn the functionality of the Matplotlib function, especially when it came to color mapping. First I imported the cars-sample.cvs file with Pandas and converted it into a dataframe. This made the data easier to work with and compatible with the Matplotlib scatter plot function. Then I applied the scatterplot using the data frame created and Matplotlib functions.
 
-Your goal is to use 5 different tools to make the following chart:
+The second plot I made with Python was with Seaborn and Pandas. Seaborn scatterplot is similar to Matplotlib but made the scatterplot more customizable and automatically created a legend for the plot based on manufacturers when specified. 
 
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
+Libraries:
+- Pandas
 - Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
+- Seaborn 
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+Matlibplot:
+![PythonMatlibplot](https://user-images.githubusercontent.com/48228807/151818288-502f6f17-fc42-49b7-b2ea-c39cf86a1b7a.png)
 
-Tips
----
+Seaborn:
+![PythonSeaborn](https://user-images.githubusercontent.com/48228807/151818406-47ef3c13-e169-447a-b151-ab2f894bce43.png)
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+# JavaScript + D3
+To create the scatterplot in d3 was more difficult than in R. I was able to create this by importing the csv file, scaling the x and y axis, then appending circles to the graph using the data. The d3.scaleOrdinal library was used to color code the data by Manufacturer. 
+Libraries:
+- d3
+- d3.scaleOrdinal
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+![Screenshot (56)](https://user-images.githubusercontent.com/48228807/151818860-46e59a28-19c5-4bd3-88b5-5dae3316d09c.png)
 
 
 Readme Requirements
