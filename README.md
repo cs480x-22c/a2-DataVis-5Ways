@@ -74,7 +74,7 @@ Link Tooltip Library (did not work) - https://www.d3-graph-gallery.com/graph/int
 - For retention and recall, I increased the size of the dots while keeping the size mapping to increase the visual density. I added a title to the chart because in the article it said that the title of the chart is what people remembered the most. The 5 different colors for the manufacturers were good because the more colors the more memorable to chart is.
 - For the tableau and d3 graphs, the interactive tooltip followed the usability goal of the delta design philosophy. As in the article, the interactions were sensible and limited to what was essential.
 
-Link - Delta Design Philosophy: https://www.tableau.com/about/blog/2019/6/creating-not-designing-four-goals-every-information-experience
-Link - Attention and Engagement: https://www.tableau.com/about/blog/2019/6/building-information-experiences-attention-and-engagement
-Link - Retention and Recall: https://www.tableau.com/about/blog/2019/8/how-get-people-remember-your-visualization
-Link - Usability: https://www.tableau.com/about/blog/2019/7/usability-most-satisfying-design-puzzle-solve
+- Link - Delta Design Philosophy: https://www.tableau.com/about/blog/2019/6/creating-not-designing-four-goals-every-information-experience
+- Link - Attention and Engagement: https://www.tableau.com/about/blog/2019/6/building-information-experiences-attention-and-engagement
+- Link - Retention and Recall: https://www.tableau.com/about/blog/2019/8/how-get-people-remember-your-visualization
+- Link - Usability: https://www.tableau.com/about/blog/2019/7/usability-most-satisfying-design-puzzle-solve
