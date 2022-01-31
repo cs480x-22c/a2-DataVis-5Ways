@@ -136,21 +136,18 @@ https://docs.google.com/spreadsheets/d/1OoX1dXFnqCfLGN9FQdK7usQsVxRJzVmlC8v40wHm
 
 Paragraph
 
+source: http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
+
 ![ggplot2](img/Rplot02.png)
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+# Javascript
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+Paragraph
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+I could not get my JS envirnment to run my js2.js code, but it is set to produce a graph.
 
-![ggplot2](img/ggplot2.png)
+source: https://jscharting.com/examples/chart-types/scatter-plot/classic/#
 
-# d3...
-
-(And so on...)
 
 
 ## Technical Achievements
