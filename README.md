@@ -12,7 +12,7 @@ Note: For the missing MPG for the two Ford cars, I sub'd them with the MPG from 
 
 ![ggplot](img/carsRplot.png)
 
-I have taken stats 1-2 and prob so R is old faithful along with ggplot so this wasn't a big deal. There was no custom colors involved since the sample graph is the same, so that was less work for me to do which was fun. The background and axis was all auto after you set it, which was less fussy than other options too.
+I have taken stats 1-2 and prob so R is old faithful along with ggplot so this wasn't a big deal. There was no custom colors involved since the sample graph is the same, so that was less work for me to do which was fun. The background and axis was all auto after you set it, which was less fussy than other options too, you know?
 
 # Javascript + D3
 
