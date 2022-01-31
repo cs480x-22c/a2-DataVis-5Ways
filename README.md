@@ -6,30 +6,7 @@ Using the dataset "cars-sample.csv", I created five visualization using various 
 
 ![ggplot2](img/ggplot2.png)
 
-Features preserved in replication included the following:
-
-- Data positioning: it should be a downward-trending scatterplot as shown. Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
 Note: For the missing MPG for the two Ford cars, I sub'd them with the MPG from the closest weight of that car type (Ford) this allowed me to complete the data set for visuals instead of a point that was not likely accurate (high weight and zero MPG, which is what is shown when you plot the missing data without changes)
-
-## Tips
-
-- If you're using d3, key to this assignment is knowing how to load data.
-  You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-  Beware that these functions are _asynchronous_, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- _For web languages like d3_ Don't forget to run a local webserver when you're debugging.
-  See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
 
 # R + ggplot2 + R Markdown
 
@@ -58,14 +35,11 @@ This tool was something popular in workplaces but far from my favroite, Microsof
 
 ![tabCars](img/carsTableau.png)
 
-For this tool, I found this to be pretty easy to use. The instuctions are clear on their website and the only thing I had to look up was inputting custom color palettes.
+For this tool, I found this to be pretty easy to use. The instructions are clear on their website and the only thing I had to look up was inputting custom color palettes. I like that you can change each display based on device, and I think in the future if I wanted to use some mobile vis tools I would check this out first! It also lets you host on a server, which is good for keeping the features like on-hover available. When it's in the app on my computer, I can mouse over for values but that doesn't translate to PNG well. 
 
 ## Technical Achievements
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
+For tech achivements, I attemped to implement a mouse-over view for D3 to show data, but it did not work. The effort is there though!
 
 ### Design Achievements
-
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+I used consistent colors to the original graph by pulling the original hex colors. I also imported my own font to look closer to the original font into the D3 implementation since I ride or die by Raleway. For my Excel and Tableau implementations, I added the background grey and the white grid lines to the correct thickness to add some more visual contrast like the original graph. I was able to create the leagends and the visual icons as well for these two platforms.
