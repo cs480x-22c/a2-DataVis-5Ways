@@ -54,7 +54,7 @@ Cons:
 - Need to have the dataset ready to be plotted
 - Steeper learning curve than previous solutions
 
-![Plot reproduced in Vega-Lite](Vega-Lite/visualization.png)
+![Plot reproduced in Vega-Lite](Vega-lite/visualization.png)
 
 # d3.js
 d3.js allows to create complex data visualizations using JavaScript. d3.js reads the csv file using a function, maps the data to object fields, and allows to visualize it using SVG components. Compared to other solutions which plot the data directly, d3.js requires to create the parts of the plot one-by-one. For example, the axis have to be added and translated to a specific position, same as the labels, ticks, and numbers. Using d3.js certainly requires to read some documentation and sample code. However, I think d3.js was the most versatile data visualization framework. Compared to the other tools, the developer has full control of the graphical components of the plot. I think this is a great option to make complex visualizations, but if trying to make something simple, other solutions allow for great time-saving.
@@ -89,3 +89,5 @@ All design and technical achievements were completed on Python or JavaScript bec
 ![Accessible color palette](readme-img/color-palette.png)
 - Visualize NA values in the dataset
     - To identify the points with a MPG value predicted by the linear regression model, I changed the stroke of those circles to make them darker. This allows to keep the same color palette and make the manufacturer easily recognizable, while warning the viewer that the point is predicted and not actual.
+
+![Predicted point stroke](readme-img/predicted-vis.png)
