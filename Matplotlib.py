@@ -7,7 +7,7 @@ data = pd.read_csv('cars-sample.csv')
 x = data[['Weight']] 
 min_max_scaler = preprocessing.MinMaxScaler()
 x_scaled = min_max_scaler.fit_transform(x)
-data['Bubble Size'] = (x_scaled * 200) + 10
+data['Bubble Size'] = (x_scaled * 250) + 10
 
 colors = {
 	'ford': "#a6445d",
