@@ -1,122 +1,3 @@
-# 02-DataVis-5ways
-
-Assignment 2 - Data Visualization, 5 Ways  
-===
-
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
 # R + ggplot2 + R Markdown
 
 R is a language primarily focused on statistical computing.
@@ -129,9 +10,38 @@ While it takes time to find the correct documentation, these functions made the 
 
 ![ggplot2](img/ggplot2.png)
 
-# d3...
+# Javscript + D3
 
-(And so on...)
+D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of Scalable Vector Graphics, HTML5, and Cascading Style Sheets standards. JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. 
+
+In order to categorize the scatterplot according to the manufacturer, I used the d3 built in function, scaleOrdinal() to map colors to a category. This allowed me to easily categorize the datapoints and color them according to manufacturer.
+
+![d3](img/d3.png)
+
+# Python + MatplotLib + Pandas
+
+Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. Pandas is a software library written for the Python programming language for data manipulation and analysis
+
+In order to read in the data from the csv and transform it into a usable and neat data structure, I used the read_csv method available in pandas. In order to make sure the axes were correctly spaced, I made use of matplotlib locator params variable that allowed me to set the number of tick marks on the x and y axes.
+
+![python](img/python.png)
+
+# IBM SPSS
+
+SPSS Statistics is a statistical software suite developed by IBM for data management, advanced analytics, multivariate analysis, business intelligence, criminal investigation.
+
+In order to make the required portions of the graph such as assigning size to weight and colors to manufacturer I used the drag and drop functionality that is available in the SPSS chart builder where you simply drag the measurements such as weight or mpg that you want controlling aspects of the graph, such as color or size of the dots.
+
+![spss](img/spss.png)
+
+# Tableau
+
+Tableau Software is an American interactive data visualization software company focused on business intelligence. Tableau was by far my favorite tool to use in this assignment because of its seamless user interface.
+
+In order to make the bubble chart, all I had to was import the csv file into tableau and the software took care of seperating the data. In addition to this, In order to assign size of the bubble to weight and assign color of the bubble according to category, it was very simalar to IBM SPSS where I simply had to drag the measurements onto the style preferences. Though this was simalar to SPSS I liked tableau better simply because it was easier to understand what to do.
+
+![Tableau](img/tableau.png)
+
 
 
 ## Technical Achievements
@@ -140,3 +50,14 @@ While it takes time to find the correct documentation, these functions made the 
 
 ### Design Achievements
 - **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+
+# Technical Achievements
+
+Some technical achievements I had during this was understanding how both SPSS and Tableau function. I thoroughly enjoyed the way both visualization software allows for the drag and drop visualizations to make the process as seamless and simple as possible. In addition to this, I got to know more about matplotlib and after reading some documentation, I was able to use the locator_params that are avilable in matplotlib to customize the axes to how I wanted them.
+
+
+# Design Achievements
+
+One of the biggest design achievements I had for this project was understanding the color schemes and understanding the different available color maps such as hsv that were available in python's matplotlib library.
+
+
