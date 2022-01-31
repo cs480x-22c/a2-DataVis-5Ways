@@ -6,7 +6,7 @@ I was surprised by how remarkably easy it was to use R and ggplot to replicate t
  
 I could see R and ggplot being useful in the future when wanting to combine statistics and data visualization in one language. I did not have to manipulate the data to get the right graph, and the data with 'NA' for its MPG field was automatically filtered out.
  
-![ggplot2](img/ggplot2.png)
+![ggplot2](https://github.com/timconnors33/a2-DataVis-5Ways/blob/main/img/ggplot2.png)
  
 # d3
  
@@ -16,7 +16,7 @@ With this immense level of freedom also comes much more work to achieve the same
  
 d3 would definitely be useful for making more intricate and interactive visualizations. It offers much more depth than the other tools I used. I filtered out the null data points by simply setting their y-coordinate to be outside the SVG. All code I based my program on is shown in the comments of the file.
  
-![d3](img/d3.png)
+![d3](https://github.com/timconnors33/a2-DataVis-5Ways/blob/main/img/d3.PNG)
  
 # Excel
  
@@ -26,7 +26,7 @@ I ran into some problems importing the CSV data to Excel, which led to some tedi
  
 Excel is great for light data analysis and visualization, where complex functionality is not needed. I had to create a separate series for each manufacturer's cars in order to map the manufacturer to node color.
  
-![Excel](img/Excel.png)
+![Excel](https://github.com/timconnors33/a2-DataVis-5Ways/blob/main/img/Excel.PNG)
  
 # Python + pyplot
  
@@ -36,7 +36,7 @@ I have very minimal experience in Python and found the syntax a bit perplexing a
  
 Python and pyplot could be useful for making data visualization on program performance. It would be simple to analyze an algorithm's performance and visualize it using pyplot. I noticed that the bubble size of the data points was much too big initially, so I had to divide the manufacturer size by 10 to make it work. All code I based my program on is shown in the comments of the file
  
-![Pyplot](img/Pyplot.png)
+![Pyplot](https://github.com/timconnors33/a2-DataVis-5Ways/blob/main/img/Pyplot.PNG)
  
 # Google Sheets
  
@@ -48,7 +48,7 @@ Sheets could be used to offer an introduction to data analysis and visualization
  
 Note: the chart did not seem to export correctly when I tried downloading the Sheets file as a .xlsx, so I included a .pdf file as well.
  
-![Sheets](img/Sheets.png)
+![Sheets](https://github.com/timconnors33/a2-DataVis-5Ways/blob/main/img/Sheets.PNG)
  
 ## Technical Achievements
 - **Gained experience with CSV files**: I had never worked with CSV files before this assignment. I figured out how a CSV file is formatted and how to utilize its different fields in a variety of languages.
