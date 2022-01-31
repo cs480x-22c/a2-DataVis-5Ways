@@ -63,9 +63,11 @@ Ironically, this is the library that I'm most proud of my data hack in. I wrote 
 - Got familiar with new tools (Flourish, ggplot2, SPSS, python/matplotlib/panda, and JavaFX are all pretty new to me. Flourish and SPSS were fairly easy to figure out, JavaFX required some digging on oracle, and python/matplotlib/panda required some sanity checks and coffee breaks. I'm technically also new to HTML/d3, though I new about the majority of what I used from the last assignment (except for mouseon/mouseoff), so it doesn't really count. I still have to figure out how to do animations in d3, though)
 - The d3 graph and the Flourish graph both have interactable datapoints. I'm especially proud of the d3 interactivity, since I made it all myself :)
 - Parsed my own data when scanning in the csv file for JavaFX (once again, RIP JavaFX :,( )
-- Not sure if it's really an achievement, but managed to avoid the bad data rows in all systems, either by coding an element to check for bad data (d3, python, java) or by removing the bad data (SPSS). Flourish and ggplot 2 dealt with this automatically.
+- Not sure if it's really an achievement, but managed to avoid the bad data rows in all systems, either by coding an element to check for bad data (d3, python, java) or by removing the bad data (SPSS and technically Excel, though that graph isn't in here because it failed miserably). Flourish and ggplot 2 dealt with this automatically.
+- Figured out how to embed images in README.md files on github.
 
 **#Design Achievements**
+- impelemted simple highlighting/unhighlighting and information display/undisplay in d3. I personally think the highlighting looks pretty clean, as well. Prior to doing this, I did not know about d3's mouseover/mouseoff tools.
 - 
 
 *ADDITIONAL NOTES*
