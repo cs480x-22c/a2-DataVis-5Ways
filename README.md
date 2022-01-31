@@ -75,6 +75,10 @@ All design and technical achievements were completed on Python or JavaScript bec
 ### Technical Achievements
 - Managed NA values in the dataset
      - The dataset contained some missing (NA) values. I could either filter them out, or make an interpolation to estimate the missing values. I imported the [Simple Statistics](https://simplestatistics.org) library to compute a linear regression on data points, and then used the model to predict the MPG values for the missing data.
+- Implemented Plotly with Dash
+    - I connected the Plotly visualization with Dash, a web framework for interactive data visualization. With just four lines of code, I was able to make an interactive plot as seen in the GIF below.
+![Dash and Plotly](plotly%20+%20python/dash.gif)
+
 - Lighthouse tests:
     - I tested the website using the Google Lighthouse tests and scored 100 on Performance, Accessibility, and Best Practices. I did this to check that I am following best practices, that the site is accessible (tests include background/foreground color contrast check), and that the dataset it read, interpolated, and processed quickly enough (performance metric).
 ![Lighthouse test](readme-img/d3js-lighthouse.png)
