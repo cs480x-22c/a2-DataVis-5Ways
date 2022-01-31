@@ -22,13 +22,13 @@
         .attr("height", height/2);
         
       
-      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(data) {
+      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", stringToNum, function(data) {
         console.log(data)
         var x = d3.scaleLinear()
           .domain([1400, 5200])
-          .range([width/16, (width/4) + (width/16)])
+          .range([0, (width/4)])
         svg.append("g")
-          .attr("transform", "translate(0, " + (height/4) + ")")
+          .attr("transform", "translate(" + (width/16) + ", " + (height/4) + ")")
           .call(d3.axisBottom(x));
         
         var y = d3.scaleLinear()
@@ -56,7 +56,12 @@
             .attr("r", 10)
             .style("fill", "blue")
       });
-      //function(point) { return point.Weight/100; 
+      //function(point) { return point.Weight/100; \
+      function stringToNum(data){
+        data.Weight = +data.Weight;
+        data.MPG = +data.MPG;
+        return data;
+      }
     </script>
     
   </body>
