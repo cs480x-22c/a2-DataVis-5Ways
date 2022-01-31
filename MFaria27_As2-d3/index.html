@@ -35,7 +35,7 @@
           .domain([8, 48])
           .range([height/4, 0])
         svg.append("g")
-          .attr("transform", "translate(" + (width/16) + ", 0)");
+          .attr("transform", "translate(" + (width/16) + ", 0)")
           .call(d3.axisLeft(y));
         
         var manuscol = d3.scaleOrdinal()
