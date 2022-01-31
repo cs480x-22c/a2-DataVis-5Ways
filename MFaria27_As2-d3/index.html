@@ -22,7 +22,7 @@
         .attr("height", height/2);
         
       
-      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", stringToNum, function(data) {
+      d3.csv("https://raw.githubusercontent.com/MFaria27/a2-DataVis-5Ways/main/MFaria27_As2-d3/cars-sample.csv", function(data) {
         console.log(data)
         var x = d3.scaleLinear()
           .domain([1400, 5200])
@@ -51,17 +51,13 @@
           .data(data)
           .enter()
           .append("circle")
-            .attr("cx", function(point) { return x(point.Weight); })
-            .attr("cy", function(point) { return y(point.MPG); })
-            .attr("r", 10)
-            .style("fill", "blue")
+          .attr("cx", function(point) { return x(point.Weight); })
+          .attr("cy", function(point) { return y(point.MPG); })
+          .attr("r", 10)
+          .style("fill", "blue")
+          .style("opacity", 0.5)
       });
-      //function(point) { return point.Weight/100; \
-      function stringToNum(data){
-        data.Weight = +data.Weight;
-        data.MPG = +data.MPG;
-        return data;
-      }
+      //function(point) { return point.Weight/100;
     </script>
     
   </body>
