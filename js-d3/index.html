@@ -100,6 +100,20 @@
             return d.Weight / 350;
           })
           .style("opacity", 0.5)
+          .style("fill", function (d) {
+            switch (d.Manufacturer) {
+              case "bmw":
+                return "rgb(241, 171, 166)";
+              case "ford":
+                return "rgb(200, 201, 136)";
+              case "honda":
+                return "rgb(141, 215, 183)";
+              case "mercedes":
+                return "rgb(140, 209, 244)";
+              case "toyota":
+                return "rgb(238, 180, 244)";
+            }
+          })
           .on("mouseover", function (d, i) {
             div.transition().duration(100).style("opacity", 1);
             div
@@ -107,25 +121,9 @@
               .style("left", d3.event.pageX + 10 + "px")
               .style("top", d3.event.pageY - 15 + "px");
           })
-          .on(
-            "mouseout",
-            function (d, i) {
-              div.transition().duration("200").style("opacity", 0);
-            }.style("fill", function (d) {
-              switch (d.Manufacturer) {
-                case "bmw":
-                  return "rgb(241, 171, 166)";
-                case "ford":
-                  return "rgb(200, 201, 136)";
-                case "honda":
-                  return "rgb(141, 215, 183)";
-                case "mercedes":
-                  return "rgb(140, 209, 244)";
-                case "toyota":
-                  return "rgb(238, 180, 244)";
-              }
-            })
-          );
+          .on("mouseout", function (d, i) {
+            div.transition().duration("200").style("opacity", 0);
+          });
       });
     </script>
   </body>
