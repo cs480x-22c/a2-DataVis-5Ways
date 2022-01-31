@@ -40,12 +40,20 @@ As far as future use goes, I could see myself using this alongside d3 if I'm eve
 
 **#SPSS**
 
-Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+By the time I had reached SPSS, I had essentially lost my mind again going through the 3 failed attempts noted below as well as a slew of other datavis sites (visme, adobe kure, excel, google sheets, etc...) that hadn't worked out due to technical restraints. During that time, IBM got the 2 hours it needed to load my webpage so I could download the goddam program :). I don't know what went wrong, but I was pretty livid.
+
+Thankfully, SPSS turned out to be exactly what I needed. It didn't have as many options as d3 or Flourish did, but don't get me wrong when I say that- SPSS has PLENTY of options (just not as many as I would like from a pay-to-use program (don't worry I used the free trial (haha embedded parentheses))). I was able to load in the data and make a grouped scatter plot with sizing and color mapping without much difficulty, and the ability to choose colors with a palette like you would in paint/photoshop was really nice as well. The only thing that was missing was a way to make data transparent. I scoured both the internet and the program itself trying to figure out how to do this, but to no avail. Still, it hit the rest of the requirements, so I stuck with it. Thanks, SPSS!
+
+I could see this being useful in the future... kind of. It's a pay-to-use program that's both less powerful and less flexible than Flourish and d3. Don't get me wrong, Flourish has pay-to-use features as well, but Flourish's free trial is indefinite, while SPSS's is not. As far as data manipulation goes, I did have to remove the 2 MPG N/A rows from the table to get the graphing to work, but other than that not much else was necessary. I still wish there was a clearcut transparency option to go with that color selection, though.
 
 ![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/e64a53e07bf8c5c29b881ad53bd236a74e404509/img/SPSS.PNG)
 
 **#java - javafx**
 I came VERY close to making JavaFX work, but the libraries do not allow you to color individual points/series... shame
+
+Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+
+![](https://github.com/JoshuaMalcarne/a2-DataVis-5Ways/blob/f526a6776d62eed9121647011bcf9b805ce7dde4/img/java%20-%20javafx.PNG)
 
 **#Technical Achievements**
 
