@@ -1,0 +1,100 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div id = "carGraphViz"></div>
+
+<script>
+
+    // https://www.educative.io/edpresso/how-to-create-a-scatter-plot-using-d3
+    // https://www.d3-graph-gallery.com/graph/custom_theme.htmls
+
+    let margin = {top: 10, right: 30, bottom: 40, left: 50},
+    width = 520 - margin.left - margin.right,
+    height = 520 - margin.top - margin.bottom;
+
+    var svg = d3.select("#carGraphViz")
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("height", height)
+        .attr("width", height)
+        .style("fill", "lightgrey")
+
+    var xScale = d3.scaleLinear().domain([1000, 5000]).range([0, width]).nice(),
+    yScale = d3.scaleLinear().domain([5, 50]).range([height, 0]),
+    rScale = d3.scaleLinear().domain([1000, 5000]).range([2, 8]);
+
+    //x axis label
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width/2 + margin.left)
+        .attr("y", height + margin.top + 20)
+        .text("Weight");
+
+    //y axis label
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -margin.top - height/2 + 20)
+        .attr("y", -margin.left + 20)
+        .text("MPG");
+
+    //y-axis
+    svg.append("g")
+        .call(d3.axisLeft(yScale).tickSize(-width * 1.3).ticks(5))
+        .select(".domain").remove();
+    
+    //x-axis
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xScale).tickSize(-height * 1.3).ticks(4))
+        .select(".domain").remove();
+    
+    svg.selectAll(".tick line").attr("stroke", "white");
+
+    // https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js
+    d3.csv("cars-sample.csv", d3.autoType).then(function(carData){
+        d3.select("svg")
+        .selectAll("circle")
+            .data(carData)
+            .enter()
+            .append("circle")
+            .attr("cx", function(d) {
+                return xScale(d.Weight);
+            })
+            .attr("cy", function(d) {
+                if (d.MPG == "NA") {
+                    // TODO: is this ok??
+                    return 805;
+                }
+                return yScale(d.MPG);
+            })
+            .attr("r", function(d) {
+                return rScale(d.Weight);
+            })
+            .style("fill", function(d) {
+                let manufacturer = d.Manufacturer;
+                switch (manufacturer) {
+                    case "bmw":
+                        return "orange";
+                    case "ford":
+                        return "gold";
+                    case "honda":
+                        return "green";
+                    case "mercedes":
+                        return "cyan";
+                    case "toyota":
+                        return "pink";
+                    default:
+                        return "black";
+                }
+            })
+            .style("opacity", "0.5")
+    });
+</script>
