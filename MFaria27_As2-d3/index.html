@@ -53,6 +53,15 @@
             .style("fill", function (d) { return manuscol(d.Manufacturer) })
             .style("opacity", 0.5)
             .attr("transform", "translate(" + (width/16) + ", 0)");
+        
+        svg.append("text")
+          .attr("transform", "translate(" + (width/16) + ", " + (height/4) + ")")
+          .text("Weight");
+        
+        svg.append("text")
+          .attr("transform", "translate(" + (width/16) + ", " + (height/4) + ")")
+          .attr("transform", "rotate(-90)")
+          .text("MPG");
       });
       //function(point) { return point.Weight/100;
     </script>
