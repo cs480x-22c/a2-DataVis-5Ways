@@ -4,7 +4,13 @@ Assignment 2 - Data Visualization, 5 Ways
 Summary
 ---
 
-For Assignment 2 in CS480X 
+For Assignment 2 in CS480X I decided to go with the following three libraries and two graphing tools:
+
+1. d3 HTML and Javascript
+2. Jupyter Notebook Python Plotly
+3. R + ggplot2
+4. Flourish
+5. Vega-Lite
 
 -   **Miles Gregg**
 
@@ -20,62 +26,58 @@ Links
 d3
 ---
 
-d3 is getting easier to use . I started out using d3 to make the graph becuase I tought it would be the most difficult to design and make the replicate. However it wasn't that bad to implement once I got the initial desin of the axis and lines of the graphs done. d3 has so much more flexiablity to making the graphs though compared to the other four tools I used for this assignment. 
+d3 is getting easier to use . I started out using d3 to make the graph becuase I tought it would be the most difficult to design and make the replicate. However it wasn't that bad to implement once I got the initial desin of the axis and lines of the graphs done. d3 has so much more flexiablity to making the graphs though compared to the other four tools I used for this assignment. In my previous assignment I already had a graph made which for this assignment I edited the graph a lot to plot the data from the csv and to draw the circles on the graph. 
 
-Python Plotly
+Jupyter Notebook Python Plotly
 ---
 
-Python being one of the most used programming languages has some incredable easy graphing interfaces. I usually use matplotlib for graph but I figured that I needed to explore a different plotting tool for python which I later found plotly. Plotly is a very easy to use graphing interface which takes up only a couple lines of code to parse and display your intended graph. I used pandas to read the csv locally and then graphed with plotly which was super easy to do. Plotly ouputs the data graph to local host browser which displays the graph and points. You can also hover of the points in plotly which will tell you move information about a specific point. 
+Jupyter Notebook Python being one of the most used programming languages has some incredable easy graphing interfaces. I usually use matplotlib for graph but I figured that I needed to explore a different plotting tool for python which I later found plotly. Plotly is a very easy to use graphing interface which takes up only a couple lines of code to parse and display your intended graph. I used pandas to read the csv locally and then graphed with plotly which was super easy to do. Plotly ouputs the data graph to local host browser which displays the graph and points. You can also hover of the points in plotly which will tell you move information about a specific point. 
 
-![alt text](img/d3-Graph.png)
+![alt text](img/Plotly-Graph.png)
 
 R + ggplot2
 ---
 
-I used R once before when I took statictics which was useful when graphing the car data. I was able to graph the data correctly only with a few lines of code. Implementing the graph was really straight forward first R has a built in csv reader to read the data and parse it correctly. 
+I used R once before when I took statictics which was useful when graphing the car data. I was able to graph the data correctly only with a few lines of code. Implementing the graph was really straight forward first R has a built in csv reader to read the data and parse it correctly. R is good as visual analysis for statistical computing. Then ggplot2 is a very popular library for making really nice looking graphs in R. I made use of the documentation: https://ggplot2.tidyverse.org/reference/, to sucessfully make a effective graph. Everything in R was really easy to use however I had some trouble at first importing the csv data into R studio. Other than that
 
-Using only 
+![alt text](img/R-Graph.png)
+
+Flourish
+---
+
+Flourish was a very easy software to use which had a very nice user interface with tons of options when making my graph. This software was nice to use since there was no programming involved. 
+
+![alt text](img/Flourish-Graph.png)
 
 Vega-Lite
 ---
 
-Vega-Lite was a very simple and easy to use grpahing tool that is open sourced also. It uses just a simple json file to read specific graphing paramaters to read the data and output a very nice graph from that data. Vega-Lite doesn't have a nice GUI interface like Flourish does but using the json file is easy to use. The website auto updates when you type new information into the json file. I believe this is the future graphing tool because it is very easy to use. It also allows you to import your csv data imput into Vega-Lite which. The documention for Vega-Lite is very nice to use and there is a ton of examples that you can use to model your plot off of.
+Vega-Lite was a very simple and easy to use grpahing tool that is open sourced also. It uses just a simple json file to read specific graphing paramaters to read the data and output a very nice graph from that data. Vega-Lite doesn't have a nice GUI interface like Flourish does, but the json file is easy to use. The website auto updates when you type new information into the json file. I believe this is the future graphing tool because it is very easy to use. It also allows you to import your csv data imput into Vega-Lite which. The documention for Vega-Lite is very nice to use and there is a ton of examples that you can use to model your plot off of.
 
-Technical Achievement Description
----
+![alt text](img/Vega-Lite-Graph.png)
 
-For the techical achievement for this assignment I was successfully able to get data from the California Covid-19 Hospital Data Website: https://data.chhs.ca.gov/dataset/covid-19-hospital-data. This allowed me to get certain data from different months to plot using d3. I plotted Covid-19 data in the state of California for  the months of March and December of 2021. Using Node.js http-server I was able to reload the webpage on port: http://127.0.0.1:8080/ whenever the HTML code would change. 
+# Achievements
 
-![alt text](https://github.com/MilesGregg/a1-ghd3/blob/master/main.png?raw=true)
+## **Technical Achievement Description**
 
-Design Achievement Description
----
+For the techical achievement for this assignment I was 
 
-For the design achievement I was able to make a accurate graph that represents very important data for people to see. I wanted to see the Covid Hospitalizations for the two completely different months of 2021. Designing the graph I made four different shapes for each statisic I am trying to show. The four statistics I'm trying to show are Vax and Unvax Hospitlizations in March 2021 and Vax and Unvax Hospitlizations in December 2021. For the different colors in my graph I was able to use Google Color Picker to choose different colors for different shpaes and lines. 
+- I used Jupyter Notebook to make the plotly graph in becuase it was much faster at loading the http-server to Jupyter Notebook since it also uses the web browser. I was initailly using just regular old python and it takes about 10 seconds to open the web port and to create the graph. 
 
-![alt text](https://github.com/MilesGregg/a1-ghd3/blob/master/color_picker.png?raw=true)
+- 
 
-The polygon shapes were very difficult to do since I had to make points around the current point on the graph. I did this with the following code below. Basically it has 5-3 different points around the current point we are trying to plot. The 5-3 varies based of the shape I am trying to plot. It will then draw the polyPoints variable on the svg using the polygon feature in d3js. The only diffence between the triangle and pendagon code is that the array is different on the second line of code. The pendagon is a size of 5 and triangle is a size of 3.
+## **Design Achievement Description**
 
-```js
-var polyPoints = []
-var pendagonSide = [[-10, -10], [10, -10], [15, 5], [0, 20], [-15, 5]]
-for (var i = 0; i < vax_hos_march.length; i++) {
-    var outputString = "";
-    for (var j = 0; j < pendegonSide.length; j++) {
-        var x = vax_hos_march[i][0] + (pendegonSide[j][0]*0.025);
-        var y = vax_hos_march[i][1] + (pendegonSide[j][1]*0.15);
-        outputString += xScaleGraph1(x.toString()) + "," + yScaleGraph1(y.toString()) + " "
-    }
-    polyPoints.push(outputString);
-}
+For the design achievement I was able to make a accurate graph for all five different types of data visualization softwares I used. There were a few design achievements that I accomplished which I thought were important to have:
 
-svg.append('g')
-    .selectAll("polygon")
-    .data(polyPoints)
-    .enter()
-    .append("polygon")
-    .attr("points", function(d) { return d })
-    .attr("transform", "translate(100, 100)")
-    .style("fill", "#1900ff");
-```
+- For the d3 graph I added a tool tip for when the user hovers over a point on the graph it will display the manufactuer, weight, and MPG of the vechicle. This text is displayed underneath the graph so the uder can see the information easily. I put it under the graph becuase if I were to put it next to the mouse cursor it would difficult to see the text with the other data points around. 
+
+- I used a website called: https://imagecolorpicker.com/en to get the hex and rgb values of the sample cars graph that was givin to me. This was able to get me the values for the colors which are:
+
+1. Ford - HEX: #d0d08d, RGB: rgba(208,208,141,255)
+2. Toyota - HEX: #ecadf7, RGB: rgba(236,173,247,255)
+3. BMW - HEX: #f4ada7, RGB: rgba(244,173,167,255)
+4. Honda - HEX: #8bd7b4, RGB: rgba(139,215,180,255)
+5. Mercedes - HEX: #8fd3f8, RGB: rgba(143,211,248,255)
+
+![alt text](img/Color-Website.png)
