@@ -38,10 +38,9 @@ Each visualization should include a screenshot. Put these in an `img` folder and
 - Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
 # Javascript + D3
+![d3cars](img/carsD3.png)
 
-Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+D3 was less than helpful when it came to creating gridlines, so I had to forgo adding them. I found that simple instructions were hard to keep up with when D3 is being updated and removing features I was looking for like mouse(this) to implement the hover over. I was not able to get it to fully work, but it does call on hover and detects the mouse moves (I checked via the google chrome's inspect tool) it just does not place on screen relevative to the mouse position. It's useful, but I think there's more of a learning curve to get over before it's my first choice since it is a lot of trial and error on indivual additions to each chart as it's own SVG.
 
 # Python + Matplotlib
 
