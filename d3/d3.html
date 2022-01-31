@@ -1,0 +1,103 @@
+<html>
+  <head>
+	  <title>D3 Assignment 2 Plot</title>
+	  <script src="https://d3js.org/d3.v7.min.js"></script>
+	  <script src="https://d3js.org/d3.v4.js"></script>
+  </head>
+  <body>
+    <svg id="visualisation" width="1000" height="1000"></svg>
+	   <script type="text/javascript">
+	   
+	   //https://www.d3-graph-gallery.com/graph/scatter_basic.html
+
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 60, bottom: 60, left: 120},
+    width = 760 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#visualisation")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("cars-sample.csv", function(data) {
+
+  // Add X axis
+  var x = d3.scaleLinear()
+    .domain([1500, 5000])
+    .range([ 0, width ]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).ticks(4));
+    
+   // Add the text label for the x axis
+    svg.append("text")
+        .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom-5) + ")")
+        .style("text-anchor", "middle")
+        .text("Weight");
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([10, 45])
+    .range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y).ticks(3));
+    
+   // Add the text label for the Y axis
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left+25)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("MPG");
+
+  //function to associate color with manufacturer
+  function get_colors(person){
+    if(person=='bmw'){
+      return 'red';
+    }
+    else if(person=='ford'){
+      return 'yellow';
+    }
+    else if(person=='honda'){
+      return 'green';
+    }
+    else if(person=='mercedes'){
+      return 'blue';
+    }
+    else if(person=='toyota'){
+      return 'pink';
+    }
+    else {
+      return "black";
+    }
+  }
+  // Add dots
+  // https://stackoverflow.com/questions/36215864/how-to-use-d3-to-plot-add-node-on-scatter-plot-one-by-one
+  //source for updates
+    var circle = svg.append('g').selectAll("dot")
+      .data(data);
+      
+    circle.enter().append("circle")
+      .each (function (d,i){
+        d3.select(this).transition()
+          .delay(i * 200) //time in between each placement
+          .attr("cx", function (d) { return x(d.Weight); } )
+          .attr("cy", function (d) { return y(d.MPG); } )
+          .attr("r", function (d) { return x(d.Weight)/25; })
+          .attr('fill-opacity', 0.5) //opacity
+          .style("fill", function (d) { return get_colors(d.Manufacturer); })
+          //returning the second index of the array at the correct car manufacturer
+          })
+})
+   
+	</script>
+
+</body>
+</html>
