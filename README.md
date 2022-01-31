@@ -45,7 +45,7 @@ Vega-Lite is a high-level visualization grammar that uses JSON syntax to customi
 ![vega-lite](img/vega-lite.PNG)
 
 ## Technical Achievements
-I added interactivity to the d3 plot. Data tips with model, manufacturer, and year are displayed when the user hovers over a point on the scatterplot. I also added a search bar so users can filter the points based on the fields in the data tips. I used the mouseover and mouseout events for the datatips and the keyup event and array filtering for the search bar. For the filtering, I did not redraw the plot every time but just set the display of non-matches to "None". GitHug Pages link: https://vrmelican.github.io/a2-DataVis-5Ways/d3/index.html
+I added interactivity to the d3 plot. Data tips with model, manufacturer, and year are displayed when the user hovers over a point on the scatterplot. I also added a search bar so users can filter the points based on the fields in the data tips. I used the mouseover and mouseout events for the datatips and the keyup event and array filtering for the search bar. For the filtering, I did not redraw the plot every time but just set the display of non-matches to "None". GitHub Pages link: https://vrmelican.github.io/a2-DataVis-5Ways/d3/index.html
 
 ## Design Achievements
 I tried to use a consistent color scheme between all the plots by matching them all to the original. In addition, I added legends to all the plots because I think they are necessary to understand the manufacturer color mappings.
