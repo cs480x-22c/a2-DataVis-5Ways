@@ -44,7 +44,7 @@ This code was really fast to write but didn't give me the most control. I wish i
 This was probably the worst expierience I had which I was supprised about. Everything felt difficult to do and hard to find. It could of been just my skill with the program but it just wasn't fun to make.
 
 # Flourish
-![Floruish](images/flourish.PNG)
+![Floruish](images/flourish.png)
 
 Code on flourish: https://public.flourish.studio/visualisation/8550400/
 
