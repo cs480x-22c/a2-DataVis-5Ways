@@ -33,7 +33,7 @@ I think that I was able to use the shortest amount of lines of code for this plo
 
 To create everything in D3, I started off with a basic scatter plot found on this page: https://www.d3-graph-gallery.com/graph/scatter_basic.html . Here, the plot contains a simple scatter plot with the axes starting at zero and automatic tick marks. In order for me to change this, I had to alter the domain and range of the axes which was easily done by hardcoding. Another thing I changed was the size of the graph in order to enlarge it. For changing the number of ticks shown on the graph, all I needed to do was add in a method ticks() which takes in the number of ticks desired for the given axis. The plot sizes were easy to manipulate, all I had to do was use the same function called for the X axis. I ended up dividing the radius of the circle by 25 so that the plots would still be to scale, but fit nicely on the screen. The opacity was just another added line of code and added as an attribute when adding the dots. The different colors is what I had to do the most work for, and it involved me creating my own function to get the correct color. I just made a simple if statement function and have it return a specified color depending on the manufacturer for each plot. 
 
-![D3plot](img/D3plot.png)
+![d3Plot](img/d3Plot.png)
 
 
 ## Technical Achievements
