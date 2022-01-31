@@ -1,0 +1,121 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div id="cars_graph"></div>
+
+<script>
+  console.log(d3); // test if d3 is loaded
+
+  //Load data
+  var data = d3.csv("cars-sample.csv", d3.autoType)
+    .then(function(data) {
+      console.log(data)
+
+
+  var margin = {top: 20, right: 30, bottom: 30, left: 60},
+      width = 700 - margin.left - margin.right,
+      height = 600 - margin.top - margin.bottom;
+
+
+  var svg = d3.select("#cars_graph")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right + 200)
+      .attr("height", height + margin.top + margin.bottom + 100)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+  //X axis
+  var x_scale = d3.scaleLinear()
+    .domain([1500, 5050])
+    .range([ 0, width])
+
+  var x_axis = d3.axisBottom(x_scale)
+    .tickValues([2000, 3000, 4000, 5000])
+
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(x_axis)
+
+  svg.append("text")
+  .attr("class", "x label")
+  .attr("text-anchor", "end")
+  .attr("x", width - 250)
+  .attr("y", height + 40)
+  .text("Weight");
+
+
+  //Y axis
+  var y_scale = d3.scaleLinear()
+    .domain([8, 47])
+    .range([ height, 0]);
+
+  var y_axis = d3.axisLeft(y_scale)
+    .tickValues([10, 20, 30, 40])
+
+  svg.append("g")
+    .call(y_axis);
+
+  svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("x", -275)
+    .attr("y", -45)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("MPG");
+
+    // Tooltip
+    var tooltip_g = svg.append("g")
+
+    //Sizes
+    var size = d3.scaleLinear()
+        .domain([1,100])
+        .range([ 0.3, 0.5])
+
+    //Colors
+    var color = d3.scaleOrdinal()
+         .domain(["bmw", "ford", "honda", "mercedes", "toyota" ])
+         .range([ "#F27831", "#ADBE0F", "#0FC37F", "#1CBEF6", "#ED8AF8"])
+
+
+  //Markers
+  svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x_scale(d.Weight); } )
+      .attr("cy", function (d) { return y_scale(d.MPG); } )
+      .attr("r", function (d) { return size(d.Weight); })
+      .style("fill", function(d) { return color(d.Manufacturer)})
+      .attr("opacity", 0.5)
+      .on("mouseover", function(e, d) {
+        d3.select(this).attr('r', size(d.Weight*1.5))
+        tooltip_g.append("rect")
+          .attr("width", 175)
+          .attr("height", 100)
+          .attr("fill", "lightgray")
+          .attr("stroke", "black")
+          .attr("x", (e.x + 5) + "px")
+          .attr("y", (e.y - 30) + "px")
+        tooltip_g.append("text").text("Car: " + d.Car)
+          .attr("x", (e.x + 10) + "px")
+          .attr("y", (e.y - 15) + "px")
+        tooltip_g.append("text").text("Manufacturer: " + d.Manufacturer)
+          .attr("x", (e.x + 10) + "px")
+          .attr("y", (e.y + 10) + "px")
+        tooltip_g.append("text").text("Weight: " + d.Weight)
+          .attr("x", (e.x + 10) + "px")
+          .attr("y", (e.y + 35) + "px")
+        tooltip_g.append("text").text("MPG: " + d.MPG)
+          .attr("x", (e.x + 10) + "px")
+          .attr("y", (e.y + 60) + "px")
+      })
+      .on("mouseout", function(e, d) {
+        d3.select(this).attr('r', size(d.Weight))
+        tooltip_g.selectAll('text').remove()
+        tooltip_g.selectAll('rect').remove()
+      })
+  });
+
+</script>
