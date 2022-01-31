@@ -1,0 +1,11 @@
+```{r}
+library(tidyverse) # install.packages('tidyverse')
+library(ggplot2)
+
+df_cars <- read.csv('cars-sample.csv')
+
+df_cars %>% ggplot() + 
+  geom_point( aes(x=Weight, y=MPG, color=Manufacturer, size=Weight, alpha = 0.5))
+```
+
+
