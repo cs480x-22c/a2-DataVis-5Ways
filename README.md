@@ -1,3 +1,6 @@
+Assignment 2 
+by Maxine Shi
+
 to see all the graphs go to https://aamaxaa.github.io/a2-DataVis-5Ways/
 
 *R + ggplot2*<br>
