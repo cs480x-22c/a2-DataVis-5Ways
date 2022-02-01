@@ -19,7 +19,7 @@ MATLAB is a programming and numeric computing platform used by millions of engin
 
 It was really easy to plot the dataset as there are many function in matlab that make reading a csv file easy.
 
-Trying to get a legend to work for my data types was impossible. For some reason matlab insist on having the legend partially preset making it incredibly frustrating to work with.
+Trying to get a legend to work for my data types was impossible. For some reason matlab insists on having the legend partially preset making it incredibly frustrating to work with.
 
 The only data manipulation that was done was replacing car manufacturers with colors, so they could be passed through the scatter() function. As well as shrinking the weight sizes as they were originally to large.
 
