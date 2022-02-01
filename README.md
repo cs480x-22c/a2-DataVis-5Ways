@@ -86,6 +86,12 @@ Because I was short on time, I did not attempt to re-create the background grid,
 
 I handled NA values by setting them to 0, and so my y-axis goes all the way down to 0, unlike the sample chart. My x-axis does not go to 0, however.
 
+I borrowed code from the following sources:
+- This class: https://wpi0-my.sharepoint.com/personal/ltharrison_wpi_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fltharrison%5Fwpi%5Fedu%2FDocuments%2FSpring%202022%2Fcs480x%2D22c%2Fvid%2F2022%2D01%2D12%2013%2E00%2E20%20cs480x%2D22c%2Fd3start%2Ezip&parent=%2Fpersonal%2Fltharrison%5Fwpi%5Fedu%2FDocuments%2FSpring%202022%2Fcs480x%2D22c%2Fvid%2F2022%2D01%2D12%2013%2E00%2E20%20cs480x%2D22c&p=14
+- https://www.geeksforgeeks.org/d3-js-axisbottom-function/
+- https://www.d3indepth.com/scales/
+- https://observablehq.com/@d3/d3-extent
+
 ![d3](d3/vis_d3.png)
 
 ## Technical Achievements
