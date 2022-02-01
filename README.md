@@ -39,11 +39,26 @@ I though trying to write code in the notebook was more time consuming than an ID
 
 Overall I would use this again if I were trying to develop code so people could learn from it(i.e. teaching). I would not use it for personal projects again.
 
+Only manipulated weight data to make data points larger.
+
 FYI: I made the design decision to not include grid lines since they made it less obvious when points were overlapping.
 
 ![d3](img/a2-d3Plot.png)
 
 # Flourish
+
+Flourish is where you can turn your data into stunning charts, maps and interactive stories. 
+
+It was the quickest and easiest by far to complete.
+
+Super easy and intuitive. Had amazing load times as well, could not have been faster.
+
+A slight knock is that some small features were missing, such as being able to show a legend for the sizes(might be wrong but i looked for almost an hour).
+
+I would use this afain if I neede to get a really good scatter plot really fast.
+
+No data manipulation was needed.
+
 ![d3](img/a2-flourish.png)
 
 ## Technical Achievements
