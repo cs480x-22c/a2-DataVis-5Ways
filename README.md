@@ -29,7 +29,7 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 # d3 + Observable Notebook
 
-Link to Notebook: https://observablehq.com/d/9817b361aab1c8f5
+!Note! The code shown in class was used, Link to Notebook: https://observablehq.com/d/9817b361aab1c8f5
 
 D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life. Observable Notebook allows you to interact with other peopes code in a front-end heavy environment.
 
