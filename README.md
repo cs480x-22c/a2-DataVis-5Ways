@@ -25,8 +25,7 @@ Trying to get a legend to work for my data types was impossible. For some reason
 
 The only data manipulation that was done was replacing car manufacturers with colors, so they could be passed through the scatter() function. As well as shrinking the weight sizes as they were originally to large.
 
-![cars-sample-matlab](https://user-images.githubusercontent.com/73619173/151912389-c3d1b37b-f8af-4fb2-96f1-107930a38a8c.png)
-
+![caption](img/cars-sample-matlab.png)
 # d3...
 
 (And so on...)
