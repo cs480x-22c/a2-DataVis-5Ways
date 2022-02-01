@@ -34,4 +34,4 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 ### Design Achievements
 - **Used matlab help Center to pick nice colors **:https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html 
-- 
+- **Installed ColorZilla**: Helped me make legends and identify colors
