@@ -28,7 +28,7 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 ![matlab](img/cars-sample-matlab.png)
 
-# Flourish
+# d3 + Observable Notebook
 
 Link to Notebook: https://observablehq.com/d/9817b361aab1c8f5
 
@@ -44,7 +44,7 @@ FYI: I made the design decision to not include grid lines since they made it les
 
 ![d3](img/a2-d3Plot.png)
 
-# d3 + Observable Notebook
+# Flourish
 
 
 ## Technical Achievements
