@@ -8,13 +8,14 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
 ```{r}
-library(tidyverse) # install.packages('tidyverse')
+#install.packages('tidyverse')
+library(tidyverse) 
 library(ggplot2)
 
 df_cars <- read.csv('cars.csv')
 
 df_cars %>% ggplot() + 
-  geom_point( aes(x=Weight, y=MPG, color=Manufacturer) )
+  geom_point( aes(x=Weight, y=MPG, color=Manufacturer, size = Weight), alpha = .5)
 ```
 
 
