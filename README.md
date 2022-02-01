@@ -80,6 +80,7 @@ No data manipulation was needed.(really similar to flourish but slightly worse)
 - **I made the website look decent with CSS**: I would have added more to it like voting on what chart is best and having a db like mongo db record the results but I ran out of time =(
 - **First time using Flourish**:
 - **First time using R**: Although we did get help from the prof
+- **First time using Datawrapper**:
 
 
 
