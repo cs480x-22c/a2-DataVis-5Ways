@@ -24,7 +24,11 @@ Trying to get a legend to work for my data types was impossible. For some reason
 The only data manipulation that was done was replacing car manufacturers with colors, so they could be passed through the scatter() function. As well as shrinking the weight sizes as the were originally to large.
 
 ![matlab](img/cars-sample-matlab.png)
-# d3...
+
+# d3 + Observable Notebook
+
+Link to Notebook: observablehq.com/d/9817b361aab1c8f5
+
 
 (And so on...)
 
@@ -34,4 +38,5 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 ### Design Achievements
 - **Used matlab help Center to pick nice colors **:https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html 
-- **Installed ColorZilla**: Helped me make legends and identify colors
+- **Installed ColorZilla**: Helped me make legends and identify colors in hexadecimal.
+- **Used circle outline in d3**: I did this to better highlight cars that were similar to one another in terms of weight and MPG.
