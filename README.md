@@ -79,6 +79,6 @@ No data manipulation was needed.(really similar to flourish but slightly worse)
 - **Got all Pictures to be displayed in a webpage I made =)**: 
 
 ### Design Achievements
-- **Used matlab help Center to pick nice colors **:https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html 
+- **Used matlab help Center for colors **:https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html 
 - **Installed ColorZilla**: Helped me make legends and identify colors in hexadecimal.
 - **Used circle outline in d3**: I did this to better highlight cars that were similar to one another in terms of weight and MPG.
