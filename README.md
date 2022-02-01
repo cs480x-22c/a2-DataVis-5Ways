@@ -45,7 +45,7 @@ FYI: I made the design decision to not include grid lines since they made it les
 ![d3](img/a2-d3Plot.png)
 
 # Flourish
-
+![d3](img/a2-flourish.png)
 
 ## Technical Achievements
 - **Got all Pictures to be displayed in a webpage I made =)**: 
