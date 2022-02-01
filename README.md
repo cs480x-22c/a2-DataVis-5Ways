@@ -11,17 +11,26 @@ While it takes time to find the correct documentation, these functions made the 
 ![ggplot2](img/ggplot2.png)
 
 # Matlab
-Tech Achievement maybe? Used help Center for Colors -> did everything but legends
-https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html
+Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+
+MATLAB is a programming and numeric computing platform used by millions of engineers and scientists to analyze data, develop algorithms, and create models(From their website). Matlab is a language I have used before in many math classes.
+
+It was really easy to plot the dataset as there are many function in matlab that make reading a csv file easy.
+
+Trying to get a legend to work for my data types was impossible. For some reason matlab insist on having the legend partially preset making it incredibly frustrating to work with.
+
+The only data manipulation that was done was replacing car manufacturers with colors, so they could be passed through the scatter() function. As well as shrinking the weight sizes as they were originally to large.
+
 ![cars-sample-matlab](https://user-images.githubusercontent.com/73619173/151912389-c3d1b37b-f8af-4fb2-96f1-107930a38a8c.png)
+
 # d3...
 
 (And so on...)
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Got all Pictures to be displayed in a webpage I made =)**: 
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Used matlab help Center to pick nice colors **:https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html 
+- 
