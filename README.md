@@ -12,7 +12,7 @@ While it takes time to find the correct documentation the prof showed us where i
 
 This could be usefull for generating simple plots that are easy to implement very quickly.(i.e. plotting 100's of plots it would be very usefull).
 
-No data manipuation was necessary.
+No data manipulation was necessary.
 
 ![R](img/a2-R.png)
 
