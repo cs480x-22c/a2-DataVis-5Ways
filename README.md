@@ -76,7 +76,8 @@ No data manipulation was needed.(really similar to flourish but slightly worse)
 ![datawrapper](img/a2-datawrapper.png)
 
 ## Technical Achievements
-- **Got all Pictures to be displayed in a webpage I made =)**: 
+- **Got all Pictures to be displayed in a webpage I made =)**: I thought it would be cool to post them to a webpage, I included a link back to this github project there. Link: https://5-charts-5-libs-tools.glitch.me/
+- **Got all Pictures to be displayed in a webpage I made =)**:
 
 ### Design Achievements
 - **Used matlab help Center for colors**: https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html 
