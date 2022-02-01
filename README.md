@@ -65,7 +65,7 @@ No data manipulation was needed.
 
 Datawrapper lets you show your data as beautiful charts, maps or tables with a few clicks.
 
-It was also very easy to use, although the set up was not as easy.
+It was also very easy to use, although the set up was not as easy. One of my favorite things about this site was they had really strong accesibility.(i.e. little motion blur and they also has setting for color blind people)
 
 A slight knock is that some small features were missing, such as being able to show a legend for the sizes(might be wrong but i looked for almost 1/2 hour).
 
@@ -77,9 +77,14 @@ No data manipulation was needed.(really similar to flourish but slightly worse)
 
 ## Technical Achievements
 - **Got all Pictures to be displayed in a webpage I made =)**: I thought it would be cool to post them to a webpage, I included a link back to this github project there. Link: https://5-charts-5-libs-tools.glitch.me/
-- **Got all Pictures to be displayed in a webpage I made =)**:
+- **I made the website look decent with CSS**: I would have added more to it like voting on what chart is best and having a db like mongo db record the results but I ran out of time =(
+- **First time using Flourish**:
+- **First time using R**: Although we did get help from the prof
+
+
 
 ### Design Achievements
 - **Used matlab help Center for colors**: https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html 
 - **Installed ColorZilla**: Helped me make legends and identify colors in hexadecimal.
 - **Used circle outline in d3**: I did this to better highlight cars that were similar to one another in terms of weight and MPG.
+- **I made sure colors and sizes were distinguishable**: This took a lot of work on some of the libraries/tools, but was easy for most of them. I also tried to make the colors look nice together.
