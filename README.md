@@ -10,7 +10,7 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 While it takes time to find the correct documentation the prof showed us where it was =), these functions made the effort creating this chart minimal.
 
-![ggplot2](img/ggplot2.png)
+![R](img/a2-R.png)
 
 # Matlab
 Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
