@@ -55,7 +55,7 @@ Super easy and intuitive. Had amazing load times as well, could not have been fa
 
 A slight knock is that some small features were missing, such as being able to show a legend for the sizes(might be wrong but i looked for almost an hour).
 
-I would use this afain if I neede to get a really good scatter plot really fast.
+I would use this again if I neede to get a really good scatter plot really fast.
 
 No data manipulation was needed.
 
