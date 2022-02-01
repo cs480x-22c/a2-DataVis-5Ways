@@ -11,7 +11,7 @@ While it takes time to find the correct documentation, these functions made the 
 ![ggplot2](img/ggplot2.png)
 
 # Matlab
-Tech Achievement maybe? Used help Center for Colors ->
+Tech Achievement maybe? Used help Center for Colors -> did everything but legends
 https://www.mathworks.com/help/matlab/creating_plots/specify-plot-colors.html
 ![cars-sample-matlab](https://user-images.githubusercontent.com/73619173/151910748-a91f6d57-67e7-40e6-811d-f739982f17c0.png)
 
