@@ -78,7 +78,15 @@ Like Vega-Lite and ggplot, Excel uses builtin color palletes, but I used a custo
 
 # d3
 
-/not done yet/
+"D3.js is a JavaScript library for manipulating documents based on data."
+
+d3 operates at a lower level than the other visualization tools, and so the code is generally much bigger. It gives us more freedom than the other libraries, but using convenience methods like .extent() and .nice() reduces this freedom.
+
+Because I was short on time, I did not attempt to re-create the background grid, nor the legend.
+
+I handled NA values by setting them to 0, and so my y-axis goes all the way down to 0, unlike the sample chart. My x-axis does not go to 0, however.
+
+![d3](d3/vis_d3.png)
 
 ## Technical Achievements
 - **Probably none**
