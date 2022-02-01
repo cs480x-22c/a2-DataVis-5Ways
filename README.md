@@ -11,6 +11,9 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 While it takes time to find the correct documentation the prof showed us where it was =), these functions made the effort creating this chart minimal.
 
 This could be usefull for generating simple plots that are easy to implement very quickly.(i.e. plotting 100's of plots it would be very usefull).
+
+No data manipuation was necessary.
+
 ![R](img/a2-R.png)
 
 # Matlab
