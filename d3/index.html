@@ -1,0 +1,121 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div class="vis">
+</div>
+
+<script>
+    console.log(d3); // test if d3 is loaded
+
+    var data = d3.csv("car-data.csv", d3.autoType)
+        .then(function (data) {
+            console.log(data);
+
+
+            height = 600;
+            width = 600;
+            margin = ({ top: 20, right: 30, bottom: 30, left: 40 });
+
+            var y = d3.scaleLinear()
+                .domain(d3.extent(data, d => d.MPG)).nice()
+                .range([height - margin.bottom, margin.top]);
+
+            var x = d3.scaleLinear()
+                .domain(d3.extent(data, d => d.Weight)).nice()
+                .range([margin.left, width - margin.right]);
+
+
+
+            xAxis = (g) =>
+                g
+                    .attr("transform", `translate(0,${height - margin.bottom})`)
+                    .call(d3.axisBottom(x))
+                    .call((g) => g.select(".domain").remove())
+                    .call((g) =>
+                        g
+                            .append("text")
+                            .attr("x", width - margin.right)
+                            .attr("y", -4)
+                            .attr("fill", "#000")
+                            .attr("font-weight", "bold")
+                            .attr("text-anchor", "end")
+                            .text("Weight")
+                    );
+
+            yAxis = (g) =>
+                g
+                    .attr("transform", `translate(${margin.left},0)`)
+                    .call(d3.axisLeft(y))
+                    .call((g) => g.select(".domain").remove())
+                    .call((g) =>
+                        g
+                            .select(".tick:last-of-type text")
+                            .clone()
+                            .attr("x", 4)
+                            .attr("text-anchor", "start")
+                            .attr("font-weight", "bold")
+                            .text("MPG")
+                    );
+
+
+
+            var svg = d3.select('.vis')
+                .append("svg")
+                .attr("viewBox", [0, 0, width, height])
+                .property("value", []);
+
+            d3.select('svg')
+                .append("g").call(xAxis);
+
+            d3.select('svg')
+                .append("g").call(yAxis);
+
+
+            var size = d3
+                .scaleLinear()
+                .domain(d3.extent(data, (d) => d.Weight))
+                .nice()
+                .range([1, 20]);
+
+            var color = d3.scaleOrdinal(
+                data.map((d) => d.Manufacturer),
+                d3.schemeCategory10
+            );
+
+            // const brush = d3.brush()
+            //     .on("start brush end", brushed);
+
+            // d3.select('svg').call(brush);
+
+            console.log('select');
+
+            d3.select('svg')
+                .append("g")
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 1.5)
+                .selectAll("circle")
+                .data(data)
+                .join("circle")
+                .attr("transform", (d) => `translate(${x(d.Weight)},${y(d.MPG)})`)
+                .attr("r", (d) => size(d.Weight))
+                .attr("fill", (d) => color(d.Manufacturer))
+        });
+
+
+    function brushed({ selection }) {
+        // let value = [];
+        // if (selection) {
+        //     const [[x0, y0], [x1, y1]] = selection;
+        //     value = d3.dot
+        //         .style("stroke", "gray")
+        //         .filter(d => x0 <= x(d.x) && x(d.x) < x1 && y0 <= y(d.y) && y(d.y) < y1)
+        //         .style("stroke", "steelblue")
+        //         .data();
+        // } else {
+        //     d3.dot.style("stroke", "steelblue");
+        // }
+        // d3.select('svg')
+        //     .property("value", value).dispatch("input");
+    }
+
+</script>

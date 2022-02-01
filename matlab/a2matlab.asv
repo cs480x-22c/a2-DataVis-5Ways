@@ -1,0 +1,11 @@
+T = readtable('car-data.csv');
+
+table_size = T.size() ; 
+rows = table_size(1); 
+for row = 1:rows 
+    if T(row,"Manufacturer")=='ford'
+        scatter(T,"Weight","MPG",'filled',,'Manufacturer');
+    elseif 
+end   
+
+
