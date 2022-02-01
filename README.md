@@ -29,6 +29,7 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 Link to Notebook: https://observablehq.com/d/9817b361aab1c8f5
 
+![d3](img/a2-d3.png)
 
 (And so on...)
 
