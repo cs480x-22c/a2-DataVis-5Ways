@@ -27,7 +27,7 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 # d3 + Observable Notebook
 
-Link to Notebook: observablehq.com/d/9817b361aab1c8f5
+Link to Notebook: https://observablehq.com/d/9817b361aab1c8f5
 
 
 (And so on...)
