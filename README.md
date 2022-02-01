@@ -23,7 +23,7 @@ Trying to get a legend to work for my data types was impossible. For some reason
 
 I would only use this for comparing functions as it lacks the functionality of most of the programs and tools I used.
 
-The only data manipulation that was done was replacing car manufacturers with colors, so they could be passed through the scatter() function. As well as shrinking the points as the were originally to large.
+The only data manipulation that was done was replacing car manufacturers with colors, so they could be passed through the scatter() function. As well as shrinking the points as they were originally to large.
 
 ![matlab](img/cars-sample-matlab.png)
 
