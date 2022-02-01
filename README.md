@@ -1,16 +1,6 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
 # Vega-Lite
 
 "Vega-Lite is a high-level grammar of interactive graphics", according to Vega-Lite's website.
