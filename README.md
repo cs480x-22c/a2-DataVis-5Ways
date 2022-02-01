@@ -61,6 +61,19 @@ No data manipulation was needed.
 
 ![d3](img/a2-flourish.png)
 
+# Datawrapper
+
+Datawrapper lets you show your data as beautiful charts, maps or tables with a few clicks.
+
+It was also very easy to use, although the set up was not as easy.
+
+A slight knock is that some small features were missing, such as being able to show a legend for the sizes(might be wrong but i looked for almost 1/2 hour).
+
+I would use this afain if I neede to get a really good scatter plot really fast.
+
+No data manipulation was needed.(really similar to flourish but slightly worse)
+
+
 ## Technical Achievements
 - **Got all Pictures to be displayed in a webpage I made =)**: 
 
