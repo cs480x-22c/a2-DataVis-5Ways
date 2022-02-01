@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> car chart </title>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+	<div id="vis">
+		<svg> </svg>
+	
+	<script type="text/javascript">
+	
+		// this line is copied from the exoplanets example in class
+		d3.csv("https://raw.githubusercontent.com/JuniorJedi490/a2-DataVis-5Ways/main/cars-sample.csv", d3.autoType).then(function(data){plot(data);});
+	
+		function chooseColor(data) {
+			if (isNaN(data.MPG) || isNaN(data.Weight)) {
+				return "white";
+			}
+		
+			var brand = data.Manufacturer;
+			switch (brand) {
+				case "ford":
+					return "#cccc66";
+				case "bmw":
+					return "#f28885";
+				case "toyota":
+					return "#e577ef";
+				case "mercedes":
+					return "#5ec0f2";
+				case "honda":
+					return "#75d6aa";
+				default:
+					return "black";
+			}
+		}
+		
+		function handleMpg(data) {
+			var mpg = data.MPG;
+			if(isNaN(mpg)) {
+				return 0;
+			} else {
+				return mpg;
+			}
+		}
+	
+		function plot(data) {
+			var w = 500;
+			var h = 400;
+			
+			const left_border = 40;
+			const bottom_border = 20;
+			const top_border = 20;
+			const right_border = 20;
+			
+			const max_circle_diameter = 8;
+			
+			const svg = d3.select("svg").attr("width", w).attr("height",h).attr("viewBox", [10,10,w,h]);
+			
+			/* References:
+			https://www.geeksforgeeks.org/d3-js-axisbottom-function/
+			https://www.d3indepth.com/scales/
+			https://observablehq.com/@d3/d3-extent
+			*/
+			
+			let x_scale = d3.scaleLinear().domain(d3.extent(data, d => d.Weight)).range([0, w - left_border - right_border]).nice();
+			
+			let y_scale = d3.scaleLinear().domain(d3.extent(data, d => handleMpg(d))).range([h - top_border - bottom_border, 0]).nice();
+			
+			// End of copied and modified code.
+			
+			const r_multiplier = max_circle_diameter / d3.max(data, d => d.Weight);
+			
+			
+			
+			
+			/*const x_lower_limit = 1500;
+			const y_lower_limit = 8;
+			const x_upper_limit = 5100;
+			const y_upper_limit = 47;*/
+			
+			/*const x_multiplier = (w - left_border - right_border)/(x_upper_limit - x_lower_limit)
+			const y_multiplier = (h - top_border - bottom_border)/(y_upper_limit - y_lower_limit);*/
+			
+			const box = svg.selectAll("rect").data([0]).join("rect").style("stroke", "aliceblue").style("fill", "white").attr("x", "0").attr("y", "0").attr("width", function(d){ return w;}).attr("height", function(d){ return h;});
+			
+			/*const point = svg.selectAll("circle").data(data).join("circle")
+				.style("stroke", function(d){ return chooseColor(d); })
+				.style("fill", function(d){ return chooseColor(d); })
+				.style("fill-opacity", "0.5")
+				.attr("cx", function(d){ return ((d.Weight - x_lower_limit) * x_multiplier + left_border); })
+				.attr("cy", function(d){ return (h - (handleMpg(d) - y_lower_limit) * y_multiplier - bottom_border); })
+				.attr("r", function(d){ return (d.Weight * r_multiplier); });*/
+				
+			const point = svg.selectAll("circle").data(data).join("circle")
+				.style("stroke", function(d){ return chooseColor(d); })
+				.style("fill", function(d){ return chooseColor(d); })
+				.style("fill-opacity", "0.5")
+				.attr("cx", function(d){ return (x_scale(d.Weight) + left_border); })
+				.attr("cy", function(d){ return (y_scale(handleMpg(d)) + top_border); })
+				.attr("r", function(d){ return (d.Weight * r_multiplier); });
+
+
+			/* Code copied from https://www.geeksforgeeks.org/d3-js-axisbottom-function/ */
+				/*(var xscale = d3.scaleLinear().domain([x_lower_limit, x_upper_limit]).range([0, w - left_border - right_border]);*/
+				var xaxis = d3.axisBottom(x_scale);
+				svg.append("g").attr("transform", "translate(" + left_border + ", " + (h - bottom_border) + ")").call(xaxis);
+				
+				/*var yscale = d3.scaleLinear().domain([y_lower_limit, y_upper_limit]).range([h - top_border - bottom_border, 0]);*/
+				var yaxis = d3.axisLeft(y_scale);
+				svg.append("g").attr("transform", "translate(" + left_border + ", " + top_border + ")").call(yaxis);
+			/* End copied code */
+			
+		}
+		//console.log("Script finished");
+		
+	</script>
+	</div>
+	
+	
+</body>
+</html>
