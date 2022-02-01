@@ -14,6 +14,8 @@ Your goal is to use 5 different tools to make the following chart:
 
 ![ggplot2](img/ggplot2.png)
 
+![ggplot2](img/tableauDataSnip.png)
+
 These features should be preserved as much as possible in your replication:
 
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
