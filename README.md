@@ -28,7 +28,7 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 ![matlab](img/cars-sample-matlab.png)
 
-# d3 + Observable Notebook
+# Flourish
 
 Link to Notebook: https://observablehq.com/d/9817b361aab1c8f5
 
