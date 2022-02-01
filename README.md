@@ -55,7 +55,7 @@ Super easy and intuitive. Had amazing load times as well, could not have been fa
 
 A slight knock is that some small features were missing, such as being able to show a legend for the sizes(might be wrong but i looked for almost an hour).
 
-I would use this again if I neede to get a really good scatter plot really fast.
+I would use this again if I needed to get a good scatter plot really fast.
 
 No data manipulation was needed.
 
@@ -69,7 +69,7 @@ It was also very easy to use, although the set up was not as easy. One of my fav
 
 A slight knock is that some small features were missing, such as being able to show a legend for the sizes(might be wrong but i looked for almost 1/2 hour).
 
-I would use this afain if I neede to get a really good scatter plot really fast.
+I would use this again if I needed to get a good scatter plot really fast.
 
 No data manipulation was needed.(really similar to flourish but slightly worse)
 
