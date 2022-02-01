@@ -15,7 +15,6 @@ This could be usefull for generating simple plots that are easy to implement ver
 
 # Matlab
 
-
 MATLAB is a programming and numeric computing platform used by millions of engineers and scientists to analyze data, develop algorithms, and create models(From their website). Matlab is a language I have used before in many math classes.
 
 It was really easy to plot the dataset as there are many function in matlab that make reading a csv file easy.
@@ -32,9 +31,9 @@ The only data manipulation that was done was replacing car manufacturers with co
 
 Link to Notebook: https://observablehq.com/d/9817b361aab1c8f5
 
-D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life. Observable Notebook allows you to interact with other pepes code in a front-end heavy environment.
+D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life. Observable Notebook allows you to interact with other peopes code in a front-end heavy environment.
 
-It was really easy to run code and get immediate feedback. I liked how code could be orginized and moved. I thought d3 and R (with their respective tools) were much easier to debug code in than matlab.
+It was really easy to run code and get immediate feedback. I liked how code could be orginized and moved. I thought d3 and R (with their respective tools) were much easier to debug code in.
 
 I though trying to write code in the notebook was more time consuming than an IDE, as it lacked many features that deacrease development time.
 
