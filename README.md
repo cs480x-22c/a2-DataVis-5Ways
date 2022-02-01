@@ -65,7 +65,7 @@ No data manipulation was needed.
 
 Datawrapper lets you show your data as beautiful charts, maps or tables with a few clicks.
 
-It was also very easy to use, although the set up was not as easy. One of my favorite things about this site was they had really strong accesibility.(i.e. little motion blur and they also had setting for color blind people)
+It was also very easy to use, although the set up was not as easy. One of my favorite things about this site was they had really strong accesibility.(i.e. little motion blur and they also had settings for color blind people)
 
 A slight knock is that some small features were missing, such as being able to show a legend for the sizes(might be wrong but i looked for almost 1/2 hour).
 
