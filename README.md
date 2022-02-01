@@ -59,7 +59,7 @@ I would use this afain if I neede to get a really good scatter plot really fast.
 
 No data manipulation was needed.
 
-![d3](img/a2-flourish.png)
+![Flourish](img/a2-flourish.png)
 
 # Datawrapper
 
@@ -73,6 +73,7 @@ I would use this afain if I neede to get a really good scatter plot really fast.
 
 No data manipulation was needed.(really similar to flourish but slightly worse)
 
+![datawrapper](img/a2-datawrapper.png)
 
 ## Technical Achievements
 - **Got all Pictures to be displayed in a webpage I made =)**: 
