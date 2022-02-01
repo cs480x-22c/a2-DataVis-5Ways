@@ -89,3 +89,4 @@ No data manipulation was needed.(really similar to flourish but slightly worse)
 - **Installed ColorZilla**: Helped me make legends and identify colors in hexadecimal.
 - **Used circle outline in d3**: I did this to better highlight cars that were similar to one another in terms of weight and MPG.
 - **I made sure colors and sizes were distinguishable**: This took a lot of work on some of the libraries/tools, but was easy for most of them. I also tried to make the colors look nice together.
+- **Looked through matlab documentation for legends**: 2 hours of my life i'll never get back
