@@ -1,142 +1,71 @@
-# 02-DataVis-5ways
+# R
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+![](img/r+ggplot.png)
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+Using the popular ggplot2 library for Rlang, plotting the chart can be done in a
+single line after loading the data. The simple and descriptive syntax gets 
+supercharged via layering. It fully recreates the example chart, as the original
+was done with thix combination of tools.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+# Matplotlib Python
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+![](img/pyplot.png)
 
-Your goal is to use 5 different tools to make the following chart:
+Pyplot from matplotlib is my go to plotting library in any language. It's syntax
+is very similar to that of Matlab, and in relatively few lines of code, I was 
+able to recreate the original chart. However, I was unable to find documentation
+or examples of a secondary legend for the car weight, as was available in other 
+visualization tools.
 
-![ggplot2](img/ggplot2.png)
+# d3
 
-These features should be preserved as much as possible in your replication:
+![d3 image](img/d3.png)
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+The d3 plot was also relatively simple, though much more verbose than the R
+implementation. Mostly, referring to examples of other scatterplots created with
+d3 were helpful in understanding what code to write, while with the more 
+statistically oriented programming languages, the documentation was the most 
+helpful resource.
 
-Other features are not required. This includes:
+# Svelte + SVG from scratch
 
-- The background grid.
-- The legends.
+![](img/Svelte+svg.png)
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+While this code is even more verbose than the d3, it does most of the same 
+things. Instead of manipulating the DOM in D3's functional chaining style,
+svelte's reactivity and integration into the markup allows for a more straight-
+forward syntax for describing the layouts.
 
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+Due to the general focus of svelte, many helper functions one might expect from 
+software like d3 are missing. In real world use, d3 can be imported for use with
+d3-scale or other helers, despite not using them to manipulate the DOM. The 
+build process will shake unneeded code from the bundle, so you don't have to 
+worry about bloat for your user when importing extras from something like d3.
 
 
-Readme Requirements
----
+# Datawrapper
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+![](img/datawrapper.png)
 
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+Datawrapper is a quick online visualization tool. Despite its limited interface,
+I was able to recreate almost all aspects of the original chart except for the 
+second weight legend. While the size does vary by the weight, the difference is
+very hard to tell in Datawrapper, and the constrained settings to generate the 
+plot left more control to be desired in this regard.
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+
+- **Implemented scatterplot from scratch in SVG**: While d3 relies on modifying 
+attributes of a circle or other shape that it has generated, the svelte 
+implementation I made brings the user much closer to the original SVG markup
+that makes the page, and allows design patterns to extend beyond visualization 
+into the rest of the DOM.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+
+- **Matched colorscheme as best as possible**: In the python and d3 
+implementations, where nice colorspaces were available, I attempted to get the 
+closest pallete to the R pallete.
+- **Shaded Background**: I copied the shaded background style of the original in
+the R plot and the python/matplotlib plot.
