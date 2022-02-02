@@ -1,0 +1,138 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div class="vis"></div>
+
+<script>
+  let size = 1000
+  let width = size
+  let height = size
+  let margin = { top: 20, right: 30, bottom: 30, left: 40 }
+  
+  let svg = d3.select('.vis').append('svg').attr('viewBox', [0, 0, width, height])
+
+  let data = []
+
+  d3.csv('../cars-sample.csv', (d) => data.push(d)).then(() => {
+    x = d3
+      .scaleLinear()
+      .domain(d3.extent(data, (d) => d.Weight))
+      .nice()
+      .range([margin.left, width - margin.right])
+
+    xAxis = (g) =>
+      g
+        .attr('transform', `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(x))
+        .call((g) => g.select('.domain').remove())
+        .call((g) =>
+          g
+            .append('text')
+            .attr('x', width - margin.right)
+            .attr('y', -4)
+            .attr('fill', '#000')
+            .attr('font-weight', 'bold')
+            .attr('text-anchor', 'end')
+            .text(data.Weight),
+        )
+        .append('text')
+        .attr('transform', `translate(${width/2},${0})rotate(0)`)
+        .text('Manufacturer')
+        .style('fill', "#000")
+        .style('font-size', 24)
+
+    y = d3
+      .scaleLinear()
+      .domain(d3.extent(data, (d) => +d.MPG))
+      .nice()
+      .range([height - margin.bottom, margin.top])
+    
+    yAxis = (g) =>
+      g
+        .attr('transform', `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y))
+        .call((g) => g.select('.domain').remove())
+        .call((g) =>
+          g
+            .select('.tick:last-of-type text')
+            .clone()
+            .attr('x', 4)
+            .attr('text-anchor', 'start')
+            .attr('font-weight', 'bold')
+            .text(data.MPG),
+        )
+        .append('text')
+        .attr('transform', `translate(${0},${height/2})rotate(-90)`)
+        .text('MPG')
+        .style('fill', "#000")
+        .style('font-size', 24)
+        
+    svg.append('g').call(xAxis)
+    svg.append('g').call(yAxis)
+
+    let colors = d3.scaleOrdinal(data.map(d => d.Manufacturer), d3.schemeDark2)
+
+    let dots = svg.append("g")
+      .selectAll("circle")
+      .data(data)
+      .join("circle")
+        .attr('cx', (d) => x(d.Weight))
+        .attr('cy', (d) => y(isNaN(d.MPG) ? 0 : d.MPG))
+        .attr('r', (d) => (d.Weight/1000) ** 2)
+        .style('fill', (d) => colors(d.Manufacturer) )
+
+    let legend1 = svg.append('g')
+      .selectAll('legendDots')
+      .data([...new Set(data.map((d) => d.Manufacturer))])
+      
+    svg.append('text')
+      .text("Manufacturer")
+      .attr("x", .825*size)
+      .attr("y", 75)
+      .attr("text-anchor", "left")
+      .style('alignment-baseline', 'middle') 
+      
+    legend1.enter()
+      .append('circle')
+      .attr("cx", .8*size)
+      .attr("cy", (d,i) => 100 + i*25)
+      .attr("r", 7)
+      .style('fill', (d) => colors(d))
+    
+    legend1.enter()
+      .append('text')
+      .attr("x", .825*size)
+      .attr("y", (d,i) => 100 + i*25)
+      .text(d => d)
+      .attr("text-anchor", "left")
+      .style('fill', (d) => colors(d) )
+      .style('alignment-baseline', 'middle')
+
+    let legend2 =  svg.append('g')
+      .selectAll('legendDots')
+      .data([2000, 3000, 4000])
+
+    svg.append('text')
+      .text("Weight")
+      .attr("x", .825*size)
+      .attr("y", 375)
+      .attr("text-anchor", "left")
+      .style('alignment-baseline', 'middle') 
+
+    legend2.enter()
+      .append('circle')
+      .attr("cx", .8*size)
+      .attr("cy", (d,i) => 400 + i*25)
+      .attr("r", (d) => (d/1000) ** 2)
+      .style('fill', '#444')
+
+    legend2.enter() 
+      .append('text')
+      .attr("x", .825*size)
+      .attr("y", (d,i) => 400 + i*25)
+      .text(d => d)
+      .attr("text-anchor", "left")
+      .style('alignment-baseline', 'middle')    
+
+  })
+
+</script>
