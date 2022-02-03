@@ -127,16 +127,46 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
 
-![ggplot2](img/ggplot2.png)
+![ggplot2](img/a2-R-ggplot.png)
 
-# d3...
+# d3
+D3 is a JavaScript library for data visualization. It was used to create a html page that visalized the car sample data. 
 
-(And so on...)
+![d3](img/a2-d3.png)
+
+
+# Excel
+
+Excel is primarily a spreadsheet manipulation program, which also has the capibility for basic data visualization. 
+
+Visualizing the data requiered manual manipulation of the data and selection of the different manufacturers for them to be dispalyed differnetly. The graphs was minimally interactive. However no coding was requiered.
+
+![excel](img/a2-excel.png)
+
+# Matlab
+
+Matlab is a matrix based calucaltor/language that in addition to other simulation and modeling cappibnliites, as graphing ability as well.
+
+The procedure for using this software to display differnet coloars is somewhat unintuitive. Its overall not as versitle and easy to weild other options. it is also difficult to customize the appearance and make the visualization more readable and apealing.  
+
+![Matlab](img/a2-matlab.png)
+
+
+# Python plotly 
+Plotly is a plotting library for python.
+
+Plotly was able to generate the visualization with no data manipulation and only 3 lines of code.
+The visual clarity of the default graph was also good, consiterably better than matlab and excel. 
+
+![Plotly](img/a2-python-plotly.png)
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Average of Selected Datapoints**: In my d3 visualization the user has the ablity to select several datapoints, which will then have their average weight and MPG displayed on the visualization as a white dot.
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+![d3](img/a2-d3-technical-achivement.png)
+
+
+### Design Achievements\
+- **Average Selection Visual Calrity** The selected dtapoints are outlines in a bright yellow to make clear which ones are being averaged.
+- **Used d3.schemecategory10**: In my d3 visualization I used colors form this color scheme thougout my visualization

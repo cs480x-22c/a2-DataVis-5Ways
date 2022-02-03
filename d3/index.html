@@ -5,7 +5,9 @@
 
 <script>
     console.log(d3); // test if d3 is loaded
-
+    var MPGsum = 0;
+    var Weightsum = 0;
+    var avg_count = 0;
     var data = d3.csv("car-data.csv", d3.autoType)
         .then(function (data) {
             console.log(data);
@@ -63,6 +65,13 @@
                 .attr("viewBox", [0, 0, width, height])
                 .property("value", []);
 
+
+            d3.select('svg')
+                .append("rect")
+                .attr("width", "100%")
+                .attr("height", "100%")
+                .attr("fill", d3.schemeCategory10[7]);
+
             d3.select('svg')
                 .append("g").call(xAxis);
 
@@ -81,17 +90,17 @@
                 d3.schemeCategory10
             );
 
-            // const brush = d3.brush()
-            //     .on("start brush end", brushed);
+            // var MPGaverage = 0;
+            // var Weightaverage = 0;
 
-            // d3.select('svg').call(brush);
 
-            console.log('select');
+
 
             d3.select('svg')
                 .append("g")
+                .attr("id", "points")
                 .attr("fill", "none")
-                .attr("stroke", "steelblue")
+                .attr("stroke", "black")
                 .attr("stroke-width", 1.5)
                 .selectAll("circle")
                 .data(data)
@@ -99,23 +108,79 @@
                 .attr("transform", (d) => `translate(${x(d.Weight)},${y(d.MPG)})`)
                 .attr("r", (d) => size(d.Weight))
                 .attr("fill", (d) => color(d.Manufacturer))
+                .on('click', function (evt, d) {
+                    MPGsum += d.MPG;
+                    Weightsum += d.Weight;
+                    avg_count += 1;
+                    console.log(MPGsum);
+                    console.log(Weightsum);
+                    console.log(avg_count);
+
+                    d3.select("#mpg")
+                        .remove();
+
+
+                    d3.select('svg')
+                        .append("text")
+                        .attr("id", "mpg")
+                        .attr("x", "250")
+                        .attr("y", "50")
+                        .attr("width", "100")
+                        .attr("height", "50")
+                        .attr("fill", d3.schemeCategory10[7])
+                        .text(function () { return "Avg MPG: " + MPGsum / avg_count; })
+                        // .text(function () { return Weightsum/avg_count; })
+                        .attr("fill", "black");
+
+
+                    d3.select("#w")
+                        .remove();
+
+
+                    d3.select('svg')
+                        .append("text")
+                        .attr("id", "w")
+                        .attr("x", "250")
+                        .attr("y", "75")
+                        .attr("width", "100")
+                        .attr("height", "50")
+                        .attr("fill", d3.schemeCategory10[7])
+                        .text(function () { return "Avg Weight: " + Weightsum / avg_count; })
+                        .attr("fill", "black");
+
+
+                    d3.select("#avg_mkr")
+                        .remove();
+
+                    d3.select('#points')
+                        .append("circle")
+                        .attr("id", "avg_mkr")
+                        .attr("transform", (d) => `translate(${x(Weightsum / avg_count)},${y(MPGsum / avg_count)})`)
+                        .attr("r", (d) => size(Weightsum / avg_count))
+                        .attr("fill", "white");
+
+                    d3.select(this)
+                        .transition()
+                        .duration(750)
+                        .ease(d3.easeLinear)
+                        .attr('stroke', 'yellow');
+                });
+
+
+            function brushed({ selection }) {
+                // let value = [];
+                // if (selection) {
+                //     const [[x0, y0], [x1, y1]] = selection;
+                //     value = d3.dot
+                //         .style("stroke", "gray")
+                //         .filter(d => x0 <= x(d.x) && x(d.x) < x1 && y0 <= y(d.y) && y(d.y) < y1)
+                //         .style("stroke", "steelblue")
+                //         .data();
+                // } else {
+                //     d3.dot.style("stroke", "steelblue");
+                // }
+                // d3.select('svg')
+                //     .property("value", value).dispatch("input");
+            }
         });
-
-
-    function brushed({ selection }) {
-        // let value = [];
-        // if (selection) {
-        //     const [[x0, y0], [x1, y1]] = selection;
-        //     value = d3.dot
-        //         .style("stroke", "gray")
-        //         .filter(d => x0 <= x(d.x) && x(d.x) < x1 && y0 <= y(d.y) && y(d.y) < y1)
-        //         .style("stroke", "steelblue")
-        //         .data();
-        // } else {
-        //     d3.dot.style("stroke", "steelblue");
-        // }
-        // d3.select('svg')
-        //     .property("value", value).dispatch("input");
-    }
-
 </script>
