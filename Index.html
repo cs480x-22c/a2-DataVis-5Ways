@@ -1,0 +1,96 @@
+ <script src="https://d3js.org/d3.v4.js"></script>
+
+<h1> Welcome to assignment 2! </h1>
+<p> I really wanted to make some d3 graph</p>
+<svg id="dataVis" height= 600 width=1500 style="background-color:#D3D3D3"></svg>
+
+<script>
+	console.log(d3); // test if d3 is loaded
+	
+	var colors = ["red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "blue",
+                  "indigo",
+                  "violet",
+                  "pink",
+                  "grey",
+                  "cyan",
+                  "purple",
+                  "#691F01",
+                  "#964514"];
+			
+
+	var margin = {top: 10, right: 20, bottom: 30, left: 50},
+		width = 1000 - margin.left - margin.right,
+		height = 600 - margin.top - margin.bottom;
+
+	var svg = d3.select("#dataVis")
+		.append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		.attr("transform","translate(" + margin.left + "," + margin.top + ")");
+		
+	d3.csv("https://raw.githubusercontent.com/sophiastrano/a2-DataVis-5Ways/main/cars-sample.csv", function(data){
+	
+	var manufacturers = [];
+		data.forEach(function(d) {
+
+
+				if(manufacturers.indexOf(d.Manufacturer) === -1){
+					manufacturers.push(d.Manufacturer);}
+        });
+
+	// Add X axis
+	var x = d3.scaleLinear()
+		.domain([1500, 5000])
+		.range([ 0, width ]);
+	svg.append("g")
+		.attr("transform", "translate(0," + height + ")")
+		.call(d3.axisBottom(x));
+
+	// Add Y axis
+	var y = d3.scaleLinear()
+		.domain([0, 45])
+		.range([ height, 0]);
+	svg.append("g")
+		.call(d3.axisLeft(y));	
+	
+	// text label for the x axis
+	svg.append("text")
+		.attr("transform",
+				"translate(" + (width/2) + " ," + 
+							(height + margin.top + 20) + ")")
+		.style("text-anchor", "middle")
+		.text("MPG");
+
+
+	// text label for the y axis
+	svg.append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("y", 0 - margin.left)
+		.attr("x",0 - (height / 2))
+		.attr("dy", "1em")
+		.style("text-anchor", "middle")
+		.text("Weight");
+		
+  // Add a scale for bubble size
+  var z = d3.scaleLinear()
+    .domain([1500, 5000])
+    .range([ 5, 30]);
+
+  // Add dots
+  svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d.Weight); } )
+      .attr("cy", function (d) { return y(d.MPG); } )
+      .attr("r", function (d) { return z(d.Weight); } )
+      .style("opacity", 0.5)
+      .style("fill", function (d) { return colors[manufacturers.indexOf(d.Manufacturer)]; })
+})
+</script>
