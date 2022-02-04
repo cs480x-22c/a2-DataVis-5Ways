@@ -70,7 +70,12 @@ https://public.flourish.studio/visualisation/8607177/
 
 # Plotly
 
+![image](https://user-images.githubusercontent.com/64103447/152478484-df0599ad-4e30-4ae0-bae5-3419fc33e05d.png)
+
+
 # MatPlotLib
+
+![image](https://user-images.githubusercontent.com/64103447/152478518-f589ba33-07ea-4917-9956-9a01acb09ba1.png)
 
 
 
