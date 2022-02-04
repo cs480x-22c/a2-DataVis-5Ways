@@ -7,10 +7,6 @@ Your goal is to use 5 different tools to make the following chart:
 
 ![ggplot2](img/ggplot2.png)
 
-![ggplot2](img/tableauDataSnip.png)
-
-https://sophiastrano.github.io/a2-DataVis-5Ways/
-
 These features should be preserved as much as possible in your replication:
 
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
@@ -61,9 +57,9 @@ It should be possible to scroll through your readme to get an overview of all th
 - Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
 
-# d3...
+# d3 : https://sophiastrano.github.io/a2-DataVis-5Ways/
 
-![image](https://user-images.githubusercontent.com/64103447/152473238-214b1708-da90-420c-98cc-cfd5d2713263.png)
+![image](https://user-images.githubusercontent.com/64103447/152474740-7eee7d62-f4a6-425d-9103-065ec729a40b.png)
 
 # Tableau
 ![ggplot2](img/tableauDataSnip.png)
