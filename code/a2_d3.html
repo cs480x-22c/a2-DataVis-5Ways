@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <div id="graph"></div>
+    <script>
+        // set the dimensions and margins of the graph
+        const margin = {top: 10, right: 30, bottom: 30, left: 60},
+            width = 560 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+        
+        // append the svg object to the body of the page
+        const svg = d3.select("#graph")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+        
+        d3.csv('../cars-sample.csv', function(data) {
+        // Add X axis
+        var x = d3.scaleLinear()
+            .domain([1500, 5000])
+            .range([ 0, width ]);
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x)
+            .ticks(3));
+
+        // Add X axis label
+        svg.append("text")
+            .attr("class", "x label")
+            .attr("text-anchor", "middle")
+            .attr("x", width/2 + 20)
+            .attr("y", height + 25)
+            .text("Weight");
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+            .domain([7, 40])
+            .range([ height, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y)
+            .ticks(4));
+        // Add Y axis label
+        svg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "middle")
+            .attr("y", 6)
+            .attr("x", -height/2)
+            .attr("dy", "-3em")
+            .attr("transform", "rotate(-90)")
+            .attr("font-family", "serif")
+            .text("Miles Per Gallon");
+
+        var color = d3.scaleOrdinal()
+            .domain(['bmw', 'ford', 'honda', 'mercedes', 'toyota'])
+            .range(['#f78781', '#c1c261', '#59d4a9', '#59c4f0', '#ec8ef5'])
+
+
+        d3.select('body')
+            .append('div')
+            .attr('id', 'tooltip')
+            .attr('style', 'position: absolute; opacity: 0;');
+
+        // Add dots
+        svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return x(d.Weight); } )
+            .attr("cy", function (d) { return y(d.MPG); } )
+            .attr("r", function (d) { return (d.Weight / 500); })
+            .style("fill", function (d) { return color(d.Manufacturer);})
+            .style("opacity", 0.5)
+            .on('mouseover', function(d) {
+                d3.select('#tooltip')
+                .transition().duration(200)
+                .style('opacity', 1).text(" Car: " + d.Car + " | Weight: " + d.Weight + " | MPG: " + d.MPG)
+            })
+
+            .on('mousemove', function() {
+                d3.select('#tooltip')
+                .style('left', d3.event.pageX + 20 + 'px')
+                .style('top', d3.event.pageY + 'px')
+            })
+
+            .on('mouseout', function() {
+                d3.select('#tooltip').style('opacity', 0)
+            })
+  
+
+            })
+    </script>
+</body>
+</html>
