@@ -131,10 +131,19 @@ I also used the plotly library to add an interactive feature to the plot. This R
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal. It is also incredibly easy to create high quality and interactive graphs with very few lines of code.
 
-# d3...
+# d3
 
-(And so on...)
+D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of Scalable Vector Graphics, HTML5, and Cascading Style Sheets standards. To visualize the cars data set, I used html and d3.js to create a similar graph to that above (MPG vs. weight with color representing the manufacturer and point size representing the weight). 
 
+![d3.js](img/d3.PNG)
+
+I also added a color and size legend to the graph so the user knows what the different manufacturer colors and sizes represent. I also used transitions to create an interactive tooltip that appears when a user hovers over different points on the graph. The tooltip displays the name of the car, the mpg, and the weight. 
+
+![d3 tooltip](img/d3_tooltip.png)
+
+I enjoyed making the features of this graph custom to what I wanted to put on it, but it took a lot more code compared to other tools such as R.
+
+# Placeholder
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
