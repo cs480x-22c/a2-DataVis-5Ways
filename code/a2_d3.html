@@ -2,7 +2,7 @@
 <html>
 <body>
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-    <div>
+    <div style="width: 60%;"">
         <div id="graph" style="width: 70%; float: left;"></div>
         <div id="legend" style="width: 20%;float: left;"></div>
     </div>
@@ -97,13 +97,15 @@
             //legend stuffs
             const svg2 = d3.select("#legend")
                 .append("svg")
+                .attr("height", 500)
 
+            svg2.append("text").attr("x", 10).attr("y", 8).text("Manufacturer").style("font-size", "15px").attr("alignment-baseline","middle")
             svg2.selectAll("mydots")
                 .data(color.domain())
                 .enter()
                 .append("circle")
                 .attr("cx", 10)
-                .attr("cy", function(d,i){ return 20 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("cy", function(d,i){ return 30 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
                 .attr("r", 7)
                 .style("fill", function(d){ return color(d)})
                 .style("opacity", 0.5)
@@ -114,11 +116,23 @@
                 .enter()
                 .append("text")
                 .attr("x", 20)
-                .attr("y", function(d,i){ return 20 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("y", function(d,i){ return 30 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
                 .style("fill", "black")
                 .text(function(d){ return d})
                 .attr("text-anchor", "left")
                 .style("alignment-baseline", "middle")
+
+            
+            svg2.append("text").attr("x", 10).attr("y", 180).text("Vehicle Weight").style("font-size", "15px").attr("alignment-baseline","middle")
+            svg2.append("circle").attr("cx",10).attr("cy", 200).attr("r", 1000/500).style("fill", "gray")
+            svg2.append("circle").attr("cx",10).attr("cy",225).attr("r", 2000/500).style("fill", "gray")
+            svg2.append("text").attr("x", 20).attr("y", 200).text("1000").style("font-size", "15px").attr("alignment-baseline","middle")
+            svg2.append("text").attr("x", 20).attr("y", 225).text("2000").style("font-size", "15px").attr("alignment-baseline","middle")
+
+            svg2.append("circle").attr("cx",10).attr("cy", 250).attr("r", 3000/500).style("fill", "gray")
+            svg2.append("circle").attr("cx",10).attr("cy",275).attr("r", 4000/500).style("fill", "gray")
+            svg2.append("text").attr("x", 20).attr("y", 250).text("3000").style("font-size", "15px").attr("alignment-baseline","middle")
+            svg2.append("text").attr("x", 20).attr("y", 275).text("4000").style("font-size", "15px").attr("alignment-baseline","middle")
         })
     </script>
 </body>
