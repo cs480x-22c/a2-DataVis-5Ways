@@ -2,8 +2,10 @@
 <html>
 <body>
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-    <div id="graph"></div>
-    <div id="legend"></div>
+    <div>
+        <div id="graph" style="width: 70%; float: left;"></div>
+        <div id="legend" style="width: 20%;float: left;"></div>
+    </div>
     <script>
         // set the dimensions and margins of the graph
         const margin = {top: 10, right: 30, bottom: 30, left: 60},
@@ -92,7 +94,31 @@
                 d3.select('#tooltip').style('opacity', 0)
             })
 
-            //legend stuff
+            //legend stuffs
+            const svg2 = d3.select("#legend")
+                .append("svg")
+
+            svg2.selectAll("mydots")
+                .data(color.domain())
+                .enter()
+                .append("circle")
+                .attr("cx", 10)
+                .attr("cy", function(d,i){ return 20 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("r", 7)
+                .style("fill", function(d){ return color(d)})
+                .style("opacity", 0.5)
+
+            // Add one dot in the legend for each name.
+            svg2.selectAll("mylabels")
+                .data(color.domain())
+                .enter()
+                .append("text")
+                .attr("x", 20)
+                .attr("y", function(d,i){ return 20 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+                .style("fill", "black")
+                .text(function(d){ return d})
+                .attr("text-anchor", "left")
+                .style("alignment-baseline", "middle")
         })
     </script>
 </body>
