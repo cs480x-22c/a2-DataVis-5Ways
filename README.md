@@ -141,7 +141,7 @@ I also added a color and size legend to the graph so the user knows what the dif
 
 ![d3 tooltip](img/d3_tooltip.png)
 
-I enjoyed making the features of this graph custom to what I wanted to put on it, but it took a lot more code compared to other tools such as R.
+I enjoyed making the features of this graph custom to what I wanted to put on it, but it took a lot more code compared to other tools such as R. Overall, I found using d3.js to be more difficult in terms of having to create the legends from scratch and manually having to calculate the point size based on the weight value. Also having to manually assign the colors to the manufacturer.
 
 # Placeholder
 
