@@ -143,7 +143,7 @@ D3.js is a JavaScript library for producing dynamic, interactive data visualizat
 
 ![d3.js](img/d3.PNG)
 
-I also added a color and size legend to the graph so the user knows what the different manufacturer colors and sizes represent. I also used transitions to create an interactive tooltip that appears when a user hovers over different points on the graph. The tooltip displays the name of the car, the mpg, and the weight. 
+I also added a color and size legend to the graph so the user knows what the different manufacturer colors and sizes represent. I took the hex color codes from the R graph above to use in this graph to make them as similar as possible. I also used transitions to create an interactive tooltip that appears when a user hovers over different points on the graph. The tooltip displays the name of the car, the mpg, and the weight. 
 
 ![d3 tooltip](img/d3_tooltip.png)
 
@@ -157,6 +157,18 @@ https://medium.com/@mila_frerichs/how-to-create-a-simple-tooltip-in-d3-js-45040a
 https://www.d3-graph-gallery.com/graph/custom_legend.html (legend)  
 
 # Tableau
+
+Tableau Software is a tool that helps make Big Data small, and small data insightful and actionable. The main use of tableau software is to help people see and understand their data. I used Tableau to create a similar graph to that in R (depicted above). The software is very straightforward and easy to use which can be helpful for people who aren't as experienced with programming. To get the graph as similar as possible to the sample, I created a custom color palette with the hex codes I found when making the graph using d3. This was pretty simple to do with a google search. It is also very easy to customize the tooltip and the background colors and gridlines. Tableau also has sever hosting which is helpful for viewing interactive components such as the tooltip and animations. The only downside with this is that the pricing for the license is pretty expensive. 
+
+![tableau](img/tableau.png)
+
+### Sources
+https://www.thedataschool.co.uk/emily-chen/tableau-tip-importing-custom-colour-palettes (custom color palette)  
+
+# Excel
+
+# Python
+
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
