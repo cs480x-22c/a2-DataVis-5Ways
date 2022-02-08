@@ -131,6 +131,12 @@ I also used the plotly library to add an interactive feature to the plot. This R
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal. It is also incredibly easy to create high quality and interactive graphs with very few lines of code.
 
+### Sources 
+https://www.statology.org/import-csv-into-r/ (reading csv)
+https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf (ggplot2 cheat sheet)
+https://www.musgraveanalytics.com/blog/2018/8/24/how-to-make-ggplot2-charts-interactive-with-plotly (plotly library)
+https://stackoverflow.com/questions/38733403/edit-labels-in-tooltip-for-plotly-maps-using-ggplot2-in-r (plotly legend)
+
 # d3
 
 D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of Scalable Vector Graphics, HTML5, and Cascading Style Sheets standards. To visualize the cars data set, I used html and d3.js to create a similar graph to that above (MPG vs. weight with color representing the manufacturer and point size representing the weight). 
@@ -143,7 +149,14 @@ I also added a color and size legend to the graph so the user knows what the dif
 
 I enjoyed making the features of this graph custom to what I wanted to put on it, but it took a lot more code compared to other tools such as R. Overall, I found using d3.js to be more difficult in terms of having to create the legends from scratch and manually having to calculate the point size based on the weight value. Also having to manually assign the colors to the manufacturer.
 
-# Placeholder
+### Sources
+https://www.d3-graph-gallery.com/graph/scatter_basic.html (scatterplot in d3.js)
+https://stackoverflow.com/questions/11189284/d3-axis-labeling (scatterplot axis labels)
+https://medium.com/@kj_schmidt/hover-effects-for-your-scatter-plot-447df80ea116 (tooltip)
+https://medium.com/@mila_frerichs/how-to-create-a-simple-tooltip-in-d3-js-45040afada07 (tooltip)
+https://www.d3-graph-gallery.com/graph/custom_legend.html (legend)
+
+# Tableau
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
