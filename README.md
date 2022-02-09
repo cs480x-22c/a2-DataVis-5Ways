@@ -162,12 +162,16 @@ Tableau Software is a tool that helps make Big Data small, and small data insigh
 
 ![tableau](img/tableau.png)
 
+Here is my custom tooltip: 
+
+![tableau tooltip](img/Tableau_tooltip.png)
+
 ### Sources
 https://www.thedataschool.co.uk/emily-chen/tableau-tip-importing-custom-colour-palettes (custom color palette)  
 
-# Excel
-
 # Python
+
+# Excel
 
 
 ## Technical Achievements
