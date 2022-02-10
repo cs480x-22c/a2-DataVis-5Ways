@@ -3,111 +3,38 @@
 Assignment 2 - Data Visualization, 5 Ways  Carley Gilmore
 ===
 
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be interesting and fun`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot `<- the CS department head uses this all the time :)`
-- Vega-lite <- `<- very interesting formal visualizatio model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
 # R + ggplot2 + R Markdown
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+![rggplot2](img/rggplot2.png)
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+I thought R + ggplot2 was one of the easiest implementations to work with. I've used R before with RStudio in my Applied Statistics class and geom_point is a very useful tool to use. I simply edited the demo code from class to have an opacity of 0.5. I also personally liked the color scheme that R installed with each Manufacturer having a very distinct color.
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+# Flourish
+The next tool I used was Flourish. I thought it was relatively simple to produce. I was mostly confused with how the legends worked because there is a section that only allowed one field to be shown at a time, or at least it didn't seem like you could add more than one legend. I also played around as a design achievement with showing the data when you click on the point.
 
-![ggplot2](img/ggplot2.png)
+![flourish1](img/flourish1.png)
 
-# d3...
+![flourishpoint](img/flourish1.png)
 
-(And so on...)
+# d3 js
+I think d3 was the hardest graph to produce. I'm sure I could have maybe used an additional library, but I feel like this one took the most playing around with. I referred to many different sites to try to find information on how to produce scatterplots and got a lot of tips from there. One of my references I used was https://www.d3-graph-gallery.com/graph/scatter_basic.html. I also just played around with  different parameters especially style. I also noticed that a tricky part was getting the colors to appear different based on the manufacturer and d3.scaleOrdinal helped a lot with this: https://observablehq.com/@d3/d3-scaleordinal.
 
+![d3js](img/d3js.png)
+
+# Python + MatplotLib
+This one was a fun one to figure out, I feel like it was definitely easier than d3js in  my opinion since matplotlib has some built in functions to create the scatter plot. However, figuring out the legends was a hassle to do. Finding a way to map the colors once again was a little tricky, but the solution was less involved than  I thought: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/.
+
+![python](img/python.png)
+
+# VegaLite
+This was my first time using VegaLite. I thought the syntax was a little getting used to and importing the CSV but it was still pretty clear and simple to produce legends for the map. I used VegaLite's example code and then tweaked the parameters.
+
+![vegalite](img/vegalite.png)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+Hovering over a point to see data about it
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+Conscious color scheme for distinct colors- pulled off of randomized color chart based on Manufacturer
+Made sure that the colors could be read with the light background
