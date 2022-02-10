@@ -65,6 +65,12 @@ And here is the tooltip for this visualization:
 
 ![python tooltip](img/python_tooltip.png)
 
+### Sources
+https://plotly.com/python/line-and-scatter/
+https://plotly.com/python/tick-formatting/
+https://stackoverflow.com/questions/57006458/how-to-assign-color-value-using-plotly-based-on-column-value
+https://plotly.com/python/hover-text-and-formatting/
+
 # Flourish
 
 Flourish is a a tool that helps you design and create graphics to embed on a website or export as a SVG file. I found this tool somewhat easy to use, although it was a bit difficult to tell what all the different settings and customizations do. It does seem like it would be very useful to people who aren't as experienced with programming, since it was very easy for me to load the data and create a basic scatterplot. I did think that there were a lot of templates for different charts that would be interesting to look into. Flourish was much easier to use than basic tools such as Excel. I did think that it was difficult to customize everything, such as adding multiple legends (for color and size). It was very easy to modify the tooltip content and layout and design. Overall a very straightforward visualization tool to use.
@@ -76,8 +82,12 @@ Here is my custom tooltip for this visualization:
 ![flourish tooltip](img/Flourish_tooltip.png)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Implemented plotly library in R**: I implemented the plotly library to convert the ggplot2 into an interactive plot. From there I added a tooltip that displays some of the car's information when the user hovers their mouse over an individual point on the scatterplot.
+- **Used transitions to create d3 tooltip**: I used transitions to display a tooltip that contains some of the car information when the user hovers their mouse over an individual point. To do this, I used transforms and the .on() function to control the actions that are performed when the mouse enters, exits, and moves from the plot point. 
+- **Used plotly express** : I implemented the plotly express module to create a scatterplot in python. This allowed me to easily create a custom tooltip displayying car information when a user hovers over a point in the graph.
+- **Learned how to use Tableau**: I've never used this type of software / data visualization tool. It was really helpful learning how to use this because I am not the best at making intricate graphs with Excel. It was so easy to learn the basics and it is very customizable
+- **Learned how to use Flourish**: I've also never used a software like this before and it was interesting to learn how to use it. It is very focused on design so if I need to make a complicated color design I will definitely use this in the future.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Custom Color Scheme**: I used the same colorscheme across all of the graphs. I used a hex finder on the colors from the R plot and implemented those colors in my color scheme across all data visualizations
+- **Tooltips**: I tried to implement a tooltip on every different data visualization so each graph looked as close to the original as possible. 
