@@ -11,7 +11,7 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 ![ggplot2](img/a2_rplot.png)
 
-I also used the plotly library to add an interactive feature to the plot. This R library used to make interactive, publication-quality graphs. The 'ggploty()' function allowed me to create a tooltip that appears when you hover your mouse over the different points on the graph. I had the tooltip include car features, such as the car's name, weight, mpg, manufacturer, and model year. 
+I also used the plotly library to add an interactive feature to the plot. This R library used to make interactive, publication-quality graphs. The 'ggplotly()' function allowed me to create a tooltip that appears when you hover your mouse over the different points on the graph. I had the tooltip include car features, such as the car's name, weight, mpg, manufacturer, and model year. 
 
 ![ggplot2](img/plotly.png)
 
@@ -29,7 +29,7 @@ D3.js is a JavaScript library for producing dynamic, interactive data visualizat
 
 ![d3.js](img/d3.PNG)
 
-I also added a color and size legend to the graph so the user knows what the different manufacturer colors and sizes represent. I took the hex color codes from the R graph above to use in this graph to make them as similar as possible. I also used transitions to create an interactive tooltip that appears when a user hovers over different points on the graph. The tooltip displays the name of the car, the mpg, and the weight. 
+I also added a color and size legend to the graph so the user knows what the different manufacturer colors and sizes represent. I took the hex color codes from the R graph above to use in this graph to make them as similar as possible. I also used transitions to create an interactive tooltip that appears when a user hovers over different points on the graph. The tooltip displays the name of the car, the mpg, and the weight. This was very difficult to figure out how to customize and format even with the documentation. Many of the sources I found had code that I couldn't get to work. It also wasn't very straightforward to implement a custom color palette for the data points. 
 
 ![d3 tooltip](img/d3_tooltip.png)
 
@@ -65,8 +65,15 @@ And here is the tooltip for this visualization:
 
 ![python tooltip](img/python_tooltip.png)
 
-# Excel
+# Flourish
 
+Flourish is a a tool that helps you design and create graphics to embed on a website or export as a SVG file. I found this tool somewhat easy to use, although it was a bit difficult to tell what all the different settings and customizations do. It does seem like it would be very useful to people who aren't as experienced with programming, since it was very easy for me to load the data and create a basic scatterplot. I did think that there were a lot of templates for different charts that would be interesting to look into. Flourish was much easier to use than basic tools such as Excel. I did think that it was difficult to customize everything, such as adding multiple legends (for color and size). It was very easy to modify the tooltip content and layout and design. Overall a very straightforward visualization tool to use.
+
+![flourish plot](img/flourish.png)
+
+Here is my custom tooltip for this visualization:
+
+![flourish tooltip](img/Flourish_tooltip.png)
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
