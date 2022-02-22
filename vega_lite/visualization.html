@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "../cars-sample.csv"},
+  "mark": "circle",
+  "encoding": {
+    "x": {"field": "Weight", "type": "quantitative", "scale": {"domain": [1500, 5100]}},
+    "y": {"field": "MPG", "type": "quantitative", "scale": {"domain": [8, 47]}},
+    "color": {"field": "Manufacturer", "type": "nominal"},
+    "size": {"field": "Weight", "type": "quantitative"},
+  },
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
